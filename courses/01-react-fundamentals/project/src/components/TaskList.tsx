@@ -1,34 +1,32 @@
-import TaskCard from "./TaskCard"
-
+import TaskCard from "./TaskCard";
 /**
  * Represents a task in the application.
  */
-export interface Task {
-  id: string | number
-  title: string
-  description: string
-  priority: "Low" | "Medium" | "High"
-  completed: boolean
-  // category?: string
-  // tags?: string[]
-  //dueDate?: string | number
-}
 
+export interface Task {
+  id: string | number;
+  title: string;
+  description: string;
+  priority: "Low" | "Medium" | "High";
+  completed: boolean;
+  category?: string;
+  tags?: string[];
+  dueDate?: string | number;
+}
 /**
  * Props accepted by the TaskList component.
- */
+//  */
 interface TaskListProps {
-  tasks?: Task[]
-  countText?: string
-  onToggle?: (id: string | number) => void
-  onDelete?: (id: string | number) => void
-  //linkToTaskDetail?: boolean
+  tasks?: Task[];
+  countText?: string;
+  onToggle?: (id: string | number) => void;
+  onDelete?: (id: string | number) => void;
+  linkToTaskDetail?: boolean;
 }
-
 /**
  * Static list of tasks used for Challenge 01.
  */
-const taskList: Task[] = [
+const HardCodedTasks: Task[] = [
   {
     id: 1,
     title: "Task One",
@@ -50,25 +48,33 @@ const taskList: Task[] = [
     priority: "Low",
     completed: true,
   },
-]
-
+];
 /**
  * Renders all available task cards.
  */
 export default function TaskList(props: TaskListProps) {
+  const taskList = Array.isArray(props.tasks)
+    ? props.tasks
+    : HardCodedTasks;
+
   return (
-    <section id="task-list">
-      {taskList.map((task) => (
-        <TaskCard
-          key={task.id}
-          title={task.title}
-          description={task.description}
-          priority={task.priority}
-          completed={task.completed}
-          onToggle={props.onToggle}
-          taskId={task.id}
-        />
-      ))}
-    </section>
-  )
+    <>
+      {typeof props.countText === "string" && (
+        <p id="task-count">{props.countText}</p>
+      )}
+
+      <section id="task-list">
+        {taskList.map((task) => (
+          <TaskCard
+            key={task.id}
+            title={task.title}
+            description={task.description}
+            priority={task.priority}
+            completed={task.completed}
+            onToggle={props.onToggle}
+          />
+        ))}
+      </section>
+    </>
+  );
 }
