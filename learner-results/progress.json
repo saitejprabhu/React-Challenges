@@ -1,23 +1,23 @@
 {
-  "lastUpdated": "2026-08-05T10:47:29.603Z",
+  "lastUpdated": "2026-08-05T12:10:09.233Z",
   "pathway": {
     "name": "Modern React Engineer",
     "version": "1.0.0",
     "overallScore": 29.9,
-    "completionPercentage": 3.8,
+    "completionPercentage": 5.7,
     "badgeLevel": "none",
     "totalChallenges": 53,
-    "completedChallenges": 2
+    "completedChallenges": 3
   },
   "courses": {
     "01-react-fundamentals": {
       "courseId": "01-react-fundamentals",
       "courseName": "React Fundamentals",
       "averageScore": 90.7,
-      "completionPercentage": 8.7,
+      "completionPercentage": 13,
       "badgeLevel": "none",
       "totalChallenges": 23,
-      "completedChallenges": 2,
+      "completedChallenges": 3,
       "challenges": {
         "01-static-task-display": {
           "challengeId": "01-static-task-display",
@@ -40,6 +40,21 @@
           "passed": true,
           "score": 90.7,
           "lastRun": "2026-08-05T10:46:42.347Z",
+          "scores": {
+            "functionalTests": 100,
+            "codeQuality": 50,
+            "architecture": 100,
+            "bestPractices": 100,
+            "e2eTests": 100,
+            "aiReview": 88
+          }
+        },
+        "03-adding-new-tasks": {
+          "challengeId": "03-adding-new-tasks",
+          "challengeName": "Adding New Tasks",
+          "passed": true,
+          "score": 90.7,
+          "lastRun": "2026-08-05T12:09:40.924Z",
           "scores": {
             "functionalTests": 100,
             "codeQuality": 50,
