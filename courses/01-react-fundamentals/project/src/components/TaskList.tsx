@@ -53,9 +53,7 @@ const HardCodedTasks: Task[] = [
  * Renders all available task cards.
  */
 export default function TaskList(props: TaskListProps) {
-  const taskList = Array.isArray(props.tasks)
-    ? props.tasks
-    : HardCodedTasks;
+  const taskList = Array.isArray(props.tasks) ? props.tasks : HardCodedTasks;
 
   return (
     <>
@@ -67,6 +65,7 @@ export default function TaskList(props: TaskListProps) {
         {taskList.map((task) => (
           <TaskCard
             key={task.id}
+            taskId={task.id}
             title={task.title}
             description={task.description}
             priority={task.priority}
