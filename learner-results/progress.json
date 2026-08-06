@@ -1,23 +1,23 @@
 {
-  "lastUpdated": "2026-08-06T12:05:32.320Z",
+  "lastUpdated": "2026-08-06T12:21:52.266Z",
   "pathway": {
     "name": "Modern React Engineer",
     "version": "1.0.0",
-    "overallScore": 27.2,
-    "completionPercentage": 28.3,
+    "overallScore": 28.1,
+    "completionPercentage": 32.1,
     "badgeLevel": "none",
     "totalChallenges": 53,
-    "completedChallenges": 15
+    "completedChallenges": 17
   },
   "courses": {
     "01-react-fundamentals": {
       "courseId": "01-react-fundamentals",
       "courseName": "React Fundamentals",
-      "averageScore": 82.4,
-      "completionPercentage": 65.2,
+      "averageScore": 85.1,
+      "completionPercentage": 73.9,
       "badgeLevel": "bronze",
       "totalChallenges": 23,
-      "completedChallenges": 15,
+      "completedChallenges": 17,
       "challenges": {
         "01-static-task-display": {
           "challengeId": "01-static-task-display",
@@ -38,15 +38,15 @@
           "challengeId": "02-dynamic-task-rendering",
           "challengeName": "Dynamic Task Rendering",
           "passed": true,
-          "score": 85,
-          "lastRun": "2026-08-06T11:49:27.322Z",
+          "score": 92.2,
+          "lastRun": "2026-08-06T12:16:40.677Z",
           "scores": {
             "functionalTests": 100,
             "codeQuality": 100,
             "architecture": 100,
             "bestPractices": 100,
-            "e2eTests": 100,
-            "aiReview": 0
+            "e2eTests": 60,
+            "aiReview": 88
           }
         },
         "03-adding-new-tasks": {
@@ -68,25 +68,25 @@
           "challengeId": "04-task-completion-toggle",
           "challengeName": "Task Completion Toggle",
           "passed": true,
-          "score": 86.2,
-          "lastRun": "2026-08-06T11:50:13.731Z",
+          "score": 86.95,
+          "lastRun": "2026-08-06T12:18:53.736Z",
           "scores": {
             "functionalTests": 100,
             "codeQuality": 100,
             "architecture": 100,
             "bestPractices": 100,
             "e2eTests": 25,
-            "aiReview": 83
+            "aiReview": 88
           }
         },
         "05-task-deletion": {
           "challengeId": "05-task-deletion",
           "challengeName": "Task Deletion",
-          "passed": false,
-          "score": 74.855,
-          "lastRun": "2026-08-06T11:51:50.251Z",
+          "passed": true,
+          "score": 98.2,
+          "lastRun": "2026-08-06T12:14:46.544Z",
           "scores": {
-            "functionalTests": 33.3,
+            "functionalTests": 100,
             "codeQuality": 100,
             "architecture": 100,
             "bestPractices": 100,
@@ -97,16 +97,16 @@
         "06-task-filtering": {
           "challengeId": "06-task-filtering",
           "challengeName": "Task Filtering",
-          "passed": false,
-          "score": 65.95,
-          "lastRun": "2026-08-06T11:52:13.609Z",
+          "passed": true,
+          "score": 97.45,
+          "lastRun": "2026-08-06T12:21:20.453Z",
           "scores": {
-            "functionalTests": 40,
+            "functionalTests": 100,
             "codeQuality": 100,
             "architecture": 100,
             "bestPractices": 100,
-            "e2eTests": 25,
-            "aiReview": 88
+            "e2eTests": 100,
+            "aiReview": 83
           }
         },
         "07-priority-based-sorting": {

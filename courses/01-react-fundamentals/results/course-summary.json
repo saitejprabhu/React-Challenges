@@ -1,11 +1,11 @@
 {
   "courseId": "01-react-fundamentals",
   "courseName": "React Fundamentals",
-  "lastUpdated": "2026-08-06T12:05:31.834Z",
+  "lastUpdated": "2026-08-06T12:21:49.659Z",
   "totalChallenges": 23,
-  "completedChallenges": 15,
-  "averageScore": 82.4,
-  "completionPercentage": 65.2,
+  "completedChallenges": 17,
+  "averageScore": 85.1,
+  "completionPercentage": 73.9,
   "badgeLevel": "bronze",
   "challengeResults": [
     {
@@ -17,7 +17,7 @@
     {
       "challengeId": "02-dynamic-task-rendering",
       "challengeName": "Dynamic Task Rendering",
-      "score": 85,
+      "score": 92.2,
       "passed": true
     },
     {
@@ -29,20 +29,20 @@
     {
       "challengeId": "04-task-completion-toggle",
       "challengeName": "Task Completion Toggle",
-      "score": 86.2,
+      "score": 86.95,
       "passed": true
     },
     {
       "challengeId": "05-task-deletion",
       "challengeName": "Task Deletion",
-      "score": 74.855,
-      "passed": false
+      "score": 98.2,
+      "passed": true
     },
     {
       "challengeId": "06-task-filtering",
       "challengeName": "Task Filtering",
-      "score": 65.95,
-      "passed": false
+      "score": 97.45,
+      "passed": true
     },
     {
       "challengeId": "07-priority-based-sorting",
@@ -152,6 +152,8 @@
     "Dynamic Task Rendering",
     "Adding New Tasks",
     "Task Completion Toggle",
+    "Task Deletion",
+    "Task Filtering",
     "Priority-Based Sorting",
     "Task Editing",
     "Search Functionality",
@@ -165,7 +167,6 @@
     "useReducer - Complex State Management"
   ],
   "improvementAreas": [
-    "Task Filtering",
     "Task Statistics Dashboard",
     "Error Boundaries and Error Handling",
     "Data Fetching - Loading and Error State",

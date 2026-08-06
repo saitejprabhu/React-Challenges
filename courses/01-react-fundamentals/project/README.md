@@ -68,12 +68,12 @@ npm run review -- --challenge=01-static-task-display
 
 ## 📊 Progress Evidence
 
-*Auto-updated when you run review. Last run: 6/8/2026, 5:35:31 pm*
+*Auto-updated when you run review. Last run: 6/8/2026, 5:51:49 pm*
 
 | Metric | Value |
 |--------|-------|
-| Challenges completed | 15 / 23 (65.2%) |
-| Average score | 82.4% |
+| Challenges completed | 17 / 23 (73.9%) |
+| Average score | 85.1% |
 
 | Challenge | Skills covered | Status |
 |-----------|----------------|--------|
@@ -81,8 +81,8 @@ npm run review -- --challenge=01-static-task-display
 | Dynamic Task Rendering | useState, map(), key prop, Lists in JSX | Passed |
 | Adding New Tasks | Controlled inputs, Event handlers, Form validation, Form handling, Immutable state | Passed |
 | Task Completion Toggle | Updating array state, Event handlers with params, Conditional styling | Passed |
-| Task Deletion | filter, Immutable state, Confirmation patterns, Prop functions with arguments | Not passed |
-| Task Filtering | Derived state, Conditional rendering, Filter logic composition | Not passed |
+| Task Deletion | filter, Immutable state, Confirmation patterns, Prop functions with arguments | Passed |
+| Task Filtering | Derived state, Conditional rendering, Filter logic composition | Passed |
 | Priority-Based Sorting | Array sort, Sort stability, Multiple sort criteria, Select dropdowns | Passed |
 | Task Editing | Inline editing, Conditional rendering, Edit mode state, Controlled inputs, Form handling, State synchronization | Passed |
 | Search Functionality | Text search, Combining filters, String methods, Search UI patterns | Passed |

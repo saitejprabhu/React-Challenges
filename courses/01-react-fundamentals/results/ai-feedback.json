@@ -23,22 +23,6 @@
     }
   },
   {
-    "challengeId": "02-dynamic-task-rendering",
-    "challengeName": "Dynamic Task Rendering",
-    "aiReview": {
-      "challengeId": "02-dynamic-task-rendering",
-      "timestamp": "2026-08-06T11:49:47.332Z",
-      "score": 0,
-      "feedback": [],
-      "strengths": [],
-      "improvements": [],
-      "readability": 0,
-      "maintainability": 0,
-      "overall": "",
-      "error": "Groq API error (429): Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kz67g1cre27rvvjxvyzg9gs2` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Used 2193, Requested 3936. Please try again in 1.289999999s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing"
-    }
-  },
-  {
     "challengeId": "03-adding-new-tasks",
     "challengeName": "Adding New Tasks",
     "aiReview": {
@@ -59,75 +43,6 @@
       "readability": 85,
       "maintainability": 90,
       "overall": "The code is well-structured and follows good practices, but there are some areas for improvement to make it more maintainable and robust."
-    }
-  },
-  {
-    "challengeId": "04-task-completion-toggle",
-    "challengeName": "Task Completion Toggle",
-    "aiReview": {
-      "challengeId": "04-task-completion-toggle",
-      "timestamp": "2026-08-06T11:51:48.138Z",
-      "score": 83,
-      "feedback": [],
-      "strengths": [
-        "The code is well-structured and follows a consistent naming convention.",
-        "The use of TypeScript and functional components is a good practice.",
-        "The code is relatively free of errors and warnings."
-      ],
-      "improvements": [
-        "Some of the variable names could be more descriptive. For example, `taskList` could be renamed to `tasks`.",
-        "The `TaskCard` component could be refactored to reduce duplication. For example, the styles for completed tasks could be extracted into a separate function.",
-        "The `TaskList` component could be improved by adding a loading indicator when the tasks are being fetched or updated."
-      ],
-      "readability": 85,
-      "maintainability": 80,
-      "overall": "The code is well-structured and follows good practices, but there are some areas for improvement to make it more maintainable and efficient."
-    }
-  },
-  {
-    "challengeId": "05-task-deletion",
-    "challengeName": "Task Deletion",
-    "aiReview": {
-      "challengeId": "05-task-deletion",
-      "timestamp": "2026-08-06T11:52:12.041Z",
-      "score": 88,
-      "feedback": [],
-      "strengths": [
-        "The code is well-structured and follows a consistent naming convention.",
-        "The use of TypeScript and functional components is a good practice.",
-        "The code is well-commented, making it easier to understand the functionality."
-      ],
-      "improvements": [
-        "Some of the functions, such as `handleDelete`, are not type-checked. It would be beneficial to add type annotations to ensure the function signature is correct.",
-        "The `TaskCard` component could benefit from a more robust way of handling the deletion of tasks. Currently, it relies on the `onDelete` prop being passed, which might not always be the case.",
-        "The `TaskApp` component has a lot of props being passed to it. It might be beneficial to break this down into smaller, more focused components to improve maintainability."
-      ],
-      "readability": 85,
-      "maintainability": 90,
-      "overall": "The code is well-structured and follows good practices. However, there are some areas that could be improved to make the code more maintainable and robust."
-    }
-  },
-  {
-    "challengeId": "06-task-filtering",
-    "challengeName": "Task Filtering",
-    "aiReview": {
-      "challengeId": "06-task-filtering",
-      "timestamp": "2026-08-06T11:55:02.338Z",
-      "score": 88,
-      "feedback": [],
-      "strengths": [
-        "The code is well-structured and follows a consistent naming convention.",
-        "The use of TypeScript and functional components is a good practice.",
-        "The code is relatively free of errors and warnings."
-      ],
-      "improvements": [
-        "The FilterBar component is currently empty and does not render any buttons. It should be updated to include the necessary JSX for the buttons.",
-        "The TaskApp component is handling the filtering logic, but it would be better to create a separate component for this logic to keep the TaskApp component focused on its main responsibilities.",
-        "The code could benefit from more comments and documentation to explain the purpose and behavior of each component and function."
-      ],
-      "readability": 85,
-      "maintainability": 90,
-      "overall": "The code is well-structured and follows good practices, but there are a few areas that need improvement. With some updates to the FilterBar component and the filtering logic, and the addition of more comments and documentation, the code will be even more maintainable and readable."
     }
   },
   {
@@ -497,6 +412,98 @@
       "readability": 85,
       "maintainability": 90,
       "overall": "The code is well-structured and follows good practices, but there are some areas that need improvement. With some refactoring and error handling, the code could be even better."
+    }
+  },
+  {
+    "challengeId": "05-task-deletion",
+    "challengeName": "Task Deletion",
+    "aiReview": {
+      "challengeId": "05-task-deletion",
+      "timestamp": "2026-08-06T12:15:15.817Z",
+      "score": 88,
+      "feedback": [],
+      "strengths": [
+        "The code is well-structured and follows a consistent naming convention.",
+        "The use of interfaces and types is good, making it easier to understand the code and catch potential errors.",
+        "The code is well-commented, making it easier for others to understand the functionality."
+      ],
+      "improvements": [
+        "Some of the function names could be more descriptive. For example, `handleDelete` could be renamed to `onDeleteTask`.",
+        "There are some magic numbers in the code (e.g., `3` in `priorityValue`). These should be replaced with named constants to make the code more readable.",
+        "The `TaskApp` component has a lot of props. Consider breaking it down into smaller components to make it easier to manage and understand."
+      ],
+      "readability": 85,
+      "maintainability": 90,
+      "overall": "The code is well-structured and maintainable, but there are some areas for improvement to make it even better. With some refactoring and attention to detail, this code could be even more readable and efficient."
+    }
+  },
+  {
+    "challengeId": "02-dynamic-task-rendering",
+    "challengeName": "Dynamic Task Rendering",
+    "aiReview": {
+      "challengeId": "02-dynamic-task-rendering",
+      "timestamp": "2026-08-06T12:18:07.030Z",
+      "score": 88,
+      "feedback": [],
+      "strengths": [
+        "The code is well-structured and follows a consistent naming convention.",
+        "The use of TypeScript and functional components is a good practice.",
+        "The code is well-commented, making it easy to understand the functionality."
+      ],
+      "improvements": [
+        "The `TaskCard` component has a lot of props, which can make it harder to manage. Consider breaking it down into smaller components or using a more modular approach.",
+        "The `TaskList` component uses the `??` operator to provide a default value for the `tasks` prop. While this is a good practice, it's not immediately clear what the default value is. Consider adding a comment or a separate constant for the default value.",
+        "The `App` component has a lot of routes defined. Consider breaking it down into smaller components or using a more modular approach to make it easier to manage."
+      ],
+      "readability": 85,
+      "maintainability": 90,
+      "overall": "The code is well-structured and follows good practices, but there are some areas that can be improved to make it more maintainable and efficient."
+    }
+  },
+  {
+    "challengeId": "04-task-completion-toggle",
+    "challengeName": "Task Completion Toggle",
+    "aiReview": {
+      "challengeId": "04-task-completion-toggle",
+      "timestamp": "2026-08-06T12:20:44.384Z",
+      "score": 88,
+      "feedback": [],
+      "strengths": [
+        "The code is well-structured and follows a consistent naming convention.",
+        "The use of interfaces and types is excellent, making the code more maintainable and easier to understand.",
+        "The code is free of any syntax errors and is well-formatted."
+      ],
+      "improvements": [
+        "In the `TaskCard` component, the `isCompleted` variable can be removed and the `completed` prop can be used directly in the JSX. This will make the code more concise and easier to read.",
+        "In the `TaskList` component, the `countText` prop can be removed and the count can be calculated directly in the JSX. This will make the code more efficient and easier to maintain.",
+        "The `TaskApp` component has a lot of props that are not being used. These props can be removed to make the code more concise and easier to maintain."
+      ],
+      "readability": 85,
+      "maintainability": 90,
+      "overall": "The code is well-structured and maintainable, but there are a few areas where it can be improved. With a few minor tweaks, the code can be even more efficient and easier to understand."
+    }
+  },
+  {
+    "challengeId": "06-task-filtering",
+    "challengeName": "Task Filtering",
+    "aiReview": {
+      "challengeId": "06-task-filtering",
+      "timestamp": "2026-08-06T12:21:48.234Z",
+      "score": 83,
+      "feedback": [],
+      "strengths": [
+        "The code is well-structured and follows a consistent naming convention.",
+        "The use of functional components and hooks makes the code easy to understand and maintain.",
+        "The code is well-organized, with each component having its own file and a clear separation of concerns."
+      ],
+      "improvements": [
+        "Some of the variable names could be more descriptive. For example, `filter` could be renamed to `currentFilter` to make it clearer what it represents.",
+        "The `TaskApp` component has a lot of logic and could be broken down into smaller, more manageable components. This would make the code easier to understand and maintain.",
+        "The `filteredTask` variable is not necessary and could be removed. The `tasks` array could be filtered directly in the JSX."
+      ],
+      "readability": 85,
+      "maintainability": 80,
+      "overall": "The code is well-structured and maintainable, but could benefit from some improvements to make it even more readable and efficient. With some refactoring and renaming of variables, the code could be even more effective and easier to understand."
     }
   }
 ]
