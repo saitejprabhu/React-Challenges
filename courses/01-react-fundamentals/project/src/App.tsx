@@ -1,5 +1,5 @@
 import './App.css'
-import { useState } from 'react'
+import {useEffect, useState } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import ChallengeList from './components/ChallengeList'
 import TaskList from './components/TaskList'
@@ -20,6 +20,26 @@ const INITIAL_TASKS: Task[] = [
 function AppContent() {
   const [tasks, setTasks] = useState<Task[]>(INITIAL_TASKS)
 
+  useEffect(()=>{
+    const savedTasks=localStorage.getItem("task-app-tasks");
+
+    if(!savedTasks) return;
+
+    try{
+      const parsedTasks =JSON.parse(savedTasks) as Task[];
+      setTasks(parsedTasks);
+    }catch {
+      alert("invalid data");
+    }
+  },[]);
+
+  useEffect(() =>{
+    localStorage.setItem(
+      "task-app-tasks",
+      JSON.stringify(tasks)
+    );
+  
+  })
   const handleDelete = (id: string | number) => {
     if (window.confirm('Are you sure?')) {
       setTasks((prev) => prev.filter((t) => t.id !== id))
