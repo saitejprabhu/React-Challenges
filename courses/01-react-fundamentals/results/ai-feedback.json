@@ -69,29 +69,6 @@
     }
   },
   {
-    "challengeId": "09-search-functionality",
-    "challengeName": "Search Functionality",
-    "aiReview": {
-      "challengeId": "09-search-functionality",
-      "timestamp": "2026-08-06T11:56:35.747Z",
-      "score": 83,
-      "feedback": [],
-      "strengths": [
-        "The code is well-structured and follows a consistent naming convention.",
-        "The use of TypeScript is a good practice for a large-scale application.",
-        "The code is relatively easy to understand, with clear and concise variable names."
-      ],
-      "improvements": [
-        "The search functionality is not implemented correctly. It should filter tasks by title or description, and the search should be case-insensitive.",
-        "The code could benefit from more comments to explain the purpose of each function and variable.",
-        "The use of a single `TaskApp` component for all challenges is not ideal. It would be better to create separate components for each challenge."
-      ],
-      "readability": 80,
-      "maintainability": 85,
-      "overall": "The code is well-structured and follows good practices, but it needs improvement in the search functionality and component organization."
-    }
-  },
-  {
     "challengeId": "10-useeffect-local-storage",
     "challengeName": "useEffect - Local Storage Persistence",
     "aiReview": {
@@ -504,6 +481,29 @@
       "readability": 85,
       "maintainability": 80,
       "overall": "The code is well-structured and follows good practices. However, there are some areas that could be improved to make the code more maintainable and efficient."
+    }
+  },
+  {
+    "challengeId": "09-search-functionality",
+    "challengeName": "Search Functionality",
+    "aiReview": {
+      "challengeId": "09-search-functionality",
+      "timestamp": "2026-08-07T11:30:50.797Z",
+      "score": 88,
+      "feedback": [],
+      "strengths": [
+        "The code is well-structured and follows a consistent naming convention.",
+        "The use of TypeScript is a good practice, especially for a complex application like this.",
+        "The code is relatively easy to follow, even for a complex task like implementing search functionality."
+      ],
+      "improvements": [
+        "Some of the function names could be more descriptive. For example, `handleToggle` could be renamed to `handleTaskCompletionToggle`.",
+        "There are some repeated code patterns, such as the filtering and sorting of tasks. These could be extracted into separate functions to make the code more maintainable.",
+        "The `FilterBar` component could be made more reusable by accepting a `filterOptions` prop instead of hardcoding the filter options."
+      ],
+      "readability": 85,
+      "maintainability": 90,
+      "overall": "The code is well-structured and follows good practices, but there are some areas for improvement to make it even more maintainable and efficient."
     }
   }
 ]

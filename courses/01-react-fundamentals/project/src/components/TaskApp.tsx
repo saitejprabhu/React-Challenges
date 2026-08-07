@@ -25,6 +25,8 @@ export default function TaskApp(props: TaskAppProps) {
 
   const [editingId, setEditingId] = useState<string | number | null>(null);
 
+  const [searchText, setSearchText] = useState("");
+
   const handleAddTask = (task: Task) => {
     setTasks?.((prev) => [...prev, task]);
   };
@@ -55,13 +57,21 @@ export default function TaskApp(props: TaskAppProps) {
         ? tasks.filter((task) => task.completed)
         : tasks;
 
+  const searchTasks = filteredTasks.filter(
+    (task) =>
+      task.title.toLowerCase().includes(searchText.toLowerCase()) ||
+      task.description.toLowerCase().includes(searchText.toLowerCase()),
+  );
+
   const priorityValue = {
     High: 3,
     Medium: 2,
     Low: 1,
   };
 
-  const sortedTasks = [...filteredTasks];
+  // const sortedTasks = [...filteredTasks];
+  const sortedTasks = [...searchTasks];
+  const totalCount = searchTasks.length;
 
   switch (sortOrder) {
     case "high":
@@ -89,7 +99,7 @@ export default function TaskApp(props: TaskAppProps) {
       break;
   }
 
-  const totalCount = tasks.length;
+  // const totalCount = tasks.length;
 
   const isCompleted = tasks.filter((task) => task.completed).length;
 
@@ -103,6 +113,8 @@ export default function TaskApp(props: TaskAppProps) {
           onFilterChange={setFilter}
           sortOrder={sortOrder}
           setSortOrder={setSortOrder}
+          searchText={searchText}
+          setSearchText={setSearchText}
         />
       )}
 

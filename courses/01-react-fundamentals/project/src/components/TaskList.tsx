@@ -86,6 +86,8 @@ export default function TaskList(props: TaskListProps) {
           />
         ))}
       </section>
+
+      {taskList.length === 0 && <p id="filter-empty-message">No task found</p>}
     </>
   );
 }
