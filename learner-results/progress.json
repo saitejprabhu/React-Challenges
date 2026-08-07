@@ -1,9 +1,9 @@
 {
-  "lastUpdated": "2026-08-06T12:21:52.266Z",
+  "lastUpdated": "2026-08-07T10:37:28.683Z",
   "pathway": {
     "name": "Modern React Engineer",
     "version": "1.0.0",
-    "overallScore": 28.1,
+    "overallScore": 28.2,
     "completionPercentage": 32.1,
     "badgeLevel": "none",
     "totalChallenges": 53,
@@ -13,7 +13,7 @@
     "01-react-fundamentals": {
       "courseId": "01-react-fundamentals",
       "courseName": "React Fundamentals",
-      "averageScore": 85.1,
+      "averageScore": 85.5,
       "completionPercentage": 73.9,
       "badgeLevel": "bronze",
       "totalChallenges": 23,
@@ -38,15 +38,15 @@
           "challengeId": "02-dynamic-task-rendering",
           "challengeName": "Dynamic Task Rendering",
           "passed": true,
-          "score": 92.2,
-          "lastRun": "2026-08-06T12:16:40.677Z",
+          "score": 91.45,
+          "lastRun": "2026-08-07T10:36:21.427Z",
           "scores": {
             "functionalTests": 100,
             "codeQuality": 100,
             "architecture": 100,
             "bestPractices": 100,
             "e2eTests": 60,
-            "aiReview": 88
+            "aiReview": 83
           }
         },
         "03-adding-new-tasks": {
@@ -68,14 +68,14 @@
           "challengeId": "04-task-completion-toggle",
           "challengeName": "Task Completion Toggle",
           "passed": true,
-          "score": 86.95,
-          "lastRun": "2026-08-06T12:18:53.736Z",
+          "score": 98.2,
+          "lastRun": "2026-08-07T10:33:13.538Z",
           "scores": {
             "functionalTests": 100,
             "codeQuality": 100,
             "architecture": 100,
             "bestPractices": 100,
-            "e2eTests": 25,
+            "e2eTests": 100,
             "aiReview": 88
           }
         },
@@ -129,7 +129,7 @@
           "challengeName": "Task Editing",
           "passed": true,
           "score": 98.2,
-          "lastRun": "2026-08-06T11:55:27.792Z",
+          "lastRun": "2026-08-07T10:19:12.126Z",
           "scores": {
             "functionalTests": 100,
             "codeQuality": 100,

@@ -69,29 +69,6 @@
     }
   },
   {
-    "challengeId": "08-task-editing",
-    "challengeName": "Task Editing",
-    "aiReview": {
-      "challengeId": "08-task-editing",
-      "timestamp": "2026-08-06T11:55:48.273Z",
-      "score": 88,
-      "feedback": [],
-      "strengths": [
-        "The code is well-structured and follows a consistent naming convention.",
-        "The use of TypeScript and functional components makes the code more maintainable and scalable.",
-        "The code is well-organized, with each component having its own file and clear responsibilities."
-      ],
-      "improvements": [
-        "Some of the component props could be more descriptive, especially in the TaskCard component.",
-        "The TaskApp component has a lot of props, which could be broken down into smaller, more manageable components.",
-        "The use of a single state variable for all tasks could be replaced with a more scalable solution, such as a reducer or a separate state management library."
-      ],
-      "readability": 85,
-      "maintainability": 90,
-      "overall": "The code is well-structured and maintainable, with a good balance between simplicity and scalability. However, there are some areas that could be improved to make the code even more robust and efficient."
-    }
-  },
-  {
     "challengeId": "09-search-functionality",
     "challengeName": "Search Functionality",
     "aiReview": {
@@ -438,52 +415,6 @@
     }
   },
   {
-    "challengeId": "02-dynamic-task-rendering",
-    "challengeName": "Dynamic Task Rendering",
-    "aiReview": {
-      "challengeId": "02-dynamic-task-rendering",
-      "timestamp": "2026-08-06T12:18:07.030Z",
-      "score": 88,
-      "feedback": [],
-      "strengths": [
-        "The code is well-structured and follows a consistent naming convention.",
-        "The use of TypeScript and functional components is a good practice.",
-        "The code is well-commented, making it easy to understand the functionality."
-      ],
-      "improvements": [
-        "The `TaskCard` component has a lot of props, which can make it harder to manage. Consider breaking it down into smaller components or using a more modular approach.",
-        "The `TaskList` component uses the `??` operator to provide a default value for the `tasks` prop. While this is a good practice, it's not immediately clear what the default value is. Consider adding a comment or a separate constant for the default value.",
-        "The `App` component has a lot of routes defined. Consider breaking it down into smaller components or using a more modular approach to make it easier to manage."
-      ],
-      "readability": 85,
-      "maintainability": 90,
-      "overall": "The code is well-structured and follows good practices, but there are some areas that can be improved to make it more maintainable and efficient."
-    }
-  },
-  {
-    "challengeId": "04-task-completion-toggle",
-    "challengeName": "Task Completion Toggle",
-    "aiReview": {
-      "challengeId": "04-task-completion-toggle",
-      "timestamp": "2026-08-06T12:20:44.384Z",
-      "score": 88,
-      "feedback": [],
-      "strengths": [
-        "The code is well-structured and follows a consistent naming convention.",
-        "The use of interfaces and types is excellent, making the code more maintainable and easier to understand.",
-        "The code is free of any syntax errors and is well-formatted."
-      ],
-      "improvements": [
-        "In the `TaskCard` component, the `isCompleted` variable can be removed and the `completed` prop can be used directly in the JSX. This will make the code more concise and easier to read.",
-        "In the `TaskList` component, the `countText` prop can be removed and the count can be calculated directly in the JSX. This will make the code more efficient and easier to maintain.",
-        "The `TaskApp` component has a lot of props that are not being used. These props can be removed to make the code more concise and easier to maintain."
-      ],
-      "readability": 85,
-      "maintainability": 90,
-      "overall": "The code is well-structured and maintainable, but there are a few areas where it can be improved. With a few minor tweaks, the code can be even more efficient and easier to understand."
-    }
-  },
-  {
     "challengeId": "06-task-filtering",
     "challengeName": "Task Filtering",
     "aiReview": {
@@ -504,6 +435,75 @@
       "readability": 85,
       "maintainability": 80,
       "overall": "The code is well-structured and maintainable, but could benefit from some improvements to make it even more readable and efficient. With some refactoring and renaming of variables, the code could be even more effective and easier to understand."
+    }
+  },
+  {
+    "challengeId": "08-task-editing",
+    "challengeName": "Task Editing",
+    "aiReview": {
+      "challengeId": "08-task-editing",
+      "timestamp": "2026-08-07T10:19:29.741Z",
+      "score": 88,
+      "feedback": [],
+      "strengths": [
+        "The code is well-organized and follows a consistent structure.",
+        "The use of TypeScript and functional components is a good practice.",
+        "The code is well-documented with clear and concise comments."
+      ],
+      "improvements": [
+        "Some of the functions in the TaskCard component are quite long and complex. Consider breaking them down into smaller, more manageable functions.",
+        "The TaskApp component has a lot of props and state variables. Consider using a more modular approach to break down the component into smaller, more focused pieces.",
+        "The code could benefit from more unit tests to ensure that it is working as expected."
+      ],
+      "readability": 85,
+      "maintainability": 90,
+      "overall": "The code is well-structured and follows good practices, but could benefit from some refactoring and additional testing to make it more maintainable and efficient."
+    }
+  },
+  {
+    "challengeId": "04-task-completion-toggle",
+    "challengeName": "Task Completion Toggle",
+    "aiReview": {
+      "challengeId": "04-task-completion-toggle",
+      "timestamp": "2026-08-07T10:33:32.496Z",
+      "score": 88,
+      "feedback": [],
+      "strengths": [
+        "The code is well-structured and easy to follow, with clear separation of concerns between components.",
+        "The use of TypeScript and functional components promotes maintainability and scalability.",
+        "The code is well-documented with clear and concise comments."
+      ],
+      "improvements": [
+        "Some of the component props could be more descriptive, especially in the TaskCard component.",
+        "The TaskList component could benefit from a more robust filtering mechanism, rather than relying on a hardcoded array.",
+        "The use of `window.confirm` in the TaskCard component could be replaced with a more robust confirmation mechanism."
+      ],
+      "readability": 85,
+      "maintainability": 90,
+      "overall": "The code is well-organized and maintainable, with a good balance between functionality and readability. However, there are a few areas that could be improved to make the code even more robust and efficient."
+    }
+  },
+  {
+    "challengeId": "02-dynamic-task-rendering",
+    "challengeName": "Dynamic Task Rendering",
+    "aiReview": {
+      "challengeId": "02-dynamic-task-rendering",
+      "timestamp": "2026-08-07T10:37:25.378Z",
+      "score": 83,
+      "feedback": [],
+      "strengths": [
+        "The code is well-structured and follows a consistent naming convention.",
+        "The use of TypeScript is a good practice for a large-scale application.",
+        "The code is well-commented, making it easier to understand the functionality."
+      ],
+      "improvements": [
+        "Some of the function names could be more descriptive. For example, `handleDelete` could be renamed to `handleTaskDeletion`.",
+        "The `TaskCard` component has a lot of props. Consider breaking it down into smaller components to reduce the number of props.",
+        "The `TaskList` component uses the `??` operator to provide a default value for the `tasks` prop. Consider using a more explicit approach, such as using a default value in the component's state."
+      ],
+      "readability": 85,
+      "maintainability": 80,
+      "overall": "The code is well-structured and follows good practices. However, there are some areas that could be improved to make the code more maintainable and efficient."
     }
   }
 ]

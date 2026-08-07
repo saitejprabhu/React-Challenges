@@ -1,4 +1,5 @@
 import TaskCard from "./TaskCard";
+import type { Dispatch, SetStateAction } from "react";
 
 /**
  * Represents a task in the application.
@@ -23,6 +24,12 @@ interface TaskListProps {
   onToggle?: (id: string | number) => void;
   onDelete?: (id: string | number) => void;
   linkToTaskDetail?: boolean;
+
+  onUpdateTask?: (id: string | number, updates: Partial<Task>) => void;
+
+  editingId?: string | number | null;
+
+  setEditingId?: Dispatch<SetStateAction<string | number | null>>;
 }
 
 /**
@@ -56,7 +63,7 @@ const HardCodedTasks: Task[] = [
  * Renders all available task cards.
  */
 export default function TaskList(props: TaskListProps) {
-  const taskList: Task[] = props.tasks ?? HardCodedTasks;
+  const taskList = props.tasks ?? HardCodedTasks;
 
   return (
     <>
@@ -65,14 +72,17 @@ export default function TaskList(props: TaskListProps) {
       <section id="task-list">
         {taskList.map((task) => (
           <TaskCard
-            id={task.id}
             key={task.id}
+            id={task.id}
             title={task.title}
             description={task.description}
             priority={task.priority}
             completed={task.completed}
             onToggle={props.onToggle}
             onDelete={props.onDelete}
+            onUpdateTask={props.onUpdateTask}
+            editingId={props.editingId}
+            setEditingId={props.setEditingId}
           />
         ))}
       </section>
