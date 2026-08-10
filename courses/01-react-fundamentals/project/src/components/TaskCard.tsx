@@ -17,6 +17,7 @@ interface TaskCardProps {
   onUpdateTask?: (id: string | number, updates: Partial<Task>) => void;
   editingId?: string | number | null;
   setEditingId?: Dispatch<SetStateAction<string | number | null>>;
+  dueDate?: string | number;
 }
 
 /**
@@ -30,6 +31,7 @@ export default function TaskCard(props: TaskCardProps) {
   const [localEditing, setLocalEditing] = useState(false);
 
   const isCompleted = props.completed ?? false;
+  const [dueDate, setDueDate] = useState(props.dueDate ?? "");
 
   const isEditing =
     props.editingId !== undefined ? props.editingId === props.id : localEditing;
@@ -38,6 +40,7 @@ export default function TaskCard(props: TaskCardProps) {
     setTitle(props.title);
     setDescription(props.description);
     setPriority(props.priority);
+    setDueDate(props.dueDate ?? "");
 
     if (props.setEditingId) {
       props.setEditingId(props.id);
@@ -61,6 +64,7 @@ export default function TaskCard(props: TaskCardProps) {
       title,
       description,
       priority,
+      dueDate: dueDate || undefined,
     });
 
     stopEditing();
@@ -70,9 +74,32 @@ export default function TaskCard(props: TaskCardProps) {
     setTitle(props.title);
     setDescription(props.description);
     setPriority(props.priority);
+    setDueDate(props.dueDate ?? "");
 
     stopEditing();
   };
+
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+
+  const dueDateValue = props.dueDate ? new Date(props.dueDate) : null;
+
+  if (dueDateValue) {
+    dueDateValue.setHours(0, 0, 0, 0);
+  }
+  const isOverdue =
+    dueDateValue !== null && dueDateValue < today && !isCompleted;
+
+  const isDueToday =
+    dueDateValue !== null && dueDateValue.getTime() === today.getTime();
+
+  const threeDaysFromNow = new Date(today);
+  threeDaysFromNow.setDate(today.getDate() + 3);
+
+  const isDueSoon =
+    dueDateValue !== null &&
+    dueDateValue > today &&
+    dueDateValue <= threeDaysFromNow;
 
   return (
     <article id="task-card" data-completed={isCompleted}>
@@ -126,6 +153,14 @@ export default function TaskCard(props: TaskCardProps) {
         <p>Priority: {props.priority}</p>
       )}
 
+      {isEditing ? (
+        <input
+          type="date"
+          value={dueDate}
+          onChange={(e) => setDueDate(e.target.value)}
+        />
+      ) : null}
+
       <p id="task-category">Category:{props.category ?? "General"}</p>
 
       <div id="task-tags">
@@ -160,6 +195,14 @@ export default function TaskCard(props: TaskCardProps) {
             </button>
           )}
         </>
+      )}
+      {props.dueDate && (
+        <p id="task-due-date" data-overdue={isOverdue ? "true" : "false"}>
+          Due: {new Date(props.dueDate).toLocaleDateString()}
+          {isOverdue && " — Overdue"}
+          {isDueToday && " — Due Today"}
+          {isDueSoon && " — Due Soon"}
+        </p>
       )}
     </article>
   );

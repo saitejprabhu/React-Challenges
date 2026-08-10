@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-08-10T09:15:13.006Z",
+  "lastUpdated": "2026-08-10T11:28:58.533Z",
   "pathway": {
     "name": "Modern React Engineer",
     "version": "1.0.0",
@@ -204,7 +204,7 @@
           "challengeName": "Due Dates and Sorting",
           "passed": true,
           "score": 98.2,
-          "lastRun": "2026-08-06T11:57:48.819Z",
+          "lastRun": "2026-08-10T11:28:36.207Z",
           "scores": {
             "functionalTests": 100,
             "codeQuality": 100,

@@ -91,6 +91,7 @@ export default function TaskList(props: TaskListProps) {
             setEditingId={props.setEditingId}
             category={task.category}
             tags={task.tags}
+            dueDate={task.dueDate}
           />
         ))}
       </section>

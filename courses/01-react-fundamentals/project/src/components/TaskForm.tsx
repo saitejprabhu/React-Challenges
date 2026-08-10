@@ -12,6 +12,7 @@ export default function TaskForm(_props: TaskFormProps) {
   const [error, setError] = useState("");
   const [category, setCategory] = useState("General");
   const [tags, setTags] = useState("");
+  const [dueDate, setDueDate] = useState("");
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -36,6 +37,7 @@ export default function TaskForm(_props: TaskFormProps) {
       completed: false,
       category,
       tags: parsedTags,
+      dueDate: dueDate || undefined,
     };
 
     _props.onAddTask?.(newTask);
@@ -99,6 +101,15 @@ export default function TaskForm(_props: TaskFormProps) {
         value={tags}
         onChange={(e) => setTags(e.target.value)}
       />
+
+      <label>
+        Due Date
+        <input
+          type="date"
+          value={dueDate}
+          onChange={(e) => setDueDate(e.target.value)}
+        />
+      </label>
     </form>
   );
 }

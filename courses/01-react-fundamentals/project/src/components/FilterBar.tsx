@@ -43,6 +43,7 @@ export default function FilterBar(props: FilterBarProps) {
           <option value="high">Priority High to Low</option>
           <option value="low">priority Low to High</option>
           <option value="alpha">Alphabetical</option>
+          <option value="dueDate">Due Date (Soonest First)</option>
         </select>
       </div>
       <div>
