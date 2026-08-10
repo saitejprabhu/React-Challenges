@@ -5607,7 +5607,7 @@
   {
     "challengeId": "16-context-api-theme",
     "challengeName": "Context API - Theme Management",
-    "timestamp": "2026-08-06T11:59:17.491Z",
+    "timestamp": "2026-08-10T19:22:29.737Z",
     "scores": {
       "functionalTests": 100,
       "codeQuality": 96,
@@ -5637,7 +5637,7 @@
               "fullName": " Challenge 16: Context API - Theme Management App should render without crashing",
               "status": "passed",
               "title": "App should render without crashing",
-              "duration": 89,
+              "duration": 82,
               "failureMessages": []
             },
             {
@@ -5648,12 +5648,12 @@
               "fullName": " Challenge 16: Context API - Theme Management App should have main content",
               "status": "passed",
               "title": "App should have main content",
-              "duration": 15,
+              "duration": 14,
               "failureMessages": []
             }
           ],
-          "startTime": 1786017562648,
-          "endTime": 1786017562752,
+          "startTime": 1786389757524,
+          "endTime": 1786389757621,
           "status": "passed",
           "message": "",
           "name": "C:/Users/Saitej/OneDrive/Documents/ReactJS/React/challenge-engine-react/courses/01-react-fundamentals/project/tests/challenge-16.test.tsx"
@@ -5714,22 +5714,22 @@
               "ruleId": "react-refresh/only-export-components",
               "severity": 1,
               "message": "Fast refresh only works when a file only exports components. Move your React context(s) to a separate file.",
-              "line": 11,
+              "line": 17,
               "column": 14,
               "nodeType": "Identifier",
               "messageId": "reactContext",
-              "endLine": 11,
+              "endLine": 17,
               "endColumn": 26
             },
             {
               "ruleId": "react-refresh/only-export-components",
               "severity": 1,
               "message": "Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components.",
-              "line": 22,
+              "line": 51,
               "column": 17,
               "nodeType": "Identifier",
               "messageId": "namedExport",
-              "endLine": 22,
+              "endLine": 51,
               "endColumn": 25
             }
           ],
@@ -5739,7 +5739,7 @@
           "warningCount": 2,
           "fixableErrorCount": 0,
           "fixableWarningCount": 0,
-          "source": "import { createContext, useContext, type ReactNode } from 'react'\r\n\r\nexport type Theme = 'light' | 'dark'\r\n\r\nexport interface ThemeContextValue {\r\n  theme: Theme\r\n  setTheme: (theme: Theme) => void\r\n  toggleTheme: () => void\r\n}\r\n\r\nexport const ThemeContext = createContext<ThemeContextValue | null>(null)\r\n\r\nexport function ThemeProvider({ children }: { children: ReactNode }) {\r\n  const value: ThemeContextValue = {\r\n    theme: 'light',\r\n    setTheme: () => {},\r\n    toggleTheme: () => {},\r\n  }\r\n  return <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>\r\n}\r\n\r\nexport function useTheme(): ThemeContextValue {\r\n  const ctx = useContext(ThemeContext)\r\n  if (!ctx) throw new Error('useTheme must be used within ThemeProvider')\r\n  return ctx\r\n}\r\n",
+          "source": "import {\r\n  createContext,\r\n  useContext,\r\n  useEffect,\r\n  useState,\r\n  type ReactNode,\r\n} from \"react\";\r\n\r\nexport type Theme = \"light\" | \"dark\";\r\n\r\nexport interface ThemeContextValue {\r\n  theme: Theme;\r\n  setTheme: (theme: Theme) => void;\r\n  toggleTheme: () => void;\r\n}\r\n\r\nexport const ThemeContext = createContext<ThemeContextValue | null>(null);\r\n\r\nexport function ThemeProvider({ children }: { children: ReactNode }) {\r\n  const [theme, setTheme] = useState<Theme>(() => {\r\n    const savedTheme = localStorage.getItem(\"task-app-theme\");\r\n\r\n    if (savedTheme === \"dark\" || savedTheme === \"light\") {\r\n      return savedTheme;\r\n    }\r\n\r\n    return \"light\";\r\n  });\r\n\r\n  useEffect(() => {\r\n    localStorage.setItem(\"task-app-theme\", theme);\r\n  }, [theme]);\r\n\r\n  const toggleTheme = () => {\r\n    setTheme((currentTheme) => (currentTheme === \"light\" ? \"dark\" : \"light\"));\r\n  };\r\n\r\n  const value: ThemeContextValue = {\r\n    theme,\r\n    setTheme,\r\n    toggleTheme,\r\n  };\r\n\r\n  return (\r\n    <ThemeContext.Provider value={value}>\r\n      <div data-theme={theme}>{children}</div>\r\n    </ThemeContext.Provider>\r\n  );\r\n}\r\n\r\nexport function useTheme(): ThemeContextValue {\r\n  const ctx = useContext(ThemeContext);\r\n  if (!ctx) throw new Error(\"useTheme must be used within ThemeProvider\");\r\n  return ctx;\r\n}\r\n",
           "usedDeprecatedRules": [
             {
               "ruleId": "no-extra-semi",
@@ -5837,12 +5837,12 @@
                           "workerIndex": 0,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 1629,
+                          "duration": 1922,
                           "errors": [],
                           "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2026-08-06T11:59:34.623Z",
+                          "startTime": "2026-08-10T19:22:51.743Z",
                           "annotations": [],
                           "attachments": []
                         }
@@ -5864,41 +5864,41 @@
     },
     "aiReviewResults": {
       "challengeId": "16-context-api-theme",
-      "timestamp": "2026-08-06T11:59:37.134Z",
+      "timestamp": "2026-08-10T19:22:55.529Z",
       "score": 88,
       "feedback": [],
       "strengths": [
-        "Well-structured code with clear separation of concerns between context and components",
-        "Effective use of TypeScript to ensure type safety and maintainability",
-        "Good use of React hooks to manage state and side effects"
+        "The code is well-structured and follows a consistent naming convention.",
+        "The use of TypeScript and React Context API is well-implemented.",
+        "The code is relatively free of bugs and errors."
       ],
       "improvements": [
-        "Inconsistent naming conventions: Some files use camelCase, while others use PascalCase. It's recommended to stick to a single convention throughout the project.",
-        "Some functions and variables could be extracted into smaller, more focused functions to improve code readability and maintainability.",
-        "The `useTheme` hook could be improved by adding a default value to handle cases where the context is not provided."
+        "Some of the variable names could be more descriptive, especially in the `ThemeContext` file.",
+        "The `useTheme` hook could be improved by adding a default value for the `ctx` variable to avoid the `throw new Error` statement.",
+        "The `ThemeProvider` component could be improved by adding a `theme` prop to allow for customization of the theme."
       ],
       "readability": 85,
       "maintainability": 90,
-      "overall": "The code is well-structured, maintainable, and effectively uses React hooks to manage state and side effects. However, there are some minor improvements that can be made to improve code readability and consistency."
+      "overall": "The code is well-structured and well-implemented, but could benefit from some minor improvements to make it more maintainable and readable."
     },
     "aiResults": {
       "challengeId": "16-context-api-theme",
-      "timestamp": "2026-08-06T11:59:37.134Z",
+      "timestamp": "2026-08-10T19:22:55.529Z",
       "score": 88,
       "feedback": [],
       "strengths": [
-        "Well-structured code with clear separation of concerns between context and components",
-        "Effective use of TypeScript to ensure type safety and maintainability",
-        "Good use of React hooks to manage state and side effects"
+        "The code is well-structured and follows a consistent naming convention.",
+        "The use of TypeScript and React Context API is well-implemented.",
+        "The code is relatively free of bugs and errors."
       ],
       "improvements": [
-        "Inconsistent naming conventions: Some files use camelCase, while others use PascalCase. It's recommended to stick to a single convention throughout the project.",
-        "Some functions and variables could be extracted into smaller, more focused functions to improve code readability and maintainability.",
-        "The `useTheme` hook could be improved by adding a default value to handle cases where the context is not provided."
+        "Some of the variable names could be more descriptive, especially in the `ThemeContext` file.",
+        "The `useTheme` hook could be improved by adding a default value for the `ctx` variable to avoid the `throw new Error` statement.",
+        "The `ThemeProvider` component could be improved by adding a `theme` prop to allow for customization of the theme."
       ],
       "readability": 85,
       "maintainability": 90,
-      "overall": "The code is well-structured, maintainable, and effectively uses React hooks to manage state and side effects. However, there are some minor improvements that can be made to improve code readability and consistency."
+      "overall": "The code is well-structured and well-implemented, but could benefit from some minor improvements to make it more maintainable and readable."
     }
   },
   {

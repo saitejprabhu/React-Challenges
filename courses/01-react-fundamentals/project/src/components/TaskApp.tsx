@@ -10,6 +10,8 @@ import TaskList from "./TaskList";
 import TaskForm from "./TaskForm";
 import FilterBar from "./FilterBar";
 import StatsPanel from "./StatsPanel";
+import { useTheme } from "../contexts/ThemeContext";
+import Button from "./Button";
 
 interface TaskAppProps {
   tasks?: Task[];
@@ -31,6 +33,8 @@ type TaskUpdate = {
 };
 
 export default function TaskApp(props: TaskAppProps) {
+  const { theme, toggleTheme } = useTheme();
+
   const { tasks = [], setTasks, showForm } = props;
 
   const [filter, setFilter] = useState<"all" | "active" | "completed">("all");
@@ -189,6 +193,9 @@ export default function TaskApp(props: TaskAppProps) {
 
   return (
     <>
+      <Button id="theme-toggle" type="button" onClick={toggleTheme}>
+        {theme === "light" ? "Dark Mode" : "Light Mode"}
+      </Button>
       {showForm && <TaskForm onAddTask={handleAddTask} />}
 
       {props.showFilterBar && (
