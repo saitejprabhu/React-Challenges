@@ -69,29 +69,6 @@
     }
   },
   {
-    "challengeId": "11-useeffect-debounced-search",
-    "challengeName": "useEffect - Debounced Search",
-    "aiReview": {
-      "challengeId": "11-useeffect-debounced-search",
-      "timestamp": "2026-08-06T11:57:20.752Z",
-      "score": 88,
-      "feedback": [],
-      "strengths": [
-        "The code is well-structured and follows a consistent naming convention.",
-        "The use of TypeScript and functional components is a good practice.",
-        "The code is well-organized and easy to navigate."
-      ],
-      "improvements": [
-        "The `FilterBar` component is currently an empty component. Consider removing it or adding some content to it.",
-        "In the `TaskApp` component, the `handleDelete` function is not being used. Consider removing it or using it somewhere in the component.",
-        "The `useEffect` hook in the `TaskApp` component could be improved by adding a dependency array to prevent unnecessary re-renders."
-      ],
-      "readability": 85,
-      "maintainability": 90,
-      "overall": "The code is well-structured and follows good practices. However, there are some minor improvements that can be made to make the code more efficient and maintainable."
-    }
-  },
-  {
     "challengeId": "12-categories-and-tags",
     "challengeName": "Categories and Tags",
     "aiReview": {
@@ -135,25 +112,6 @@
       "readability": 85,
       "maintainability": 90,
       "overall": "The code is well-structured and maintainable, but there are some areas that need improvement. With some additional testing and due date handling, this code could be even more robust and reliable."
-    }
-  },
-  {
-    "challengeId": "14-task-statistics-dashboard",
-    "challengeName": "Task Statistics Dashboard",
-    "aiReview": {
-      "challengeId": "14-task-statistics-dashboard",
-      "timestamp": "2026-08-06T11:58:55.121Z",
-      "score": 50,
-      "feedback": [],
-      "strengths": [
-        "Code structure is reasonable"
-      ],
-      "improvements": [
-        "Code structure is reasonable"
-      ],
-      "readability": 50,
-      "maintainability": 50,
-      "overall": "Here's the review of the provided code:\n\n```json\n{\n  \"readability\": 80,\n  \"maintainability\": 85,\n  \"strengths\": [\n    \"The code is well-structured and follows a clear component-based architecture.\",\n    \"The use of TypeScript and functional components is a good practice.\",\n    \"The code is relatively concise and easy to follow.\"\n  ],\n  \"improvements\": [\n    \"The StatsPanel component is currently a no-op and doesn't display any statistics. It should be implemented to display the required statisti"
     }
   },
   {
@@ -442,29 +400,6 @@
     }
   },
   {
-    "challengeId": "02-dynamic-task-rendering",
-    "challengeName": "Dynamic Task Rendering",
-    "aiReview": {
-      "challengeId": "02-dynamic-task-rendering",
-      "timestamp": "2026-08-07T10:37:25.378Z",
-      "score": 83,
-      "feedback": [],
-      "strengths": [
-        "The code is well-structured and follows a consistent naming convention.",
-        "The use of TypeScript is a good practice for a large-scale application.",
-        "The code is well-commented, making it easier to understand the functionality."
-      ],
-      "improvements": [
-        "Some of the function names could be more descriptive. For example, `handleDelete` could be renamed to `handleTaskDeletion`.",
-        "The `TaskCard` component has a lot of props. Consider breaking it down into smaller components to reduce the number of props.",
-        "The `TaskList` component uses the `??` operator to provide a default value for the `tasks` prop. Consider using a more explicit approach, such as using a default value in the component's state."
-      ],
-      "readability": 85,
-      "maintainability": 80,
-      "overall": "The code is well-structured and follows good practices. However, there are some areas that could be improved to make the code more maintainable and efficient."
-    }
-  },
-  {
     "challengeId": "09-search-functionality",
     "challengeName": "Search Functionality",
     "aiReview": {
@@ -508,6 +443,75 @@
       "readability": 80,
       "maintainability": 85,
       "overall": "The code is well-structured and easy to follow, but could benefit from some improvements in terms of code organization and explicit dependency management. With some refactoring and attention to detail, this code could be even more maintainable and efficient."
+    }
+  },
+  {
+    "challengeId": "14-task-statistics-dashboard",
+    "challengeName": "Task Statistics Dashboard",
+    "aiReview": {
+      "challengeId": "14-task-statistics-dashboard",
+      "timestamp": "2026-08-07T12:21:20.925Z",
+      "score": 88,
+      "feedback": [],
+      "strengths": [
+        "The code is well-structured and follows a consistent naming convention.",
+        "The use of functional components and hooks makes the code easy to read and understand.",
+        "The code is well-organized, with each component having its own file and responsibilities."
+      ],
+      "improvements": [
+        "The StatsPanel component is currently empty and doesn't display any statistics. It should be implemented to display the required statistics.",
+        "The TaskApp component has a lot of state variables and event handlers. It might be beneficial to break it down into smaller, more manageable components.",
+        "The code could benefit from more type annotations and interfaces to make it easier to understand and maintain."
+      ],
+      "readability": 85,
+      "maintainability": 90,
+      "overall": "The code is well-structured and follows good practices, but it needs some implementation details to make it functional. With some improvements, it can be even more maintainable and efficient."
+    }
+  },
+  {
+    "challengeId": "02-dynamic-task-rendering",
+    "challengeName": "Dynamic Task Rendering",
+    "aiReview": {
+      "challengeId": "02-dynamic-task-rendering",
+      "timestamp": "2026-08-07T12:33:24.865Z",
+      "score": 88,
+      "feedback": [],
+      "strengths": [
+        "Well-structured code with clear separation of concerns between components.",
+        "Effective use of TypeScript type annotations for better code maintainability.",
+        "Use of functional components and hooks for a more declarative and efficient codebase."
+      ],
+      "improvements": [
+        "Consider adding more descriptive variable names and function names to improve code readability.",
+        "Some functions in the TaskCard component are quite long and complex; consider breaking them down into smaller, more manageable functions.",
+        "The TaskList component uses a hardcoded list of tasks for Challenge 01; consider using a more dynamic approach, such as fetching tasks from an API or using a state management library."
+      ],
+      "readability": 85,
+      "maintainability": 90,
+      "overall": "The codebase is well-structured and maintainable, with a good balance of readability and performance. However, there are some areas for improvement, particularly in terms of code organization and complexity. With some further refactoring and optimization, this codebase has the potential to be highly scalable and efficient."
+    }
+  },
+  {
+    "challengeId": "11-useeffect-debounced-search",
+    "challengeName": "useEffect - Debounced Search",
+    "aiReview": {
+      "challengeId": "11-useeffect-debounced-search",
+      "timestamp": "2026-08-10T07:14:30.272Z",
+      "score": 88,
+      "feedback": [],
+      "strengths": [
+        "The code is well-structured and easy to follow, with clear separation of concerns between components.",
+        "The use of TypeScript and functional components promotes maintainability and scalability.",
+        "The code includes effective use of hooks, such as `useState` and `useEffect`, to manage state and side effects."
+      ],
+      "improvements": [
+        "Some of the component props could be more descriptive, making it easier for other developers to understand their purpose.",
+        "The `debouncedSearch` state could be removed in favor of directly using the `searchText` state in the filtering logic.",
+        "The `useEffect` cleanup function could be simplified by using the `useCallback` hook to memoize the `clearTimeout` function."
+      ],
+      "readability": 85,
+      "maintainability": 90,
+      "overall": "The code is well-organized and effectively uses React hooks to manage state and side effects. With a few minor improvements, it can be even more maintainable and efficient."
     }
   }
 ]

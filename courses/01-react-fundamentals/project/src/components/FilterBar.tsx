@@ -5,6 +5,7 @@ interface FilterBarProps {
   setSearchText: (text: string) => void;
   setSortOrder: (sort: string) => void;
   onFilterChange: (filter: "all" | "active" | "completed") => void;
+  isSearching: boolean;
 }
 export default function FilterBar(props: FilterBarProps) {
   return (
@@ -49,6 +50,7 @@ export default function FilterBar(props: FilterBarProps) {
           value={props.searchText}
           onChange={(e) => props.setSearchText(e.target.value)}
         />
+        {props.isSearching && <p id="searching-indicator">Searching...</p>}
         {props.searchText && (
           <button id="clear-search" onClick={() => props.setSearchText("")}>
             clear Search

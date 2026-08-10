@@ -1,10 +1,10 @@
 {
   "courseId": "01-react-fundamentals",
   "courseName": "React Fundamentals",
-  "lastUpdated": "2026-08-07T11:58:42.541Z",
+  "lastUpdated": "2026-08-10T07:14:31.650Z",
   "totalChallenges": 23,
   "completedChallenges": 17,
-  "averageScore": 86,
+  "averageScore": 86.5,
   "completionPercentage": 73.9,
   "badgeLevel": "bronze",
   "challengeResults": [
@@ -17,7 +17,7 @@
     {
       "challengeId": "02-dynamic-task-rendering",
       "challengeName": "Dynamic Task Rendering",
-      "score": 91.45,
+      "score": 92.2,
       "passed": true
     },
     {
@@ -71,7 +71,7 @@
     {
       "challengeId": "11-useeffect-debounced-search",
       "challengeName": "useEffect - Debounced Search",
-      "score": 93.2,
+      "score": 98.2,
       "passed": true
     },
     {
@@ -89,7 +89,7 @@
     {
       "challengeId": "14-task-statistics-dashboard",
       "challengeName": "Task Statistics Dashboard",
-      "score": 56.825,
+      "score": 62.525000000000006,
       "passed": false
     },
     {

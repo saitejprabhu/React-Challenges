@@ -1,4 +1,4 @@
-import { useState, type Dispatch, type SetStateAction } from "react";
+import { useEffect, useState, type Dispatch, type SetStateAction } from "react";
 import type { Task } from "./TaskList";
 import TaskList from "./TaskList";
 import TaskForm from "./TaskForm";
@@ -26,6 +26,17 @@ export default function TaskApp(props: TaskAppProps) {
   const [editingId, setEditingId] = useState<string | number | null>(null);
 
   const [searchText, setSearchText] = useState("");
+
+  const [debouncedSearch, setDebouncedSearch] = useState("");
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setDebouncedSearch(searchText);
+    }, 300);
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [searchText]);
 
   const handleAddTask = (task: Task) => {
     setTasks?.((prev) => [...prev, task]);
@@ -59,8 +70,8 @@ export default function TaskApp(props: TaskAppProps) {
 
   const searchTasks = filteredTasks.filter(
     (task) =>
-      task.title.toLowerCase().includes(searchText.toLowerCase()) ||
-      task.description.toLowerCase().includes(searchText.toLowerCase()),
+      task.title.toLowerCase().includes(debouncedSearch.toLowerCase()) ||
+      task.description.toLowerCase().includes(debouncedSearch.toLowerCase()),
   );
 
   const priorityValue = {
@@ -115,6 +126,7 @@ export default function TaskApp(props: TaskAppProps) {
           setSortOrder={setSortOrder}
           searchText={searchText}
           setSearchText={setSearchText}
+          isSearching={searchText !== debouncedSearch}
         />
       )}
 

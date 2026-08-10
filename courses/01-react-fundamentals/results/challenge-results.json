@@ -456,16 +456,16 @@
   {
     "challengeId": "02-dynamic-task-rendering",
     "challengeName": "Dynamic Task Rendering",
-    "timestamp": "2026-08-07T10:36:21.427Z",
+    "timestamp": "2026-08-07T12:32:18.713Z",
     "scores": {
       "functionalTests": 100,
       "codeQuality": 100,
       "architecture": 100,
       "bestPractices": 100,
       "e2eTests": 60,
-      "aiReview": 83
+      "aiReview": 88
     },
-    "totalScore": 91.45,
+    "totalScore": 92.2,
     "passed": true,
     "errors": [],
     "warnings": [],
@@ -486,7 +486,7 @@
               "fullName": " Challenge 02: Dynamic Task Rendering should render tasks from tasks prop",
               "status": "passed",
               "title": "should render tasks from tasks prop",
-              "duration": 50,
+              "duration": 46,
               "failureMessages": []
             },
             {
@@ -497,7 +497,7 @@
               "fullName": " Challenge 02: Dynamic Task Rendering should display task count with id task-count",
               "status": "passed",
               "title": "should display task count with id task-count",
-              "duration": 11,
+              "duration": 9,
               "failureMessages": []
             },
             {
@@ -519,12 +519,12 @@
               "fullName": " Challenge 02: Dynamic Task Rendering should use map in TaskList",
               "status": "passed",
               "title": "should use map in TaskList",
-              "duration": 0,
+              "duration": 1,
               "failureMessages": []
             }
           ],
-          "startTime": 1786098984974,
-          "endTime": 1786098985038,
+          "startTime": 1786105943755,
+          "endTime": 1786105943814,
           "status": "passed",
           "message": "",
           "name": "C:/Users/Saitej/OneDrive/Documents/ReactJS/React/challenge-engine-react/courses/01-react-fundamentals/project/tests/challenge-02.test.tsx"
@@ -688,12 +688,12 @@
                           "workerIndex": 0,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 1567,
+                          "duration": 1733,
                           "errors": [],
                           "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2026-08-07T10:36:34.258Z",
+                          "startTime": "2026-08-07T12:32:33.877Z",
                           "annotations": [],
                           "attachments": []
                         }
@@ -722,12 +722,12 @@
                           "workerIndex": 0,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 233,
+                          "duration": 227,
                           "errors": [],
                           "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2026-08-07T10:36:36.057Z",
+                          "startTime": "2026-08-07T12:32:35.913Z",
                           "annotations": [],
                           "attachments": []
                         }
@@ -756,7 +756,7 @@
                           "workerIndex": 0,
                           "parallelIndex": 0,
                           "status": "failed",
-                          "duration": 5267,
+                          "duration": 5229,
                           "error": {
                             "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#task-count')\nExpected substring: \u001b[32m\"Tasks\"\u001b[39m\nReceived string:    \u001b[31m\"0 of 5 completed\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#task-count')\u001b[22m\n\u001b[2m    9 × locator resolved to <p id=\"task-count\">0 of 5 completed</p>\u001b[22m\n\u001b[2m      - unexpected value \"0 of 5 completed\"\u001b[22m\n",
                             "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#task-count')\nExpected substring: \u001b[32m\"Tasks\"\u001b[39m\nReceived string:    \u001b[31m\"0 of 5 completed\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#task-count')\u001b[22m\n\u001b[2m    9 × locator resolved to <p id=\"task-count\">0 of 5 completed</p>\u001b[22m\n\u001b[2m      - unexpected value \"0 of 5 completed\"\u001b[22m\n\n    at C:\\Users\\Saitej\\OneDrive\\Documents\\ReactJS\\React\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\tests\\e2e\\challenge-02.spec.ts:21:27",
@@ -780,7 +780,7 @@
                           "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2026-08-07T10:36:36.317Z",
+                          "startTime": "2026-08-07T12:32:36.158Z",
                           "annotations": [],
                           "attachments": [
                             {
@@ -804,7 +804,7 @@
                           "workerIndex": 1,
                           "parallelIndex": 0,
                           "status": "failed",
-                          "duration": 5427,
+                          "duration": 5378,
                           "error": {
                             "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#task-count')\nExpected substring: \u001b[32m\"Tasks\"\u001b[39m\nReceived string:    \u001b[31m\"0 of 5 completed\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#task-count')\u001b[22m\n\u001b[2m    9 × locator resolved to <p id=\"task-count\">0 of 5 completed</p>\u001b[22m\n\u001b[2m      - unexpected value \"0 of 5 completed\"\u001b[22m\n",
                             "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#task-count')\nExpected substring: \u001b[32m\"Tasks\"\u001b[39m\nReceived string:    \u001b[31m\"0 of 5 completed\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#task-count')\u001b[22m\n\u001b[2m    9 × locator resolved to <p id=\"task-count\">0 of 5 completed</p>\u001b[22m\n\u001b[2m      - unexpected value \"0 of 5 completed\"\u001b[22m\n\n    at C:\\Users\\Saitej\\OneDrive\\Documents\\ReactJS\\React\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\tests\\e2e\\challenge-02.spec.ts:21:27",
@@ -828,7 +828,7 @@
                           "stdout": [],
                           "stderr": [],
                           "retry": 1,
-                          "startTime": "2026-08-07T10:36:44.079Z",
+                          "startTime": "2026-08-07T12:32:43.819Z",
                           "annotations": [],
                           "attachments": [
                             {
@@ -857,7 +857,7 @@
                           "workerIndex": 2,
                           "parallelIndex": 0,
                           "status": "failed",
-                          "duration": 5287,
+                          "duration": 5331,
                           "error": {
                             "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#task-count')\nExpected substring: \u001b[32m\"Tasks\"\u001b[39m\nReceived string:    \u001b[31m\"0 of 5 completed\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#task-count')\u001b[22m\n\u001b[2m    9 × locator resolved to <p id=\"task-count\">0 of 5 completed</p>\u001b[22m\n\u001b[2m      - unexpected value \"0 of 5 completed\"\u001b[22m\n",
                             "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#task-count')\nExpected substring: \u001b[32m\"Tasks\"\u001b[39m\nReceived string:    \u001b[31m\"0 of 5 completed\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#task-count')\u001b[22m\n\u001b[2m    9 × locator resolved to <p id=\"task-count\">0 of 5 completed</p>\u001b[22m\n\u001b[2m      - unexpected value \"0 of 5 completed\"\u001b[22m\n\n    at C:\\Users\\Saitej\\OneDrive\\Documents\\ReactJS\\React\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\tests\\e2e\\challenge-02.spec.ts:21:27",
@@ -881,7 +881,7 @@
                           "stdout": [],
                           "stderr": [],
                           "retry": 2,
-                          "startTime": "2026-08-07T10:36:52.181Z",
+                          "startTime": "2026-08-07T12:32:51.774Z",
                           "annotations": [],
                           "attachments": [
                             {
@@ -926,7 +926,7 @@
                           "workerIndex": 3,
                           "parallelIndex": 0,
                           "status": "failed",
-                          "duration": 5258,
+                          "duration": 5265,
                           "error": {
                             "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#task-count')\nExpected substring: \u001b[32m\"5 Tasks\"\u001b[39m\nReceived string:    \u001b[31m\"0 of 5 completed\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#task-count')\u001b[22m\n\u001b[2m    9 × locator resolved to <p id=\"task-count\">0 of 5 completed</p>\u001b[22m\n\u001b[2m      - unexpected value \"0 of 5 completed\"\u001b[22m\n",
                             "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#task-count')\nExpected substring: \u001b[32m\"5 Tasks\"\u001b[39m\nReceived string:    \u001b[31m\"0 of 5 completed\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#task-count')\u001b[22m\n\u001b[2m    9 × locator resolved to <p id=\"task-count\">0 of 5 completed</p>\u001b[22m\n\u001b[2m      - unexpected value \"0 of 5 completed\"\u001b[22m\n\n    at C:\\Users\\Saitej\\OneDrive\\Documents\\ReactJS\\React\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\tests\\e2e\\challenge-02.spec.ts:25:47",
@@ -950,7 +950,7 @@
                           "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2026-08-07T10:36:59.987Z",
+                          "startTime": "2026-08-07T12:32:59.673Z",
                           "annotations": [],
                           "attachments": [
                             {
@@ -974,7 +974,7 @@
                           "workerIndex": 4,
                           "parallelIndex": 0,
                           "status": "failed",
-                          "duration": 5371,
+                          "duration": 5372,
                           "error": {
                             "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#task-count')\nExpected substring: \u001b[32m\"5 Tasks\"\u001b[39m\nReceived string:    \u001b[31m\"0 of 5 completed\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#task-count')\u001b[22m\n\u001b[2m    9 × locator resolved to <p id=\"task-count\">0 of 5 completed</p>\u001b[22m\n\u001b[2m      - unexpected value \"0 of 5 completed\"\u001b[22m\n",
                             "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#task-count')\nExpected substring: \u001b[32m\"5 Tasks\"\u001b[39m\nReceived string:    \u001b[31m\"0 of 5 completed\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#task-count')\u001b[22m\n\u001b[2m    9 × locator resolved to <p id=\"task-count\">0 of 5 completed</p>\u001b[22m\n\u001b[2m      - unexpected value \"0 of 5 completed\"\u001b[22m\n\n    at C:\\Users\\Saitej\\OneDrive\\Documents\\ReactJS\\React\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\tests\\e2e\\challenge-02.spec.ts:25:47",
@@ -998,7 +998,7 @@
                           "stdout": [],
                           "stderr": [],
                           "retry": 1,
-                          "startTime": "2026-08-07T10:37:07.765Z",
+                          "startTime": "2026-08-07T12:33:07.574Z",
                           "annotations": [],
                           "attachments": [
                             {
@@ -1027,7 +1027,7 @@
                           "workerIndex": 5,
                           "parallelIndex": 0,
                           "status": "failed",
-                          "duration": 5300,
+                          "duration": 5265,
                           "error": {
                             "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#task-count')\nExpected substring: \u001b[32m\"5 Tasks\"\u001b[39m\nReceived string:    \u001b[31m\"0 of 5 completed\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#task-count')\u001b[22m\n\u001b[2m    9 × locator resolved to <p id=\"task-count\">0 of 5 completed</p>\u001b[22m\n\u001b[2m      - unexpected value \"0 of 5 completed\"\u001b[22m\n",
                             "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#task-count')\nExpected substring: \u001b[32m\"5 Tasks\"\u001b[39m\nReceived string:    \u001b[31m\"0 of 5 completed\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#task-count')\u001b[22m\n\u001b[2m    9 × locator resolved to <p id=\"task-count\">0 of 5 completed</p>\u001b[22m\n\u001b[2m      - unexpected value \"0 of 5 completed\"\u001b[22m\n\n    at C:\\Users\\Saitej\\OneDrive\\Documents\\ReactJS\\React\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\tests\\e2e\\challenge-02.spec.ts:25:47",
@@ -1051,7 +1051,7 @@
                           "stdout": [],
                           "stderr": [],
                           "retry": 2,
-                          "startTime": "2026-08-07T10:37:15.998Z",
+                          "startTime": "2026-08-07T12:33:15.608Z",
                           "annotations": [],
                           "attachments": [
                             {
@@ -1096,12 +1096,12 @@
                           "workerIndex": 6,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 777,
+                          "duration": 769,
                           "errors": [],
                           "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2026-08-07T10:37:24.017Z",
+                          "startTime": "2026-08-07T12:33:23.457Z",
                           "annotations": [],
                           "attachments": []
                         }
@@ -1124,41 +1124,41 @@
     },
     "aiReviewResults": {
       "challengeId": "02-dynamic-task-rendering",
-      "timestamp": "2026-08-07T10:37:25.378Z",
-      "score": 83,
+      "timestamp": "2026-08-07T12:33:24.865Z",
+      "score": 88,
       "feedback": [],
       "strengths": [
-        "The code is well-structured and follows a consistent naming convention.",
-        "The use of TypeScript is a good practice for a large-scale application.",
-        "The code is well-commented, making it easier to understand the functionality."
+        "Well-structured code with clear separation of concerns between components.",
+        "Effective use of TypeScript type annotations for better code maintainability.",
+        "Use of functional components and hooks for a more declarative and efficient codebase."
       ],
       "improvements": [
-        "Some of the function names could be more descriptive. For example, `handleDelete` could be renamed to `handleTaskDeletion`.",
-        "The `TaskCard` component has a lot of props. Consider breaking it down into smaller components to reduce the number of props.",
-        "The `TaskList` component uses the `??` operator to provide a default value for the `tasks` prop. Consider using a more explicit approach, such as using a default value in the component's state."
+        "Consider adding more descriptive variable names and function names to improve code readability.",
+        "Some functions in the TaskCard component are quite long and complex; consider breaking them down into smaller, more manageable functions.",
+        "The TaskList component uses a hardcoded list of tasks for Challenge 01; consider using a more dynamic approach, such as fetching tasks from an API or using a state management library."
       ],
       "readability": 85,
-      "maintainability": 80,
-      "overall": "The code is well-structured and follows good practices. However, there are some areas that could be improved to make the code more maintainable and efficient."
+      "maintainability": 90,
+      "overall": "The codebase is well-structured and maintainable, with a good balance of readability and performance. However, there are some areas for improvement, particularly in terms of code organization and complexity. With some further refactoring and optimization, this codebase has the potential to be highly scalable and efficient."
     },
     "aiResults": {
       "challengeId": "02-dynamic-task-rendering",
-      "timestamp": "2026-08-07T10:37:25.378Z",
-      "score": 83,
+      "timestamp": "2026-08-07T12:33:24.865Z",
+      "score": 88,
       "feedback": [],
       "strengths": [
-        "The code is well-structured and follows a consistent naming convention.",
-        "The use of TypeScript is a good practice for a large-scale application.",
-        "The code is well-commented, making it easier to understand the functionality."
+        "Well-structured code with clear separation of concerns between components.",
+        "Effective use of TypeScript type annotations for better code maintainability.",
+        "Use of functional components and hooks for a more declarative and efficient codebase."
       ],
       "improvements": [
-        "Some of the function names could be more descriptive. For example, `handleDelete` could be renamed to `handleTaskDeletion`.",
-        "The `TaskCard` component has a lot of props. Consider breaking it down into smaller components to reduce the number of props.",
-        "The `TaskList` component uses the `??` operator to provide a default value for the `tasks` prop. Consider using a more explicit approach, such as using a default value in the component's state."
+        "Consider adding more descriptive variable names and function names to improve code readability.",
+        "Some functions in the TaskCard component are quite long and complex; consider breaking them down into smaller, more manageable functions.",
+        "The TaskList component uses a hardcoded list of tasks for Challenge 01; consider using a more dynamic approach, such as fetching tasks from an API or using a state management library."
       ],
       "readability": 85,
-      "maintainability": 80,
-      "overall": "The code is well-structured and follows good practices. However, there are some areas that could be improved to make the code more maintainable and efficient."
+      "maintainability": 90,
+      "overall": "The codebase is well-structured and maintainable, with a good balance of readability and performance. However, there are some areas for improvement, particularly in terms of code organization and complexity. With some further refactoring and optimization, this codebase has the potential to be highly scalable and efficient."
     }
   },
   {
@@ -4160,16 +4160,16 @@
   {
     "challengeId": "11-useeffect-debounced-search",
     "challengeName": "useEffect - Debounced Search",
-    "timestamp": "2026-08-06T11:57:01.182Z",
+    "timestamp": "2026-08-10T07:13:59.109Z",
     "scores": {
       "functionalTests": 100,
       "codeQuality": 100,
-      "architecture": 50,
+      "architecture": 100,
       "bestPractices": 100,
       "e2eTests": 100,
       "aiReview": 88
     },
-    "totalScore": 93.2,
+    "totalScore": 98.2,
     "passed": true,
     "errors": [],
     "warnings": [],
@@ -4190,7 +4190,7 @@
               "fullName": " Challenge 11: useEffect - Debounced Search FilterBar should exist for search/debounce integration",
               "status": "passed",
               "title": "FilterBar should exist for search/debounce integration",
-              "duration": 19,
+              "duration": 41,
               "failureMessages": []
             },
             {
@@ -4201,12 +4201,12 @@
               "fullName": " Challenge 11: useEffect - Debounced Search TaskList should render tasks",
               "status": "passed",
               "title": "TaskList should render tasks",
-              "duration": 26,
+              "duration": 21,
               "failureMessages": []
             }
           ],
-          "startTime": 1786017426298,
-          "endTime": 1786017426343,
+          "startTime": 1786346046836,
+          "endTime": 1786346046898,
           "status": "passed",
           "message": "",
           "name": "C:/Users/Saitej/OneDrive/Documents/ReactJS/React/challenge-engine-react/courses/01-react-fundamentals/project/tests/challenge-11.test.tsx"
@@ -4283,14 +4283,13 @@
       ]
     },
     "architectureResults": {
-      "score": 50,
-      "passed": false,
+      "score": 100,
+      "passed": true,
       "patternsFound": [
-        "functionalComponent"
-      ],
-      "patternsMissing": [
+        "functionalComponent",
         "useEffect"
       ],
+      "patternsMissing": [],
       "details": [
         {
           "file": "src/components/FilterBar.tsx",
@@ -4304,20 +4303,18 @@
         {
           "file": "src/components/TaskApp.tsx",
           "patternsFound": [
-            "functionalComponent"
-          ],
-          "patternsMissing": [
+            "functionalComponent",
             "useEffect"
-          ]
+          ],
+          "patternsMissing": []
         },
         {
           "file": "src/App.tsx",
           "patternsFound": [
-            "functionalComponent"
-          ],
-          "patternsMissing": [
+            "functionalComponent",
             "useEffect"
-          ]
+          ],
+          "patternsMissing": []
         }
       ]
     },
@@ -4364,12 +4361,12 @@
                           "workerIndex": 0,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 1620,
+                          "duration": 1737,
                           "errors": [],
                           "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2026-08-06T11:57:18.309Z",
+                          "startTime": "2026-08-10T07:14:27.453Z",
                           "annotations": [],
                           "attachments": []
                         }
@@ -4391,41 +4388,41 @@
     },
     "aiReviewResults": {
       "challengeId": "11-useeffect-debounced-search",
-      "timestamp": "2026-08-06T11:57:20.752Z",
+      "timestamp": "2026-08-10T07:14:30.272Z",
       "score": 88,
       "feedback": [],
       "strengths": [
-        "The code is well-structured and follows a consistent naming convention.",
-        "The use of TypeScript and functional components is a good practice.",
-        "The code is well-organized and easy to navigate."
+        "The code is well-structured and easy to follow, with clear separation of concerns between components.",
+        "The use of TypeScript and functional components promotes maintainability and scalability.",
+        "The code includes effective use of hooks, such as `useState` and `useEffect`, to manage state and side effects."
       ],
       "improvements": [
-        "The `FilterBar` component is currently an empty component. Consider removing it or adding some content to it.",
-        "In the `TaskApp` component, the `handleDelete` function is not being used. Consider removing it or using it somewhere in the component.",
-        "The `useEffect` hook in the `TaskApp` component could be improved by adding a dependency array to prevent unnecessary re-renders."
+        "Some of the component props could be more descriptive, making it easier for other developers to understand their purpose.",
+        "The `debouncedSearch` state could be removed in favor of directly using the `searchText` state in the filtering logic.",
+        "The `useEffect` cleanup function could be simplified by using the `useCallback` hook to memoize the `clearTimeout` function."
       ],
       "readability": 85,
       "maintainability": 90,
-      "overall": "The code is well-structured and follows good practices. However, there are some minor improvements that can be made to make the code more efficient and maintainable."
+      "overall": "The code is well-organized and effectively uses React hooks to manage state and side effects. With a few minor improvements, it can be even more maintainable and efficient."
     },
     "aiResults": {
       "challengeId": "11-useeffect-debounced-search",
-      "timestamp": "2026-08-06T11:57:20.752Z",
+      "timestamp": "2026-08-10T07:14:30.272Z",
       "score": 88,
       "feedback": [],
       "strengths": [
-        "The code is well-structured and follows a consistent naming convention.",
-        "The use of TypeScript and functional components is a good practice.",
-        "The code is well-organized and easy to navigate."
+        "The code is well-structured and easy to follow, with clear separation of concerns between components.",
+        "The use of TypeScript and functional components promotes maintainability and scalability.",
+        "The code includes effective use of hooks, such as `useState` and `useEffect`, to manage state and side effects."
       ],
       "improvements": [
-        "The `FilterBar` component is currently an empty component. Consider removing it or adding some content to it.",
-        "In the `TaskApp` component, the `handleDelete` function is not being used. Consider removing it or using it somewhere in the component.",
-        "The `useEffect` hook in the `TaskApp` component could be improved by adding a dependency array to prevent unnecessary re-renders."
+        "Some of the component props could be more descriptive, making it easier for other developers to understand their purpose.",
+        "The `debouncedSearch` state could be removed in favor of directly using the `searchText` state in the filtering logic.",
+        "The `useEffect` cleanup function could be simplified by using the `useCallback` hook to memoize the `clearTimeout` function."
       ],
       "readability": 85,
       "maintainability": 90,
-      "overall": "The code is well-structured and follows good practices. However, there are some minor improvements that can be made to make the code more efficient and maintainable."
+      "overall": "The code is well-organized and effectively uses React hooks to manage state and side effects. With a few minor improvements, it can be even more maintainable and efficient."
     }
   },
   {
@@ -5028,16 +5025,16 @@
   {
     "challengeId": "14-task-statistics-dashboard",
     "challengeName": "Task Statistics Dashboard",
-    "timestamp": "2026-08-06T11:58:10.987Z",
+    "timestamp": "2026-08-07T12:20:44.685Z",
     "scores": {
       "functionalTests": 33.3,
       "codeQuality": 90,
       "architecture": 66.7,
       "bestPractices": 100,
       "e2eTests": 50,
-      "aiReview": 50
+      "aiReview": 88
     },
-    "totalScore": 56.825,
+    "totalScore": 62.525000000000006,
     "passed": false,
     "errors": [],
     "warnings": [],
@@ -5058,7 +5055,7 @@
               "fullName": " Challenge 14: Task Statistics Dashboard StatsPanel should have id=\"stats-panel\"",
               "status": "failed",
               "title": "StatsPanel should have id=\"stats-panel\"",
-              "duration": 23,
+              "duration": 15,
               "failureMessages": [
                 "\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).toBeInTheDocument()\u001b[22m\n\n\u001b[31mreceived\u001b[39m value must be an HTMLElement or an SVGElement.\n"
               ],
@@ -5075,7 +5072,7 @@
               "fullName": " Challenge 14: Task Statistics Dashboard StatsPanel should display total and completed",
               "status": "failed",
               "title": "StatsPanel should display total and completed",
-              "duration": 10,
+              "duration": 8,
               "failureMessages": [
                 "Unable to find an element with the text: /total:\\s*2/i. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.\n\nIgnored nodes: comments, script, style\n\u001b[36m<body>\u001b[39m\n  \u001b[36m<div />\u001b[39m\n\u001b[36m</body>\u001b[39m"
               ],
@@ -5092,18 +5089,18 @@
               "fullName": " Challenge 14: Task Statistics Dashboard TaskList should render tasks",
               "status": "passed",
               "title": "TaskList should render tasks",
-              "duration": 30,
+              "duration": 15,
               "failureMessages": []
             }
           ],
-          "startTime": 1786017497226,
-          "endTime": 1786017497289,
+          "startTime": 1786105248342,
+          "endTime": 1786105248380,
           "status": "failed",
           "message": "",
           "name": "C:/Users/Saitej/OneDrive/Documents/ReactJS/React/challenge-engine-react/courses/01-react-fundamentals/project/tests/challenge-14.test.tsx"
         }
       ],
-      "error": "Command failed: npx vitest run \"C:\\Users\\Saitej\\OneDrive\\Documents\\ReactJS\\React\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\tests\\challenge-14.test.tsx\" --reporter=json\nnpm warn Unknown env config \"challenge\". This will stop working in the next major version of npm.\n"
+      "error": "Command failed: npx vitest run \"C:\\Users\\Saitej\\OneDrive\\Documents\\ReactJS\\React\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\tests\\challenge-14.test.tsx\" --reporter=json"
     },
     "lintResults": {
       "score": 90,
@@ -5242,12 +5239,12 @@
                           "workerIndex": 0,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 1624,
+                          "duration": 1514,
                           "errors": [],
                           "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2026-08-06T11:58:29.202Z",
+                          "startTime": "2026-08-07T12:20:57.198Z",
                           "annotations": [],
                           "attachments": []
                         }
@@ -5276,7 +5273,7 @@
                           "workerIndex": 0,
                           "parallelIndex": 0,
                           "status": "failed",
-                          "duration": 5277,
+                          "duration": 5195,
                           "error": {
                             "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#stats-panel')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#stats-panel')\u001b[22m\n",
                             "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#stats-panel')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#stats-panel')\u001b[22m\n\n    at C:\\Users\\Saitej\\OneDrive\\Documents\\ReactJS\\React\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\tests\\e2e\\challenge-14.spec.ts:14:25",
@@ -5300,7 +5297,7 @@
                           "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2026-08-06T11:58:31.169Z",
+                          "startTime": "2026-08-07T12:20:58.930Z",
                           "annotations": [],
                           "attachments": [
                             {
@@ -5324,7 +5321,7 @@
                           "workerIndex": 1,
                           "parallelIndex": 0,
                           "status": "failed",
-                          "duration": 5498,
+                          "duration": 5345,
                           "error": {
                             "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#stats-panel')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#stats-panel')\u001b[22m\n",
                             "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#stats-panel')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#stats-panel')\u001b[22m\n\n    at C:\\Users\\Saitej\\OneDrive\\Documents\\ReactJS\\React\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\tests\\e2e\\challenge-14.spec.ts:14:25",
@@ -5348,7 +5345,7 @@
                           "stdout": [],
                           "stderr": [],
                           "retry": 1,
-                          "startTime": "2026-08-06T11:58:39.451Z",
+                          "startTime": "2026-08-07T12:21:06.470Z",
                           "annotations": [],
                           "attachments": [
                             {
@@ -5377,7 +5374,7 @@
                           "workerIndex": 2,
                           "parallelIndex": 0,
                           "status": "failed",
-                          "duration": 5351,
+                          "duration": 5246,
                           "error": {
                             "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#stats-panel')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#stats-panel')\u001b[22m\n",
                             "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#stats-panel')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#stats-panel')\u001b[22m\n\n    at C:\\Users\\Saitej\\OneDrive\\Documents\\ReactJS\\React\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\tests\\e2e\\challenge-14.spec.ts:14:25",
@@ -5401,7 +5398,7 @@
                           "stdout": [],
                           "stderr": [],
                           "retry": 2,
-                          "startTime": "2026-08-06T11:58:48.328Z",
+                          "startTime": "2026-08-07T12:21:14.439Z",
                           "annotations": [],
                           "attachments": [
                             {
@@ -5435,38 +5432,46 @@
           ]
         }
       ],
-      "error": "Command failed: npx playwright test \"tests/e2e/challenge-14.spec.ts\" --reporter=json\nnpm warn Unknown env config \"challenge\". This will stop working in the next major version of npm.\n",
+      "error": "Command failed: npx playwright test \"tests/e2e/challenge-14.spec.ts\" --reporter=json",
       "passed": false
     },
     "aiReviewResults": {
       "challengeId": "14-task-statistics-dashboard",
-      "timestamp": "2026-08-06T11:58:55.121Z",
-      "score": 50,
+      "timestamp": "2026-08-07T12:21:20.925Z",
+      "score": 88,
       "feedback": [],
       "strengths": [
-        "Code structure is reasonable"
+        "The code is well-structured and follows a consistent naming convention.",
+        "The use of functional components and hooks makes the code easy to read and understand.",
+        "The code is well-organized, with each component having its own file and responsibilities."
       ],
       "improvements": [
-        "Code structure is reasonable"
+        "The StatsPanel component is currently empty and doesn't display any statistics. It should be implemented to display the required statistics.",
+        "The TaskApp component has a lot of state variables and event handlers. It might be beneficial to break it down into smaller, more manageable components.",
+        "The code could benefit from more type annotations and interfaces to make it easier to understand and maintain."
       ],
-      "readability": 50,
-      "maintainability": 50,
-      "overall": "Here's the review of the provided code:\n\n```json\n{\n  \"readability\": 80,\n  \"maintainability\": 85,\n  \"strengths\": [\n    \"The code is well-structured and follows a clear component-based architecture.\",\n    \"The use of TypeScript and functional components is a good practice.\",\n    \"The code is relatively concise and easy to follow.\"\n  ],\n  \"improvements\": [\n    \"The StatsPanel component is currently a no-op and doesn't display any statistics. It should be implemented to display the required statisti"
+      "readability": 85,
+      "maintainability": 90,
+      "overall": "The code is well-structured and follows good practices, but it needs some implementation details to make it functional. With some improvements, it can be even more maintainable and efficient."
     },
     "aiResults": {
       "challengeId": "14-task-statistics-dashboard",
-      "timestamp": "2026-08-06T11:58:55.121Z",
-      "score": 50,
+      "timestamp": "2026-08-07T12:21:20.925Z",
+      "score": 88,
       "feedback": [],
       "strengths": [
-        "Code structure is reasonable"
+        "The code is well-structured and follows a consistent naming convention.",
+        "The use of functional components and hooks makes the code easy to read and understand.",
+        "The code is well-organized, with each component having its own file and responsibilities."
       ],
       "improvements": [
-        "Code structure is reasonable"
+        "The StatsPanel component is currently empty and doesn't display any statistics. It should be implemented to display the required statistics.",
+        "The TaskApp component has a lot of state variables and event handlers. It might be beneficial to break it down into smaller, more manageable components.",
+        "The code could benefit from more type annotations and interfaces to make it easier to understand and maintain."
       ],
-      "readability": 50,
-      "maintainability": 50,
-      "overall": "Here's the review of the provided code:\n\n```json\n{\n  \"readability\": 80,\n  \"maintainability\": 85,\n  \"strengths\": [\n    \"The code is well-structured and follows a clear component-based architecture.\",\n    \"The use of TypeScript and functional components is a good practice.\",\n    \"The code is relatively concise and easy to follow.\"\n  ],\n  \"improvements\": [\n    \"The StatsPanel component is currently a no-op and doesn't display any statistics. It should be implemented to display the required statisti"
+      "readability": 85,
+      "maintainability": 90,
+      "overall": "The code is well-structured and follows good practices, but it needs some implementation details to make it functional. With some improvements, it can be even more maintainable and efficient."
     }
   },
   {

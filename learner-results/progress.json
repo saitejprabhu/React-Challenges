@@ -1,9 +1,9 @@
 {
-  "lastUpdated": "2026-08-07T11:58:44.323Z",
+  "lastUpdated": "2026-08-10T07:14:34.170Z",
   "pathway": {
     "name": "Modern React Engineer",
     "version": "1.0.0",
-    "overallScore": 28.4,
+    "overallScore": 28.5,
     "completionPercentage": 32.1,
     "badgeLevel": "none",
     "totalChallenges": 53,
@@ -13,7 +13,7 @@
     "01-react-fundamentals": {
       "courseId": "01-react-fundamentals",
       "courseName": "React Fundamentals",
-      "averageScore": 86,
+      "averageScore": 86.5,
       "completionPercentage": 73.9,
       "badgeLevel": "bronze",
       "totalChallenges": 23,
@@ -38,15 +38,15 @@
           "challengeId": "02-dynamic-task-rendering",
           "challengeName": "Dynamic Task Rendering",
           "passed": true,
-          "score": 91.45,
-          "lastRun": "2026-08-07T10:36:21.427Z",
+          "score": 92.2,
+          "lastRun": "2026-08-07T12:32:18.713Z",
           "scores": {
             "functionalTests": 100,
             "codeQuality": 100,
             "architecture": 100,
             "bestPractices": 100,
             "e2eTests": 60,
-            "aiReview": 83
+            "aiReview": 88
           }
         },
         "03-adding-new-tasks": {
@@ -173,12 +173,12 @@
           "challengeId": "11-useeffect-debounced-search",
           "challengeName": "useEffect - Debounced Search",
           "passed": true,
-          "score": 93.2,
-          "lastRun": "2026-08-06T11:57:01.182Z",
+          "score": 98.2,
+          "lastRun": "2026-08-10T07:13:59.109Z",
           "scores": {
             "functionalTests": 100,
             "codeQuality": 100,
-            "architecture": 50,
+            "architecture": 100,
             "bestPractices": 100,
             "e2eTests": 100,
             "aiReview": 88
@@ -218,15 +218,15 @@
           "challengeId": "14-task-statistics-dashboard",
           "challengeName": "Task Statistics Dashboard",
           "passed": false,
-          "score": 56.825,
-          "lastRun": "2026-08-06T11:58:10.987Z",
+          "score": 62.525000000000006,
+          "lastRun": "2026-08-07T12:20:44.685Z",
           "scores": {
             "functionalTests": 33.3,
             "codeQuality": 90,
             "architecture": 66.7,
             "bestPractices": 100,
             "e2eTests": 50,
-            "aiReview": 50
+            "aiReview": 88
           }
         },
         "15-component-organization": {
