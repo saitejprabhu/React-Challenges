@@ -1,6 +1,7 @@
 import { useState } from "react";
 import type { Task } from "./TaskList";
-
+import Button from "./Button";
+import FormInput from "./FormInput";
 interface TaskFormProps {
   onAddTask?: (task: Task) => void;
 }
@@ -53,21 +54,25 @@ export default function TaskForm(_props: TaskFormProps) {
     <form onSubmit={handleSubmit}>
       <div>
         <label htmlFor="task-title">Title</label>
-        <input
-          id="task-title"
-          type="text"
-          value={title}
-          onChange={(e) => setTitle(e.target.value)}
-        />
+       <FormInput
+  label="Title"
+  id="task-title"
+  value={title}
+  onChange={(e) => setTitle(e.target.value)}
+  error={error}
+/>
+<p id="task-form-error">{error}</p>
       </div>
 
       <div>
         <label htmlFor="task-description">Description</label>
-        <textarea
-          id="task-description"
-          value={description}
-          onChange={(e) => setDescription(e.target.value)}
-        />
+       <FormInput
+  label="Description"
+  id="task-description"
+  value={description}
+  onChange={(e) => setDescription(e.target.value)}
+  textarea
+/>
       </div>
 
       <div>
@@ -87,7 +92,9 @@ export default function TaskForm(_props: TaskFormProps) {
 
       <p id="task-form-error">{error}</p>
 
-      <button type="submit">Add Task</button>
+     <Button type="submit" variant="primary">
+  Add Task
+</Button>
 
       <select value={category} onChange={(e) => setCategory(e.target.value)}>
         <option value="General">General</option>

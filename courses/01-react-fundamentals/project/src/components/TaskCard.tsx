@@ -1,3 +1,6 @@
+import Button from "./Button";
+import Badge from "./Badge";
+import StatusIndicator from "./StatusIndicator";
 import { useState, type Dispatch, type SetStateAction } from "react";
 import type { Task } from "./TaskList";
 
@@ -150,7 +153,9 @@ export default function TaskCard(props: TaskCardProps) {
           <option value="High">High</option>
         </select>
       ) : (
-        <p>Priority: {props.priority}</p>
+        <p>
+  Priority: <Badge variant="priority">{props.priority}</Badge>
+</p>
       )}
 
       {isEditing ? (
@@ -161,47 +166,65 @@ export default function TaskCard(props: TaskCardProps) {
         />
       ) : null}
 
-      <p id="task-category">Category:{props.category ?? "General"}</p>
+      <p id="task-category">
+  Category:{" "}
+  <Badge variant="category">
+    {props.category ?? "General"}
+  </Badge>
+</p>
 
       <div id="task-tags">
-        {(props.tags ?? []).map((tag) => (
-          <span key={tag} data-tag={tag}>
-            {tag}
-          </span>
-        ))}
-      </div>
+  {(props.tags ?? []).map((tag) => (
+    <Badge key={tag} variant="tag">
+      {tag}
+    </Badge>
+  ))}
+</div>
 
-      <p>{isCompleted ? "Completed" : "Not Completed"}</p>
+      <p>
+  {isCompleted ? (
+    <StatusIndicator status="completed" />
+  ) : (
+    "Not Completed"
+  )}
+</p>
 
       {isEditing ? (
         <>
-          <button onClick={handleSave}>Save</button>
+         <Button onClick={handleSave} variant="primary">
+  Save
+</Button>
 
-          <button onClick={handleCancel}>Cancel</button>
+         <Button onClick={handleCancel} variant="secondary">
+  Cancel
+</Button>
         </>
       ) : (
         <>
-          <button onClick={startEditing}>Edit</button>
+          <Button onClick={startEditing} variant="secondary">
+  Edit
+</Button>
 
           {props.onDelete && (
-            <button
-              onClick={() => {
-                if (window.confirm("Are you sure?")) {
-                  props.onDelete?.(props.id);
-                }
-              }}
-            >
-              Delete
-            </button>
+            <Button
+  variant="danger"
+  onClick={() => {
+    if (window.confirm("Are you sure?")) {
+      props.onDelete?.(props.id);
+    }
+  }}
+>
+  Delete
+</Button>
           )}
         </>
       )}
       {props.dueDate && (
         <p id="task-due-date" data-overdue={isOverdue ? "true" : "false"}>
           Due: {new Date(props.dueDate).toLocaleDateString()}
-          {isOverdue && " — Overdue"}
-          {isDueToday && " — Due Today"}
-          {isDueSoon && " — Due Soon"}
+         {isOverdue && <StatusIndicator status="overdue" />}
+{isDueToday && <StatusIndicator status="due-today" />}
+{isDueSoon && <StatusIndicator status="due-soon" />}
         </p>
       )}
     </article>
