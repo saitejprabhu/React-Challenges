@@ -6,6 +6,9 @@ interface FilterBarProps {
   setSortOrder: (sort: string) => void;
   onFilterChange: (filter: "all" | "active" | "completed") => void;
   isSearching: boolean;
+  categories: string[];
+  category: string;
+  onCategoryChange: (category: string) => void;
 }
 export default function FilterBar(props: FilterBarProps) {
   return (
@@ -57,6 +60,18 @@ export default function FilterBar(props: FilterBarProps) {
           </button>
         )}
       </div>
+
+      <select
+        value={props.category}
+        onChange={(e) => props.onCategoryChange(e.target.value)}
+      >
+        <option value="all">All categories</option>
+        {props.categories.map((category) => (
+          <option value={category} key={category}>
+            {category}
+          </option>
+        ))}
+      </select>
     </>
   );
 }

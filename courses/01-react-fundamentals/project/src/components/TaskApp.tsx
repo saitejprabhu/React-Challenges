@@ -14,7 +14,14 @@ interface TaskAppProps {
   showStatsPanel?: boolean;
   onDelete?: (id: string | number) => void;
   linkToTaskDetail?: boolean;
+  onUpdateTask?: (id: string | number, updates: TaskUpdate) => void;
 }
+
+type TaskUpdate = {
+  title: string;
+  description: string;
+  priority: "Low" | "Medium" | "High";
+};
 
 export default function TaskApp(props: TaskAppProps) {
   const { tasks = [], setTasks, showForm } = props;
@@ -28,6 +35,12 @@ export default function TaskApp(props: TaskAppProps) {
   const [searchText, setSearchText] = useState("");
 
   const [debouncedSearch, setDebouncedSearch] = useState("");
+
+  const [category, setCategory] = useState("all");
+
+  const categories = [
+    ...new Set(tasks.map((task) => task.category).filter(Boolean)),
+  ];
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -55,7 +68,11 @@ export default function TaskApp(props: TaskAppProps) {
     );
   };
 
-  const handleUpdateTask = (id: string | number, updates: Partial<Task>) => {
+  type TaskUpdate = Partial<
+    Pick<Task, "title" | "description" | "priority" | "category" | "tags">
+  >;
+
+  const handleUpdateTask = (id: string | number, updates: TaskUpdate) => {
     setTasks?.((prev) =>
       prev.map((task) => (task.id === id ? { ...task, ...updates } : task)),
     );
@@ -68,7 +85,12 @@ export default function TaskApp(props: TaskAppProps) {
         ? tasks.filter((task) => task.completed)
         : tasks;
 
-  const searchTasks = filteredTasks.filter(
+  const categoryFilteredTasks =
+    category === "all"
+      ? filteredTasks
+      : filteredTasks.filter((task) => task.category === category);
+
+  const searchTasks = categoryFilteredTasks.filter(
     (task) =>
       task.title.toLowerCase().includes(debouncedSearch.toLowerCase()) ||
       task.description.toLowerCase().includes(debouncedSearch.toLowerCase()),
@@ -82,7 +104,7 @@ export default function TaskApp(props: TaskAppProps) {
 
   // const sortedTasks = [...filteredTasks];
   const sortedTasks = [...searchTasks];
-  const totalCount = searchTasks.length;
+  // const totalCount = searchTasks.length;
 
   switch (sortOrder) {
     case "high":
@@ -110,9 +132,10 @@ export default function TaskApp(props: TaskAppProps) {
       break;
   }
 
-  // const totalCount = tasks.length;
+  const showingCount = searchTasks.length;
+  const totalCount = tasks.length;
 
-  const isCompleted = tasks.filter((task) => task.completed).length;
+  // const isCompleted = tasks.filter((task) => task.completed).length;
 
   return (
     <>
@@ -127,6 +150,9 @@ export default function TaskApp(props: TaskAppProps) {
           searchText={searchText}
           setSearchText={setSearchText}
           isSearching={searchText !== debouncedSearch}
+          categories={categories}
+          category={category}
+          onCategoryChange={setCategory}
         />
       )}
 
@@ -134,7 +160,7 @@ export default function TaskApp(props: TaskAppProps) {
         tasks={sortedTasks}
         onToggle={handleToggle}
         onDelete={props.onDelete}
-        countText={`${isCompleted} of ${totalCount} completed`}
+        countText={`Showing ${showingCount} of ${totalCount} tasks`}
         onUpdateTask={handleUpdateTask}
         editingId={editingId}
         setEditingId={setEditingId}

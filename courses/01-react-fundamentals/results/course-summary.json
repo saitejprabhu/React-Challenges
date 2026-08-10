@@ -1,7 +1,7 @@
 {
   "courseId": "01-react-fundamentals",
   "courseName": "React Fundamentals",
-  "lastUpdated": "2026-08-10T07:14:31.650Z",
+  "lastUpdated": "2026-08-10T09:15:12.038Z",
   "totalChallenges": 23,
   "completedChallenges": 17,
   "averageScore": 86.5,
@@ -77,7 +77,7 @@
     {
       "challengeId": "12-categories-and-tags",
       "challengeName": "Categories and Tags",
-      "score": 97.45,
+      "score": 98.2,
       "passed": true
     },
     {

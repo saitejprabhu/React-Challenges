@@ -10,9 +10,16 @@ export default function TaskForm(_props: TaskFormProps) {
   const [description, setDescription] = useState("");
   const [priority, setPriority] = useState<"Low" | "Medium" | "High">("Low");
   const [error, setError] = useState("");
+  const [category, setCategory] = useState("General");
+  const [tags, setTags] = useState("");
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
+    const parsedTags = tags
+      .split(",")
+      .map((tag) => tag.trim())
+      .filter(Boolean);
 
     if (!title.trim()) {
       setError("Title is required");
@@ -27,6 +34,8 @@ export default function TaskForm(_props: TaskFormProps) {
       description,
       priority,
       completed: false,
+      category,
+      tags: parsedTags,
     };
 
     _props.onAddTask?.(newTask);
@@ -34,6 +43,8 @@ export default function TaskForm(_props: TaskFormProps) {
     setTitle("");
     setDescription("");
     setPriority("Low");
+    setCategory("General");
+    setTags("");
   };
 
   return (
@@ -75,6 +86,19 @@ export default function TaskForm(_props: TaskFormProps) {
       <p id="task-form-error">{error}</p>
 
       <button type="submit">Add Task</button>
+
+      <select value={category} onChange={(e) => setCategory(e.target.value)}>
+        <option value="General">General</option>
+        <option value="Work">Work</option>
+        <option value="Personal">Personal</option>
+      </select>
+
+      <input
+        type="text"
+        placeholder="Tags (comma Seperated)"
+        value={tags}
+        onChange={(e) => setTags(e.target.value)}
+      />
     </form>
   );
 }
