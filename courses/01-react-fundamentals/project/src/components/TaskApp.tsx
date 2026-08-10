@@ -1,8 +1,15 @@
-import { useEffect, useState, type Dispatch, type SetStateAction } from "react";
+import {
+  useEffect,
+  useState,
+  useMemo,
+  type Dispatch,
+  type SetStateAction,
+} from "react";
 import type { Task } from "./TaskList";
 import TaskList from "./TaskList";
 import TaskForm from "./TaskForm";
 import FilterBar from "./FilterBar";
+import StatsPanel from "./StatsPanel";
 
 interface TaskAppProps {
   tasks?: Task[];
@@ -41,6 +48,39 @@ export default function TaskApp(props: TaskAppProps) {
   const categories = [
     ...new Set(tasks.map((task) => task.category).filter(Boolean)),
   ];
+
+  const stats = useMemo(() => {
+    const total = tasks.length;
+
+    const completed = tasks.filter((task) => task.completed).length;
+
+    const active = tasks.filter((task) => !task.completed).length;
+
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+
+    const overdue = tasks.filter((task) => {
+      if (task.completed || !task.dueDate) {
+        return false;
+      }
+
+      const dueDate = new Date(task.dueDate);
+      dueDate.setHours(0, 0, 0, 0);
+
+      return dueDate < today;
+    }).length;
+
+    const completedPercentage =
+      total === 0 ? 0 : Math.round((completed / total) * 100);
+
+    return {
+      total,
+      completed,
+      active,
+      overdue,
+      completedPercentage,
+    };
+  }, [tasks]);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -163,6 +203,16 @@ export default function TaskApp(props: TaskAppProps) {
           categories={categories}
           category={category}
           onCategoryChange={setCategory}
+        />
+      )}
+
+      {props.showStatsPanel && (
+        <StatsPanel
+          total={stats.total}
+          completed={stats.completed}
+          active={stats.active}
+          overdue={stats.overdue}
+          completedPercentage={stats.completedPercentage}
         />
       )}
 
