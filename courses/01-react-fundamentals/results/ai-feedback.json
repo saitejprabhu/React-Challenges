@@ -69,22 +69,6 @@
     }
   },
   {
-    "challengeId": "18-usereducer-complex-state",
-    "challengeName": "useReducer - Complex State Management",
-    "aiReview": {
-      "challengeId": "18-usereducer-complex-state",
-      "timestamp": "2026-08-06T12:00:22.919Z",
-      "score": 0,
-      "feedback": [],
-      "strengths": [],
-      "improvements": [],
-      "readability": 0,
-      "maintainability": 0,
-      "overall": "",
-      "error": "Groq API error (429): Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kz67g1cre27rvvjxvyzg9gs2` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Used 4372, Requested 3064. Please try again in 14.36s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing"
-    }
-  },
-  {
     "challengeId": "19-performance-optimization",
     "challengeName": "Performance Optimization",
     "aiReview": {
@@ -512,6 +496,29 @@
       "readability": 85,
       "maintainability": 90,
       "overall": "The code is well-structured and follows good practices, but there are some areas that could be improved for better maintainability and error handling. Overall, the code is a good example of how to use a custom hook for local storage and how to separate concerns in a React application."
+    }
+  },
+  {
+    "challengeId": "18-usereducer-complex-state",
+    "challengeName": "useReducer - Complex State Management",
+    "aiReview": {
+      "challengeId": "18-usereducer-complex-state",
+      "timestamp": "2026-08-11T11:13:44.729Z",
+      "score": 88,
+      "feedback": [],
+      "strengths": [
+        "Effective use of TypeScript and type annotations to ensure code correctness and maintainability.",
+        "Clear separation of concerns between components and reducers, making the codebase easier to understand and maintain.",
+        "Use of functional programming principles, such as immutability and pure functions, to make the code more predictable and easier to reason about."
+      ],
+      "improvements": [
+        "Some functions, such as `handleAddTask` and `handleToggle`, are not using the optional chaining operator (`?.`) to handle potential null or undefined values. This can lead to runtime errors if the `dispatch` function is not provided.",
+        "The `taskReducer` function has a default case that returns the original state. This is not necessary and can be removed to make the code more concise.",
+        "The `TaskApp` component has a lot of state variables and event handlers. Consider breaking this component down into smaller, more focused components to improve maintainability and readability."
+      ],
+      "readability": 85,
+      "maintainability": 90,
+      "overall": "The code is well-structured, maintainable, and follows best practices for React and TypeScript development. However, there are some minor improvements that can be made to make the code even more robust and efficient."
     }
   }
 ]

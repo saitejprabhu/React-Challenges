@@ -1,10 +1,5 @@
-import {
-  useEffect,
-  useState,
-  useMemo,
-  type Dispatch,
-  type SetStateAction,
-} from "react";
+import { useEffect, useState, useMemo } from "react";
+import type { Dispatch } from "react";
 import type { Task } from "./TaskList";
 import TaskList from "./TaskList";
 import TaskForm from "./TaskForm";
@@ -12,11 +7,16 @@ import FilterBar from "./FilterBar";
 import StatsPanel from "./StatsPanel";
 import { useTheme } from "../contexts/ThemeContext";
 import Button from "./Button";
+import {
+  ADD_TASK,
+  UPDATE_TASK,
+  TOGGLE_TASK,
+  TaskAction,
+} from "../reducers/taskReducer";
 
 interface TaskAppProps {
   tasks?: Task[];
-  setTasks?: Dispatch<SetStateAction<Task[]>>;
-  dispatch?: (action: { type: string; payload?: unknown }) => void;
+  dispatch?: Dispatch<TaskAction>;
   showForm?: boolean;
   countFormat?: string;
   showFilterBar?: boolean;
@@ -35,7 +35,7 @@ type TaskUpdate = {
 export default function TaskApp(props: TaskAppProps) {
   const { theme, toggleTheme } = useTheme();
 
-  const { tasks = [], setTasks, showForm } = props;
+  const { tasks = [], showForm } = props;
 
   const [filter, setFilter] = useState<"all" | "active" | "completed">("all");
 
@@ -96,20 +96,16 @@ export default function TaskApp(props: TaskAppProps) {
   }, [searchText]);
 
   const handleAddTask = (task: Task) => {
-    setTasks?.((prev) => [...prev, task]);
+    props.dispatch?.({
+      type: ADD_TASK,
+      payload: task,
+    });
   };
-
   const handleToggle = (id: string | number) => {
-    setTasks?.((prev) =>
-      prev.map((task) =>
-        task.id === id
-          ? {
-              ...task,
-              completed: !task.completed,
-            }
-          : task,
-      ),
-    );
+    props.dispatch?.({
+      type: TOGGLE_TASK,
+      payload: id,
+    });
   };
 
   type TaskUpdate = Partial<
@@ -117,9 +113,13 @@ export default function TaskApp(props: TaskAppProps) {
   >;
 
   const handleUpdateTask = (id: string | number, updates: TaskUpdate) => {
-    setTasks?.((prev) =>
-      prev.map((task) => (task.id === id ? { ...task, ...updates } : task)),
-    );
+    props.dispatch?.({
+      type: UPDATE_TASK,
+      payload: {
+        id,
+        updates,
+      },
+    });
   };
 
   const filteredTasks =
