@@ -6453,17 +6453,17 @@
   {
     "challengeId": "19-performance-optimization",
     "challengeName": "Performance Optimization",
-    "timestamp": "2026-08-06T12:00:25.701Z",
+    "timestamp": "2026-08-11T11:40:08.636Z",
     "scores": {
       "functionalTests": 100,
       "codeQuality": 100,
-      "architecture": 25,
+      "architecture": 100,
       "bestPractices": 100,
       "e2eTests": 100,
-      "aiReview": 0
+      "aiReview": 88
     },
-    "totalScore": 77.5,
-    "passed": false,
+    "totalScore": 98.2,
+    "passed": true,
     "errors": [],
     "warnings": [],
     "testResults": {
@@ -6483,7 +6483,7 @@
               "fullName": " Challenge 19: Performance Optimization TaskCard should render",
               "status": "passed",
               "title": "TaskCard should render",
-              "duration": 41,
+              "duration": 26,
               "failureMessages": []
             },
             {
@@ -6494,12 +6494,12 @@
               "fullName": " Challenge 19: Performance Optimization TaskList should render TaskCards",
               "status": "passed",
               "title": "TaskList should render TaskCards",
-              "duration": 7,
+              "duration": 6,
               "failureMessages": []
             }
           ],
-          "startTime": 1786017631239,
-          "endTime": 1786017631287,
+          "startTime": 1786448411901,
+          "endTime": 1786448411933,
           "status": "passed",
           "message": "",
           "name": "C:/Users/Saitej/OneDrive/Documents/ReactJS/React/challenge-engine-react/courses/01-react-fundamentals/project/tests/challenge-19.test.tsx"
@@ -6596,24 +6596,23 @@
       ]
     },
     "architectureResults": {
-      "score": 25,
-      "passed": false,
+      "score": 100,
+      "passed": true,
       "patternsFound": [
-        "functionalComponent"
-      ],
-      "patternsMissing": [
+        "functionalComponent",
         "React.memo",
         "useCallback",
         "useMemo"
       ],
+      "patternsMissing": [],
       "details": [
         {
           "file": "src/components/TaskCard.tsx",
           "patternsFound": [
-            "functionalComponent"
+            "functionalComponent",
+            "React.memo"
           ],
           "patternsMissing": [
-            "React.memo",
             "useCallback",
             "useMemo"
           ]
@@ -6632,22 +6631,22 @@
         {
           "file": "src/components/TaskApp.tsx",
           "patternsFound": [
-            "functionalComponent"
-          ],
-          "patternsMissing": [
-            "React.memo",
+            "functionalComponent",
             "useCallback",
             "useMemo"
+          ],
+          "patternsMissing": [
+            "React.memo"
           ]
         },
         {
           "file": "src/App.tsx",
           "patternsFound": [
-            "functionalComponent"
+            "functionalComponent",
+            "useCallback"
           ],
           "patternsMissing": [
             "React.memo",
-            "useCallback",
             "useMemo"
           ]
         }
@@ -6696,12 +6695,12 @@
                           "workerIndex": 0,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 1644,
+                          "duration": 1517,
                           "errors": [],
                           "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2026-08-06T12:00:43.621Z",
+                          "startTime": "2026-08-11T11:40:19.203Z",
                           "annotations": [],
                           "attachments": []
                         }
@@ -6723,51 +6722,65 @@
     },
     "aiReviewResults": {
       "challengeId": "19-performance-optimization",
-      "timestamp": "2026-08-06T12:00:46.244Z",
-      "score": 0,
+      "timestamp": "2026-08-11T11:40:21.279Z",
+      "score": 88,
       "feedback": [],
-      "strengths": [],
-      "improvements": [],
-      "readability": 0,
-      "maintainability": 0,
-      "overall": "",
-      "error": "Groq API error (429): Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kz67g1cre27rvvjxvyzg9gs2` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Used 2217, Requested 3844. Please try again in 610ms. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing"
+      "strengths": [
+        "The code is well-structured and follows a consistent naming convention.",
+        "The use of TypeScript and functional components makes the code more maintainable and efficient.",
+        "The code includes clear and concise comments that explain the purpose of each section."
+      ],
+      "improvements": [
+        "Some of the functions and variables could be extracted into separate modules or functions to make the code more modular and reusable.",
+        "The use of `useCallback` and `useMemo` could be more consistent throughout the code to ensure that the memoized values are updated correctly.",
+        "The code could benefit from more extensive testing to ensure that all edge cases are covered."
+      ],
+      "readability": 85,
+      "maintainability": 90,
+      "overall": "The code is well-structured and maintainable, but could benefit from some improvements to make it more modular and efficient. With some additional testing and refactoring, the code could be even more robust and scalable."
     },
     "aiResults": {
       "challengeId": "19-performance-optimization",
-      "timestamp": "2026-08-06T12:00:46.244Z",
-      "score": 0,
+      "timestamp": "2026-08-11T11:40:21.279Z",
+      "score": 88,
       "feedback": [],
-      "strengths": [],
-      "improvements": [],
-      "readability": 0,
-      "maintainability": 0,
-      "overall": "",
-      "error": "Groq API error (429): Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kz67g1cre27rvvjxvyzg9gs2` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Used 2217, Requested 3844. Please try again in 610ms. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing"
+      "strengths": [
+        "The code is well-structured and follows a consistent naming convention.",
+        "The use of TypeScript and functional components makes the code more maintainable and efficient.",
+        "The code includes clear and concise comments that explain the purpose of each section."
+      ],
+      "improvements": [
+        "Some of the functions and variables could be extracted into separate modules or functions to make the code more modular and reusable.",
+        "The use of `useCallback` and `useMemo` could be more consistent throughout the code to ensure that the memoized values are updated correctly.",
+        "The code could benefit from more extensive testing to ensure that all edge cases are covered."
+      ],
+      "readability": 85,
+      "maintainability": 90,
+      "overall": "The code is well-structured and maintainable, but could benefit from some improvements to make it more modular and efficient. With some additional testing and refactoring, the code could be even more robust and scalable."
     }
   },
   {
     "challengeId": "20-error-boundaries",
     "challengeName": "Error Boundaries and Error Handling",
-    "timestamp": "2026-08-06T12:00:47.274Z",
+    "timestamp": "2026-08-11T11:58:59.065Z",
     "scores": {
-      "functionalTests": 25,
+      "functionalTests": 100,
       "codeQuality": 100,
       "architecture": 100,
       "bestPractices": 100,
       "e2eTests": 0,
-      "aiReview": 83
+      "aiReview": 88
     },
-    "totalScore": 56.2,
-    "passed": false,
+    "totalScore": 83.2,
+    "passed": true,
     "errors": [],
     "warnings": [],
     "testResults": {
-      "score": 25,
-      "passed": false,
+      "score": 100,
+      "passed": true,
       "totalTests": 4,
-      "passedTests": 1,
-      "failedTests": 3,
+      "passedTests": 4,
+      "failedTests": 0,
       "details": [
         {
           "assertionResults": [
@@ -6779,7 +6792,7 @@
               "fullName": " Challenge 20: Error Boundaries and Error Handling ErrorBoundary should render children when no error",
               "status": "passed",
               "title": "ErrorBoundary should render children when no error",
-              "duration": 52,
+              "duration": 18,
               "failureMessages": []
             },
             {
@@ -6788,16 +6801,10 @@
                 "Challenge 20: Error Boundaries and Error Handling"
               ],
               "fullName": " Challenge 20: Error Boundaries and Error Handling ErrorBoundary should have fallback with id=\"error-boundary-fallback\" when error caught",
-              "status": "failed",
+              "status": "passed",
               "title": "ErrorBoundary should have fallback with id=\"error-boundary-fallback\" when error caught",
-              "duration": 39,
-              "failureMessages": [
-                "test"
-              ],
-              "location": {
-                "line": 18,
-                "column": 13
-              }
+              "duration": 20,
+              "failureMessages": []
             },
             {
               "ancestorTitles": [
@@ -6805,16 +6812,10 @@
                 "Challenge 20: Error Boundaries and Error Handling"
               ],
               "fullName": " Challenge 20: Error Boundaries and Error Handling ErrorBoundary should have Retry button with id=\"error-retry\"",
-              "status": "failed",
+              "status": "passed",
               "title": "ErrorBoundary should have Retry button with id=\"error-retry\"",
-              "duration": 9,
-              "failureMessages": [
-                "test"
-              ],
-              "location": {
-                "line": 32,
-                "column": 13
-              }
+              "duration": 4,
+              "failureMessages": []
             },
             {
               "ancestorTitles": [
@@ -6822,26 +6823,19 @@
                 "Challenge 20: Error Boundaries and Error Handling"
               ],
               "fullName": " Challenge 20: Error Boundaries and Error Handling Retry button should be clickable",
-              "status": "failed",
+              "status": "passed",
               "title": "Retry button should be clickable",
-              "duration": 9,
-              "failureMessages": [
-                "test"
-              ],
-              "location": {
-                "line": 46,
-                "column": 13
-              }
+              "duration": 98,
+              "failureMessages": []
             }
           ],
-          "startTime": 1786017653628,
-          "endTime": 1786017653737,
-          "status": "failed",
+          "startTime": 1786449542436,
+          "endTime": 1786449542576,
+          "status": "passed",
           "message": "",
           "name": "C:/Users/Saitej/OneDrive/Documents/ReactJS/React/challenge-engine-react/courses/01-react-fundamentals/project/tests/challenge-20.test.tsx"
         }
-      ],
-      "error": "Command failed: npx vitest run \"C:\\Users\\Saitej\\OneDrive\\Documents\\ReactJS\\React\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\tests\\challenge-20.test.tsx\" --reporter=json\nnpm warn Unknown env config \"challenge\". This will stop working in the next major version of npm.\n"
+      ]
     },
     "lintResults": {
       "score": 100,
@@ -6889,6 +6883,26 @@
               "replacedBy": []
             }
           ]
+        },
+        {
+          "filePath": "C:\\Users\\Saitej\\OneDrive\\Documents\\ReactJS\\React\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\src\\hooks\\useLocalStorage.ts",
+          "messages": [],
+          "suppressedMessages": [],
+          "errorCount": 0,
+          "fatalErrorCount": 0,
+          "warningCount": 0,
+          "fixableErrorCount": 0,
+          "fixableWarningCount": 0,
+          "usedDeprecatedRules": [
+            {
+              "ruleId": "no-extra-semi",
+              "replacedBy": []
+            },
+            {
+              "ruleId": "no-mixed-spaces-and-tabs",
+              "replacedBy": []
+            }
+          ]
         }
       ]
     },
@@ -6916,7 +6930,6 @@
         },
         {
           "file": "src/hooks/useLocalStorage.ts",
-          "error": "File does not exist",
           "patternsFound": [],
           "patternsMissing": [
             "functionalComponent"
@@ -6966,10 +6979,10 @@
                           "workerIndex": 0,
                           "parallelIndex": 0,
                           "status": "failed",
-                          "duration": 1641,
+                          "duration": 1546,
                           "error": {
-                            "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#task-list').or(locator('main'))\nExpected: visible\nError: strict mode violation: locator('#task-list').or(locator('main')) resolved to 2 elements:\n    1) <main>…</main> aka getByText('TitleDescriptionPriorityLowMediumHighAdd Task0 of 5 completedFirst')\n    2) <section id=\"task-list\">…</section> aka getByText('First TaskDescription onePriority: HighNot CompletedSecond TaskDescription')\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#task-list').or(locator('main'))\u001b[22m\n",
-                            "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#task-list').or(locator('main'))\nExpected: visible\nError: strict mode violation: locator('#task-list').or(locator('main')) resolved to 2 elements:\n    1) <main>…</main> aka getByText('TitleDescriptionPriorityLowMediumHighAdd Task0 of 5 completedFirst')\n    2) <section id=\"task-list\">…</section> aka getByText('First TaskDescription onePriority: HighNot CompletedSecond TaskDescription')\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#task-list').or(locator('main'))\u001b[22m\n\n    at C:\\Users\\Saitej\\OneDrive\\Documents\\ReactJS\\React\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\tests\\e2e\\challenge-20.spec.ts:11:37",
+                            "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#task-list').or(locator('main'))\nExpected: visible\nError: strict mode violation: locator('#task-list').or(locator('main')) resolved to 2 elements:\n    1) <main>…</main> aka getByText('Dark ModeTitleTitleDescriptionDescriptionPriorityLowMediumHighAdd')\n    2) <section id=\"task-list\">…</section> aka locator('#task-list')\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#task-list').or(locator('main'))\u001b[22m\n",
+                            "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#task-list').or(locator('main'))\nExpected: visible\nError: strict mode violation: locator('#task-list').or(locator('main')) resolved to 2 elements:\n    1) <main>…</main> aka getByText('Dark ModeTitleTitleDescriptionDescriptionPriorityLowMediumHighAdd')\n    2) <section id=\"task-list\">…</section> aka locator('#task-list')\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#task-list').or(locator('main'))\u001b[22m\n\n    at C:\\Users\\Saitej\\OneDrive\\Documents\\ReactJS\\React\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\tests\\e2e\\challenge-20.spec.ts:11:37",
                             "location": {
                               "file": "C:\\Users\\Saitej\\OneDrive\\Documents\\ReactJS\\React\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\tests\\e2e\\challenge-20.spec.ts",
                               "column": 37,
@@ -6984,13 +6997,13 @@
                                 "column": 37,
                                 "line": 11
                               },
-                              "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#task-list').or(locator('main'))\nExpected: visible\nError: strict mode violation: locator('#task-list').or(locator('main')) resolved to 2 elements:\n    1) <main>…</main> aka getByText('TitleDescriptionPriorityLowMediumHighAdd Task0 of 5 completedFirst')\n    2) <section id=\"task-list\">…</section> aka getByText('First TaskDescription onePriority: HighNot CompletedSecond TaskDescription')\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#task-list').or(locator('main'))\u001b[22m\n\n\n   9 |     const taskList = page.locator('#task-list');\n  10 |     const main = page.locator('main');\n> 11 |     await expect(taskList.or(main)).toBeVisible();\n     |                                     ^\n  12 |   });\n  13 | });\n  14 |\n    at C:\\Users\\Saitej\\OneDrive\\Documents\\ReactJS\\React\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\tests\\e2e\\challenge-20.spec.ts:11:37"
+                              "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#task-list').or(locator('main'))\nExpected: visible\nError: strict mode violation: locator('#task-list').or(locator('main')) resolved to 2 elements:\n    1) <main>…</main> aka getByText('Dark ModeTitleTitleDescriptionDescriptionPriorityLowMediumHighAdd')\n    2) <section id=\"task-list\">…</section> aka locator('#task-list')\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#task-list').or(locator('main'))\u001b[22m\n\n\n   9 |     const taskList = page.locator('#task-list');\n  10 |     const main = page.locator('main');\n> 11 |     await expect(taskList.or(main)).toBeVisible();\n     |                                     ^\n  12 |   });\n  13 | });\n  14 |\n    at C:\\Users\\Saitej\\OneDrive\\Documents\\ReactJS\\React\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\tests\\e2e\\challenge-20.spec.ts:11:37"
                             }
                           ],
                           "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2026-08-06T12:01:05.886Z",
+                          "startTime": "2026-08-11T11:59:09.790Z",
                           "annotations": [],
                           "attachments": [
                             {
@@ -7014,10 +7027,10 @@
                           "workerIndex": 1,
                           "parallelIndex": 0,
                           "status": "failed",
-                          "duration": 1057,
+                          "duration": 806,
                           "error": {
-                            "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#task-list').or(locator('main'))\nExpected: visible\nError: strict mode violation: locator('#task-list').or(locator('main')) resolved to 2 elements:\n    1) <main>…</main> aka getByText('TitleDescriptionPriorityLowMediumHighAdd Task0 of 5 completedFirst')\n    2) <section id=\"task-list\">…</section> aka getByText('First TaskDescription onePriority: HighNot CompletedSecond TaskDescription')\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#task-list').or(locator('main'))\u001b[22m\n",
-                            "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#task-list').or(locator('main'))\nExpected: visible\nError: strict mode violation: locator('#task-list').or(locator('main')) resolved to 2 elements:\n    1) <main>…</main> aka getByText('TitleDescriptionPriorityLowMediumHighAdd Task0 of 5 completedFirst')\n    2) <section id=\"task-list\">…</section> aka getByText('First TaskDescription onePriority: HighNot CompletedSecond TaskDescription')\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#task-list').or(locator('main'))\u001b[22m\n\n    at C:\\Users\\Saitej\\OneDrive\\Documents\\ReactJS\\React\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\tests\\e2e\\challenge-20.spec.ts:11:37",
+                            "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#task-list').or(locator('main'))\nExpected: visible\nError: strict mode violation: locator('#task-list').or(locator('main')) resolved to 2 elements:\n    1) <main>…</main> aka getByText('Dark ModeTitleTitleDescriptionDescriptionPriorityLowMediumHighAdd')\n    2) <section id=\"task-list\">…</section> aka locator('#task-list')\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#task-list').or(locator('main'))\u001b[22m\n",
+                            "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#task-list').or(locator('main'))\nExpected: visible\nError: strict mode violation: locator('#task-list').or(locator('main')) resolved to 2 elements:\n    1) <main>…</main> aka getByText('Dark ModeTitleTitleDescriptionDescriptionPriorityLowMediumHighAdd')\n    2) <section id=\"task-list\">…</section> aka locator('#task-list')\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#task-list').or(locator('main'))\u001b[22m\n\n    at C:\\Users\\Saitej\\OneDrive\\Documents\\ReactJS\\React\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\tests\\e2e\\challenge-20.spec.ts:11:37",
                             "location": {
                               "file": "C:\\Users\\Saitej\\OneDrive\\Documents\\ReactJS\\React\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\tests\\e2e\\challenge-20.spec.ts",
                               "column": 37,
@@ -7032,13 +7045,13 @@
                                 "column": 37,
                                 "line": 11
                               },
-                              "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#task-list').or(locator('main'))\nExpected: visible\nError: strict mode violation: locator('#task-list').or(locator('main')) resolved to 2 elements:\n    1) <main>…</main> aka getByText('TitleDescriptionPriorityLowMediumHighAdd Task0 of 5 completedFirst')\n    2) <section id=\"task-list\">…</section> aka getByText('First TaskDescription onePriority: HighNot CompletedSecond TaskDescription')\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#task-list').or(locator('main'))\u001b[22m\n\n\n   9 |     const taskList = page.locator('#task-list');\n  10 |     const main = page.locator('main');\n> 11 |     await expect(taskList.or(main)).toBeVisible();\n     |                                     ^\n  12 |   });\n  13 | });\n  14 |\n    at C:\\Users\\Saitej\\OneDrive\\Documents\\ReactJS\\React\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\tests\\e2e\\challenge-20.spec.ts:11:37"
+                              "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#task-list').or(locator('main'))\nExpected: visible\nError: strict mode violation: locator('#task-list').or(locator('main')) resolved to 2 elements:\n    1) <main>…</main> aka getByText('Dark ModeTitleTitleDescriptionDescriptionPriorityLowMediumHighAdd')\n    2) <section id=\"task-list\">…</section> aka locator('#task-list')\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#task-list').or(locator('main'))\u001b[22m\n\n\n   9 |     const taskList = page.locator('#task-list');\n  10 |     const main = page.locator('main');\n> 11 |     await expect(taskList.or(main)).toBeVisible();\n     |                                     ^\n  12 |   });\n  13 | });\n  14 |\n    at C:\\Users\\Saitej\\OneDrive\\Documents\\ReactJS\\React\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\tests\\e2e\\challenge-20.spec.ts:11:37"
                             }
                           ],
                           "stdout": [],
                           "stderr": [],
                           "retry": 1,
-                          "startTime": "2026-08-06T12:01:10.684Z",
+                          "startTime": "2026-08-11T11:59:13.176Z",
                           "annotations": [],
                           "attachments": [
                             {
@@ -7067,10 +7080,10 @@
                           "workerIndex": 2,
                           "parallelIndex": 0,
                           "status": "failed",
-                          "duration": 955,
+                          "duration": 791,
                           "error": {
-                            "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#task-list').or(locator('main'))\nExpected: visible\nError: strict mode violation: locator('#task-list').or(locator('main')) resolved to 2 elements:\n    1) <main>…</main> aka getByText('TitleDescriptionPriorityLowMediumHighAdd Task0 of 5 completedFirst')\n    2) <section id=\"task-list\">…</section> aka getByText('First TaskDescription onePriority: HighNot CompletedSecond TaskDescription')\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#task-list').or(locator('main'))\u001b[22m\n",
-                            "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#task-list').or(locator('main'))\nExpected: visible\nError: strict mode violation: locator('#task-list').or(locator('main')) resolved to 2 elements:\n    1) <main>…</main> aka getByText('TitleDescriptionPriorityLowMediumHighAdd Task0 of 5 completedFirst')\n    2) <section id=\"task-list\">…</section> aka getByText('First TaskDescription onePriority: HighNot CompletedSecond TaskDescription')\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#task-list').or(locator('main'))\u001b[22m\n\n    at C:\\Users\\Saitej\\OneDrive\\Documents\\ReactJS\\React\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\tests\\e2e\\challenge-20.spec.ts:11:37",
+                            "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#task-list').or(locator('main'))\nExpected: visible\nError: strict mode violation: locator('#task-list').or(locator('main')) resolved to 2 elements:\n    1) <main>…</main> aka getByText('Dark ModeTitleTitleDescriptionDescriptionPriorityLowMediumHighAdd')\n    2) <section id=\"task-list\">…</section> aka locator('#task-list')\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#task-list').or(locator('main'))\u001b[22m\n",
+                            "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#task-list').or(locator('main'))\nExpected: visible\nError: strict mode violation: locator('#task-list').or(locator('main')) resolved to 2 elements:\n    1) <main>…</main> aka getByText('Dark ModeTitleTitleDescriptionDescriptionPriorityLowMediumHighAdd')\n    2) <section id=\"task-list\">…</section> aka locator('#task-list')\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#task-list').or(locator('main'))\u001b[22m\n\n    at C:\\Users\\Saitej\\OneDrive\\Documents\\ReactJS\\React\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\tests\\e2e\\challenge-20.spec.ts:11:37",
                             "location": {
                               "file": "C:\\Users\\Saitej\\OneDrive\\Documents\\ReactJS\\React\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\tests\\e2e\\challenge-20.spec.ts",
                               "column": 37,
@@ -7085,13 +7098,13 @@
                                 "column": 37,
                                 "line": 11
                               },
-                              "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#task-list').or(locator('main'))\nExpected: visible\nError: strict mode violation: locator('#task-list').or(locator('main')) resolved to 2 elements:\n    1) <main>…</main> aka getByText('TitleDescriptionPriorityLowMediumHighAdd Task0 of 5 completedFirst')\n    2) <section id=\"task-list\">…</section> aka getByText('First TaskDescription onePriority: HighNot CompletedSecond TaskDescription')\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#task-list').or(locator('main'))\u001b[22m\n\n\n   9 |     const taskList = page.locator('#task-list');\n  10 |     const main = page.locator('main');\n> 11 |     await expect(taskList.or(main)).toBeVisible();\n     |                                     ^\n  12 |   });\n  13 | });\n  14 |\n    at C:\\Users\\Saitej\\OneDrive\\Documents\\ReactJS\\React\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\tests\\e2e\\challenge-20.spec.ts:11:37"
+                              "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#task-list').or(locator('main'))\nExpected: visible\nError: strict mode violation: locator('#task-list').or(locator('main')) resolved to 2 elements:\n    1) <main>…</main> aka getByText('Dark ModeTitleTitleDescriptionDescriptionPriorityLowMediumHighAdd')\n    2) <section id=\"task-list\">…</section> aka locator('#task-list')\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#task-list').or(locator('main'))\u001b[22m\n\n\n   9 |     const taskList = page.locator('#task-list');\n  10 |     const main = page.locator('main');\n> 11 |     await expect(taskList.or(main)).toBeVisible();\n     |                                     ^\n  12 |   });\n  13 | });\n  14 |\n    at C:\\Users\\Saitej\\OneDrive\\Documents\\ReactJS\\React\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\tests\\e2e\\challenge-20.spec.ts:11:37"
                             }
                           ],
                           "stdout": [],
                           "stderr": [],
                           "retry": 2,
-                          "startTime": "2026-08-06T12:01:14.663Z",
+                          "startTime": "2026-08-11T11:59:15.838Z",
                           "annotations": [],
                           "attachments": [
                             {
@@ -7125,46 +7138,46 @@
           ]
         }
       ],
-      "error": "Command failed: npx playwright test \"tests/e2e/challenge-20.spec.ts\" --reporter=json\nnpm warn Unknown env config \"challenge\". This will stop working in the next major version of npm.\n",
+      "error": "Command failed: npx playwright test \"tests/e2e/challenge-20.spec.ts\" --reporter=json",
       "passed": false
     },
     "aiReviewResults": {
       "challengeId": "20-error-boundaries",
-      "timestamp": "2026-08-06T12:01:16.640Z",
-      "score": 83,
+      "timestamp": "2026-08-11T11:59:17.153Z",
+      "score": 88,
       "feedback": [],
       "strengths": [
         "The code is well-structured and follows a consistent naming convention.",
-        "The use of TypeScript is a good practice for a large-scale React application.",
-        "The ErrorBoundary component is implemented correctly and catches rendering errors."
+        "The use of TypeScript and React hooks is well-implemented and easy to understand.",
+        "The error handling mechanism is robust and catches rendering errors effectively."
       ],
       "improvements": [
-        "The ErrorBoundary component's render method can be simplified by removing the unnecessary return statement.",
-        "The TaskApp component can be refactored to reduce its complexity by breaking it down into smaller, more manageable functions.",
-        "The use of try/catch blocks for localStorage operations can be improved by logging errors in development mode."
+        "In the `ErrorBoundary` component, consider adding a loading state to handle cases where the error is being resolved.",
+        "In the `useLocalStorage` hook, consider adding a check to ensure that the `key` parameter is a string.",
+        "In the `TaskApp` component, consider breaking down the `useEffect` hook into smaller, more manageable pieces."
       ],
-      "readability": 80,
-      "maintainability": 85,
-      "overall": "The code is well-structured and follows good practices, but there are some areas for improvement to make it more maintainable and efficient."
+      "readability": 85,
+      "maintainability": 90,
+      "overall": "The code is well-written and demonstrates a good understanding of React and TypeScript. However, there are a few areas that could be improved to make the code more robust and maintainable."
     },
     "aiResults": {
       "challengeId": "20-error-boundaries",
-      "timestamp": "2026-08-06T12:01:16.640Z",
-      "score": 83,
+      "timestamp": "2026-08-11T11:59:17.153Z",
+      "score": 88,
       "feedback": [],
       "strengths": [
         "The code is well-structured and follows a consistent naming convention.",
-        "The use of TypeScript is a good practice for a large-scale React application.",
-        "The ErrorBoundary component is implemented correctly and catches rendering errors."
+        "The use of TypeScript and React hooks is well-implemented and easy to understand.",
+        "The error handling mechanism is robust and catches rendering errors effectively."
       ],
       "improvements": [
-        "The ErrorBoundary component's render method can be simplified by removing the unnecessary return statement.",
-        "The TaskApp component can be refactored to reduce its complexity by breaking it down into smaller, more manageable functions.",
-        "The use of try/catch blocks for localStorage operations can be improved by logging errors in development mode."
+        "In the `ErrorBoundary` component, consider adding a loading state to handle cases where the error is being resolved.",
+        "In the `useLocalStorage` hook, consider adding a check to ensure that the `key` parameter is a string.",
+        "In the `TaskApp` component, consider breaking down the `useEffect` hook into smaller, more manageable pieces."
       ],
-      "readability": 80,
-      "maintainability": 85,
-      "overall": "The code is well-structured and follows good practices, but there are some areas for improvement to make it more maintainable and efficient."
+      "readability": 85,
+      "maintainability": 90,
+      "overall": "The code is well-written and demonstrates a good understanding of React and TypeScript. However, there are a few areas that could be improved to make the code more robust and maintainable."
     }
   },
   {

@@ -1,7 +1,7 @@
 import Button from "./Button";
 import Badge from "./Badge";
 import StatusIndicator from "./StatusIndicator";
-import { useState, type Dispatch, type SetStateAction } from "react";
+import React, { useState, type Dispatch, type SetStateAction } from "react";
 import type { Task } from "./TaskList";
 
 /**
@@ -26,7 +26,7 @@ interface TaskCardProps {
 /**
  * Displays the details of a single task.
  */
-export default function TaskCard(props: TaskCardProps) {
+function TaskCard(props: TaskCardProps) {
   const [title, setTitle] = useState(props.title);
   const [description, setDescription] = useState(props.description);
   const [priority, setPriority] = useState(props.priority);
@@ -154,8 +154,8 @@ export default function TaskCard(props: TaskCardProps) {
         </select>
       ) : (
         <p>
-  Priority: <Badge variant="priority">{props.priority}</Badge>
-</p>
+          Priority: <Badge variant="priority">{props.priority}</Badge>
+        </p>
       )}
 
       {isEditing ? (
@@ -167,66 +167,61 @@ export default function TaskCard(props: TaskCardProps) {
       ) : null}
 
       <p id="task-category">
-  Category:{" "}
-  <Badge variant="category">
-    {props.category ?? "General"}
-  </Badge>
-</p>
+        Category:{" "}
+        <Badge variant="category">{props.category ?? "General"}</Badge>
+      </p>
 
       <div id="task-tags">
-  {(props.tags ?? []).map((tag) => (
-    <Badge key={tag} variant="tag">
-      {tag}
-    </Badge>
-  ))}
-</div>
+        {(props.tags ?? []).map((tag) => (
+          <Badge key={tag} variant="tag">
+            {tag}
+          </Badge>
+        ))}
+      </div>
 
       <p>
-  {isCompleted ? (
-    <StatusIndicator status="completed" />
-  ) : (
-    "Not Completed"
-  )}
-</p>
+        {isCompleted ? <StatusIndicator status="completed" /> : "Not Completed"}
+      </p>
 
       {isEditing ? (
         <>
-         <Button onClick={handleSave} variant="primary">
-  Save
-</Button>
+          <Button onClick={handleSave} variant="primary">
+            Save
+          </Button>
 
-         <Button onClick={handleCancel} variant="secondary">
-  Cancel
-</Button>
+          <Button onClick={handleCancel} variant="secondary">
+            Cancel
+          </Button>
         </>
       ) : (
         <>
           <Button onClick={startEditing} variant="secondary">
-  Edit
-</Button>
+            Edit
+          </Button>
 
           {props.onDelete && (
             <Button
-  variant="danger"
-  onClick={() => {
-    if (window.confirm("Are you sure?")) {
-      props.onDelete?.(props.id);
-    }
-  }}
->
-  Delete
-</Button>
+              variant="danger"
+              onClick={() => {
+                if (window.confirm("Are you sure?")) {
+                  props.onDelete?.(props.id);
+                }
+              }}
+            >
+              Delete
+            </Button>
           )}
         </>
       )}
       {props.dueDate && (
         <p id="task-due-date" data-overdue={isOverdue ? "true" : "false"}>
           Due: {new Date(props.dueDate).toLocaleDateString()}
-         {isOverdue && <StatusIndicator status="overdue" />}
-{isDueToday && <StatusIndicator status="due-today" />}
-{isDueSoon && <StatusIndicator status="due-soon" />}
+          {isOverdue && <StatusIndicator status="overdue" />}
+          {isDueToday && <StatusIndicator status="due-today" />}
+          {isDueSoon && <StatusIndicator status="due-soon" />}
         </p>
       )}
     </article>
   );
 }
+export default React.memo(TaskCard);

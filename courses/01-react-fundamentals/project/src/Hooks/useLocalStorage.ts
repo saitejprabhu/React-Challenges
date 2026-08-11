@@ -6,30 +6,32 @@ export function useLocalStorage<T>(
 ): [T, (value: T | ((prev: T) => T)) => void] {
   const [value, setValue] = useState<T>(() => {
     try {
-      const savedValue = localStorage.getItem(key);
+      const storedValue = localStorage.getItem(key);
 
-      if (savedValue !== null) {
-        return JSON.parse(savedValue);
+      if (storedValue === null) {
+        return initialValue;
       }
 
-      return initialValue;
+      return JSON.parse(storedValue) as T;
     } catch {
       return initialValue;
     }
   });
 
-  const setStoredValue = (value: T | ((prev: T) => T)) => {
-    setValue((prev) => {
-      const newValue =
-        typeof value === "function" ? (value as (prev: T) => T)(prev) : value;
+  const setStoredValue = (newValue: T | ((prev: T) => T)) => {
+    setValue((previousValue) => {
+      const valueToStore =
+        typeof newValue === "function"
+          ? (newValue as (prev: T) => T)(previousValue)
+          : newValue;
 
       try {
-        localStorage.setItem(key, JSON.stringify(newValue));
+        localStorage.setItem(key, JSON.stringify(valueToStore));
       } catch {
         // Ignore localStorage write errors
       }
 
-      return newValue;
+      return valueToStore;
     });
   };
 
