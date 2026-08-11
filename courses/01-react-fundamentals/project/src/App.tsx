@@ -1,5 +1,4 @@
 import "./App.css";
-import { useEffect, useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ChallengeList from "./components/ChallengeList";
 import TaskList from "./components/TaskList";
@@ -8,7 +7,7 @@ import TaskDetailPage from "./components/TaskDetailPage";
 import FetchDemoView from "./components/FetchDemoView";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import type { Task } from "./components/TaskList";
-
+import { useLocalStorage } from "./Hooks/useLocalStorage";
 
 const INITIAL_TASKS: Task[] = [
   {
@@ -59,31 +58,10 @@ const INITIAL_TASKS: Task[] = [
 ];
 
 function AppContent() {
-  const [tasks, setTasks] = useState<Task[]>(INITIAL_TASKS);
-
-  useEffect(() => {
-    const savedTasks = localStorage.getItem("task-app-tasks");
-
-    if (!savedTasks) return;
-
-    try {
-      const parsedTasks = JSON.parse(savedTasks) as Task[];
-
-      const normalizedTasks = parsedTasks.map((task) => ({
-        ...task,
-        category: task.category || "General",
-        tags: Array.isArray(task.tags) ? task.tags : [],
-      }));
-
-      setTasks(normalizedTasks);
-    } catch {
-      alert("invalid data");
-    }
-  }, []);
-
-  useEffect(() => {
-    localStorage.setItem("task-app-tasks", JSON.stringify(tasks));
-  }, [tasks]);
+  const [tasks, setTasks] = useLocalStorage<Task[]>(
+    "task-app-tasks",
+    INITIAL_TASKS,
+  );
 
   const handleDelete = (id: string | number) => {
     setTasks((prev) => prev.filter((t) => t.id !== id));
