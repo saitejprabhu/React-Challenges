@@ -245,6 +245,7 @@ export default function TaskApp(props: TaskAppProps) {
           onUpdateTask={handleUpdateTask}
           editingId={editingId}
           setEditingId={setEditingId}
+          linkToTaskDetail={props.linkToTaskDetail}
         />
       </ErrorBoundary>
     </>

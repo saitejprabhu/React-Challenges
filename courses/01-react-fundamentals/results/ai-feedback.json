@@ -69,52 +69,6 @@
     }
   },
   {
-    "challengeId": "21-react-router",
-    "challengeName": "React Router - Routing and Navigation",
-    "aiReview": {
-      "challengeId": "21-react-router",
-      "timestamp": "2026-08-06T12:02:30.609Z",
-      "score": 88,
-      "feedback": [],
-      "strengths": [
-        "The code is well-structured and follows a consistent naming convention.",
-        "The use of TypeScript and functional components makes the code more maintainable and scalable.",
-        "The application of React Router for client-side routing is a good practice."
-      ],
-      "improvements": [
-        "In the `TaskDetailPage` component, the `useParams` hook is not being used to retrieve the task ID from the URL. This should be fixed to display the correct task details.",
-        "In the `TaskList` component, the `linkToTaskDetail` prop is not being used to render links to task details. This should be fixed to enable navigation to task details.",
-        "The code could benefit from more comments and documentation to explain the purpose of each component and how they interact with each other."
-      ],
-      "readability": 85,
-      "maintainability": 90,
-      "overall": "The code is well-structured and follows good practices, but there are some minor issues that need to be addressed to make it more maintainable and efficient. With some improvements, this code has the potential to be a solid foundation for a larger application."
-    }
-  },
-  {
-    "challengeId": "22-data-fetching",
-    "challengeName": "Data Fetching - Loading and Error State",
-    "aiReview": {
-      "challengeId": "22-data-fetching",
-      "timestamp": "2026-08-06T12:04:20.123Z",
-      "score": 75,
-      "feedback": [],
-      "strengths": [
-        "The code is well-structured and follows a clear pattern for handling loading, error, and data states.",
-        "The use of `useState` and `useEffect` is correct and effective for managing the component's state and fetching data.",
-        "The code is concise and easy to understand, with minimal unnecessary complexity."
-      ],
-      "improvements": [
-        "The component's state is not properly initialized, which could lead to unexpected behavior. For example, the `loading` state is not initialized to `false` when the component mounts.",
-        "The error handling could be improved by providing more specific error messages and handling different types of errors (e.g., network errors, JSON parsing errors).",
-        "The code could benefit from additional comments or documentation to explain the purpose of each section and the logic behind the code."
-      ],
-      "readability": 80,
-      "maintainability": 70,
-      "overall": "The code is a good start, but it could benefit from some improvements to make it more robust, maintainable, and readable. With some additional comments and error handling, this component could be a great example of how to handle loading, error, and data states in a React application."
-    }
-  },
-  {
     "challengeId": "23-useref-focus-management",
     "challengeName": "useRef - Focus Management",
     "aiReview": {
@@ -526,6 +480,45 @@
       "readability": 85,
       "maintainability": 90,
       "overall": "The code is well-written and demonstrates a good understanding of React and TypeScript. However, there are a few areas that could be improved to make the code more robust and maintainable."
+    }
+  },
+  {
+    "challengeId": "21-react-router",
+    "challengeName": "React Router - Routing and Navigation",
+    "aiReview": {
+      "challengeId": "21-react-router",
+      "timestamp": "2026-08-12T05:40:56.112Z",
+      "score": 0,
+      "feedback": [],
+      "strengths": [],
+      "improvements": [],
+      "readability": 0,
+      "maintainability": 0,
+      "overall": "",
+      "error": "Groq API error (413): Request too large for model `llama-3.1-8b-instant` in organization `org_01kz67g1cre27rvvjxvyzg9gs2` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Requested 6253, please reduce your message size and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing"
+    }
+  },
+  {
+    "challengeId": "22-data-fetching",
+    "challengeName": "Data Fetching - Loading and Error State",
+    "aiReview": {
+      "challengeId": "22-data-fetching",
+      "timestamp": "2026-08-12T05:47:56.207Z",
+      "score": 88,
+      "feedback": [],
+      "strengths": [
+        "The code is well-structured and easy to follow, with clear separation of concerns between the FetchDemoView component and the useEffect hook.",
+        "The use of TypeScript and functional components makes the code more maintainable and efficient.",
+        "The code includes proper error handling and cleanup using the AbortController, which is a good practice for async data loading."
+      ],
+      "improvements": [
+        "The code could benefit from more descriptive variable names, especially in the useEffect hook. For example, 'controller' could be renamed to 'abortController' for clarity.",
+        "The error message 'Failed to load data' could be more informative and provide additional context, such as the actual error message or the API URL that failed to load.",
+        "The code assumes that the API returns a JSON response with an array of TodoItem objects. Consider adding some error handling for cases where the API returns an unexpected response format."
+      ],
+      "readability": 85,
+      "maintainability": 90,
+      "overall": "The code is well-structured, maintainable, and efficient, with good practices for async data loading and error handling. However, there are some minor improvements that can be made to enhance readability and robustness."
     }
   }
 ]

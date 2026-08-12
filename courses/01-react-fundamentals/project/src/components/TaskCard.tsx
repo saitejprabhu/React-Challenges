@@ -3,6 +3,7 @@ import Badge from "./Badge";
 import StatusIndicator from "./StatusIndicator";
 import React, { useState, type Dispatch, type SetStateAction } from "react";
 import type { Task } from "./TaskList";
+import { Link } from "react-router-dom";
 
 /**
  * Props required to render a task card.
@@ -21,6 +22,7 @@ interface TaskCardProps {
   editingId?: string | number | null;
   setEditingId?: Dispatch<SetStateAction<string | number | null>>;
   dueDate?: string | number;
+  linkToTaskDetail?: boolean;
 }
 
 /**
@@ -117,12 +119,14 @@ function TaskCard(props: TaskCardProps) {
       {isEditing ? (
         <input value={title} onChange={(e) => setTitle(e.target.value)} />
       ) : (
-        <h2
-          style={{
-            textDecoration: isCompleted ? "line-through" : "none",
-          }}
-        >
-          {props.title}
+        <h2>
+          {props.linkToTaskDetail ? (
+            <Link to={`/challenge/21-react-router/task/${props.id}`}>
+              {props.title}
+            </Link>
+          ) : (
+            props.title
+          )}
         </h2>
       )}
 

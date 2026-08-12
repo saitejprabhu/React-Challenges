@@ -92,6 +92,7 @@ export default function TaskList(props: TaskListProps) {
             category={task.category}
             tags={task.tags}
             dueDate={task.dueDate}
+            linkToTaskDetail={props.linkToTaskDetail}
           />
         ))}
       </section>

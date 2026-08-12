@@ -7183,25 +7183,25 @@
   {
     "challengeId": "21-react-router",
     "challengeName": "React Router - Routing and Navigation",
-    "timestamp": "2026-08-06T12:01:19.599Z",
+    "timestamp": "2026-08-12T05:40:39.670Z",
     "scores": {
-      "functionalTests": 50,
+      "functionalTests": 100,
       "codeQuality": 100,
       "architecture": 100,
       "bestPractices": 100,
-      "e2eTests": 33.3,
-      "aiReview": 88
+      "e2eTests": 100,
+      "aiReview": 0
     },
-    "totalScore": 70.695,
-    "passed": false,
+    "totalScore": 85,
+    "passed": true,
     "errors": [],
     "warnings": [],
     "testResults": {
-      "score": 50,
-      "passed": false,
+      "score": 100,
+      "passed": true,
       "totalTests": 2,
-      "passedTests": 1,
-      "failedTests": 1,
+      "passedTests": 2,
+      "failedTests": 0,
       "details": [
         {
           "assertionResults": [
@@ -7213,7 +7213,7 @@
               "fullName": " Challenge 21: React Router - Routing and Navigation TaskDetailPage should use useParams and render task detail or not found",
               "status": "passed",
               "title": "TaskDetailPage should use useParams and render task detail or not found",
-              "duration": 35,
+              "duration": 21,
               "failureMessages": []
             },
             {
@@ -7222,26 +7222,19 @@
                 "Challenge 21: React Router - Routing and Navigation"
               ],
               "fullName": " Challenge 21: React Router - Routing and Navigation TaskDetailPage should have back button with id task-detail-back",
-              "status": "failed",
+              "status": "passed",
               "title": "TaskDetailPage should have back button with id task-detail-back",
-              "duration": 18,
-              "failureMessages": [
-                "\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).toBeInTheDocument()\u001b[22m\n\n\u001b[31mreceived\u001b[39m value must be an HTMLElement or an SVGElement.\n"
-              ],
-              "location": {
-                "line": 28,
-                "column": 18
-              }
+              "duration": 4,
+              "failureMessages": []
             }
           ],
-          "startTime": 1786017686111,
-          "endTime": 1786017686164,
-          "status": "failed",
+          "startTime": 1786513243770,
+          "endTime": 1786513243795,
+          "status": "passed",
           "message": "",
           "name": "C:/Users/Saitej/OneDrive/Documents/ReactJS/React/challenge-engine-react/courses/01-react-fundamentals/project/tests/challenge-21.test.tsx"
         }
-      ],
-      "error": "Command failed: npx vitest run \"C:\\Users\\Saitej\\OneDrive\\Documents\\ReactJS\\React\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\tests\\challenge-21.test.tsx\" --reporter=json\nnpm warn Unknown env config \"challenge\". This will stop working in the next major version of npm.\n"
+      ]
     },
     "lintResults": {
       "score": 100,
@@ -7413,10 +7406,11 @@
       "note": "No best practices requirements specified in challenge"
     },
     "e2eResults": {
-      "score": 33.3,
+      "score": 100,
+      "passed": true,
       "totalTests": 3,
-      "passedTests": 1,
-      "failedTests": 2,
+      "passedTests": 3,
+      "failedTests": 0,
       "details": [
         {
           "title": "challenge-21.spec.ts",
@@ -7447,12 +7441,12 @@
                           "workerIndex": 0,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 1628,
+                          "duration": 1627,
                           "errors": [],
                           "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2026-08-06T12:01:38.242Z",
+                          "startTime": "2026-08-12T05:40:52.416Z",
                           "annotations": [],
                           "attachments": []
                         }
@@ -7467,7 +7461,7 @@
                 },
                 {
                   "title": "task detail route should be reachable",
-                  "ok": false,
+                  "ok": true,
                   "tags": [],
                   "tests": [
                     {
@@ -7480,154 +7474,18 @@
                         {
                           "workerIndex": 0,
                           "parallelIndex": 0,
-                          "status": "failed",
-                          "duration": 5409,
-                          "error": {
-                            "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('#task-detail-page')\nExpected: visible\nReceived: hidden\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#task-detail-page')\u001b[22m\n\u001b[2m    9 × locator resolved to <div id=\"task-detail-page\"></div>\u001b[22m\n\u001b[2m      - unexpected value \"hidden\"\u001b[22m\n",
-                            "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('#task-detail-page')\nExpected: visible\nReceived: hidden\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#task-detail-page')\u001b[22m\n\u001b[2m    9 × locator resolved to <div id=\"task-detail-page\"></div>\u001b[22m\n\u001b[2m      - unexpected value \"hidden\"\u001b[22m\n\n    at C:\\Users\\Saitej\\OneDrive\\Documents\\ReactJS\\React\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\tests\\e2e\\challenge-21.spec.ts:14:53",
-                            "location": {
-                              "file": "C:\\Users\\Saitej\\OneDrive\\Documents\\ReactJS\\React\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\tests\\e2e\\challenge-21.spec.ts",
-                              "column": 53,
-                              "line": 14
-                            },
-                            "snippet": "\u001b[0m \u001b[90m 12 |\u001b[39m   test(\u001b[32m'task detail route should be reachable'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m 13 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/challenge/21-react-router/task/1'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 14 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'#task-detail-page'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 15 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 16 |\u001b[39m\n \u001b[90m 17 |\u001b[39m   test(\u001b[32m'back button should exist on task detail page'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\u001b[0m"
-                          },
-                          "errors": [
-                            {
-                              "location": {
-                                "file": "C:\\Users\\Saitej\\OneDrive\\Documents\\ReactJS\\React\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\tests\\e2e\\challenge-21.spec.ts",
-                                "column": 53,
-                                "line": 14
-                              },
-                              "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('#task-detail-page')\nExpected: visible\nReceived: hidden\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#task-detail-page')\u001b[22m\n\u001b[2m    9 × locator resolved to <div id=\"task-detail-page\"></div>\u001b[22m\n\u001b[2m      - unexpected value \"hidden\"\u001b[22m\n\n\n  12 |   test('task detail route should be reachable', async ({ page }) => {\n  13 |     await page.goto('/challenge/21-react-router/task/1');\n> 14 |     await expect(page.locator('#task-detail-page')).toBeVisible();\n     |                                                     ^\n  15 |   });\n  16 |\n  17 |   test('back button should exist on task detail page', async ({ page }) => {\n    at C:\\Users\\Saitej\\OneDrive\\Documents\\ReactJS\\React\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\tests\\e2e\\challenge-21.spec.ts:14:53"
-                            }
-                          ],
+                          "status": "passed",
+                          "duration": 321,
+                          "errors": [],
                           "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2026-08-06T12:01:40.266Z",
+                          "startTime": "2026-08-12T05:40:54.369Z",
                           "annotations": [],
-                          "attachments": [
-                            {
-                              "name": "screenshot",
-                              "contentType": "image/png",
-                              "path": "C:\\Users\\Saitej\\OneDrive\\Documents\\ReactJS\\React\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\test-results\\challenge-21-Challenge-21--3353d-l-route-should-be-reachable-chromium\\test-failed-1.png"
-                            },
-                            {
-                              "name": "error-context",
-                              "contentType": "text/markdown",
-                              "path": "C:\\Users\\Saitej\\OneDrive\\Documents\\ReactJS\\React\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\test-results\\challenge-21-Challenge-21--3353d-l-route-should-be-reachable-chromium\\error-context.md"
-                            }
-                          ],
-                          "errorLocation": {
-                            "file": "C:\\Users\\Saitej\\OneDrive\\Documents\\ReactJS\\React\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\tests\\e2e\\challenge-21.spec.ts",
-                            "column": 53,
-                            "line": 14
-                          }
-                        },
-                        {
-                          "workerIndex": 1,
-                          "parallelIndex": 0,
-                          "status": "failed",
-                          "duration": 5529,
-                          "error": {
-                            "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('#task-detail-page')\nExpected: visible\nReceived: hidden\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#task-detail-page')\u001b[22m\n\u001b[2m    9 × locator resolved to <div id=\"task-detail-page\"></div>\u001b[22m\n\u001b[2m      - unexpected value \"hidden\"\u001b[22m\n",
-                            "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('#task-detail-page')\nExpected: visible\nReceived: hidden\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#task-detail-page')\u001b[22m\n\u001b[2m    9 × locator resolved to <div id=\"task-detail-page\"></div>\u001b[22m\n\u001b[2m      - unexpected value \"hidden\"\u001b[22m\n\n    at C:\\Users\\Saitej\\OneDrive\\Documents\\ReactJS\\React\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\tests\\e2e\\challenge-21.spec.ts:14:53",
-                            "location": {
-                              "file": "C:\\Users\\Saitej\\OneDrive\\Documents\\ReactJS\\React\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\tests\\e2e\\challenge-21.spec.ts",
-                              "column": 53,
-                              "line": 14
-                            },
-                            "snippet": "\u001b[0m \u001b[90m 12 |\u001b[39m   test(\u001b[32m'task detail route should be reachable'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m 13 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/challenge/21-react-router/task/1'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 14 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'#task-detail-page'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 15 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 16 |\u001b[39m\n \u001b[90m 17 |\u001b[39m   test(\u001b[32m'back button should exist on task detail page'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\u001b[0m"
-                          },
-                          "errors": [
-                            {
-                              "location": {
-                                "file": "C:\\Users\\Saitej\\OneDrive\\Documents\\ReactJS\\React\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\tests\\e2e\\challenge-21.spec.ts",
-                                "column": 53,
-                                "line": 14
-                              },
-                              "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('#task-detail-page')\nExpected: visible\nReceived: hidden\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#task-detail-page')\u001b[22m\n\u001b[2m    9 × locator resolved to <div id=\"task-detail-page\"></div>\u001b[22m\n\u001b[2m      - unexpected value \"hidden\"\u001b[22m\n\n\n  12 |   test('task detail route should be reachable', async ({ page }) => {\n  13 |     await page.goto('/challenge/21-react-router/task/1');\n> 14 |     await expect(page.locator('#task-detail-page')).toBeVisible();\n     |                                                     ^\n  15 |   });\n  16 |\n  17 |   test('back button should exist on task detail page', async ({ page }) => {\n    at C:\\Users\\Saitej\\OneDrive\\Documents\\ReactJS\\React\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\tests\\e2e\\challenge-21.spec.ts:14:53"
-                            }
-                          ],
-                          "stdout": [],
-                          "stderr": [],
-                          "retry": 1,
-                          "startTime": "2026-08-06T12:01:48.841Z",
-                          "annotations": [],
-                          "attachments": [
-                            {
-                              "name": "screenshot",
-                              "contentType": "image/png",
-                              "path": "C:\\Users\\Saitej\\OneDrive\\Documents\\ReactJS\\React\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\test-results\\challenge-21-Challenge-21--3353d-l-route-should-be-reachable-chromium-retry1\\test-failed-1.png"
-                            },
-                            {
-                              "name": "error-context",
-                              "contentType": "text/markdown",
-                              "path": "C:\\Users\\Saitej\\OneDrive\\Documents\\ReactJS\\React\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\test-results\\challenge-21-Challenge-21--3353d-l-route-should-be-reachable-chromium-retry1\\error-context.md"
-                            },
-                            {
-                              "name": "trace",
-                              "contentType": "application/zip",
-                              "path": "C:\\Users\\Saitej\\OneDrive\\Documents\\ReactJS\\React\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\test-results\\challenge-21-Challenge-21--3353d-l-route-should-be-reachable-chromium-retry1\\trace.zip"
-                            }
-                          ],
-                          "errorLocation": {
-                            "file": "C:\\Users\\Saitej\\OneDrive\\Documents\\ReactJS\\React\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\tests\\e2e\\challenge-21.spec.ts",
-                            "column": 53,
-                            "line": 14
-                          }
-                        },
-                        {
-                          "workerIndex": 2,
-                          "parallelIndex": 0,
-                          "status": "failed",
-                          "duration": 5365,
-                          "error": {
-                            "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('#task-detail-page')\nExpected: visible\nReceived: hidden\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#task-detail-page')\u001b[22m\n\u001b[2m    9 × locator resolved to <div id=\"task-detail-page\"></div>\u001b[22m\n\u001b[2m      - unexpected value \"hidden\"\u001b[22m\n",
-                            "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('#task-detail-page')\nExpected: visible\nReceived: hidden\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#task-detail-page')\u001b[22m\n\u001b[2m    9 × locator resolved to <div id=\"task-detail-page\"></div>\u001b[22m\n\u001b[2m      - unexpected value \"hidden\"\u001b[22m\n\n    at C:\\Users\\Saitej\\OneDrive\\Documents\\ReactJS\\React\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\tests\\e2e\\challenge-21.spec.ts:14:53",
-                            "location": {
-                              "file": "C:\\Users\\Saitej\\OneDrive\\Documents\\ReactJS\\React\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\tests\\e2e\\challenge-21.spec.ts",
-                              "column": 53,
-                              "line": 14
-                            },
-                            "snippet": "\u001b[0m \u001b[90m 12 |\u001b[39m   test(\u001b[32m'task detail route should be reachable'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m 13 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/challenge/21-react-router/task/1'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 14 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'#task-detail-page'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 15 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 16 |\u001b[39m\n \u001b[90m 17 |\u001b[39m   test(\u001b[32m'back button should exist on task detail page'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\u001b[0m"
-                          },
-                          "errors": [
-                            {
-                              "location": {
-                                "file": "C:\\Users\\Saitej\\OneDrive\\Documents\\ReactJS\\React\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\tests\\e2e\\challenge-21.spec.ts",
-                                "column": 53,
-                                "line": 14
-                              },
-                              "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('#task-detail-page')\nExpected: visible\nReceived: hidden\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#task-detail-page')\u001b[22m\n\u001b[2m    9 × locator resolved to <div id=\"task-detail-page\"></div>\u001b[22m\n\u001b[2m      - unexpected value \"hidden\"\u001b[22m\n\n\n  12 |   test('task detail route should be reachable', async ({ page }) => {\n  13 |     await page.goto('/challenge/21-react-router/task/1');\n> 14 |     await expect(page.locator('#task-detail-page')).toBeVisible();\n     |                                                     ^\n  15 |   });\n  16 |\n  17 |   test('back button should exist on task detail page', async ({ page }) => {\n    at C:\\Users\\Saitej\\OneDrive\\Documents\\ReactJS\\React\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\tests\\e2e\\challenge-21.spec.ts:14:53"
-                            }
-                          ],
-                          "stdout": [],
-                          "stderr": [],
-                          "retry": 2,
-                          "startTime": "2026-08-06T12:01:57.621Z",
-                          "annotations": [],
-                          "attachments": [
-                            {
-                              "name": "screenshot",
-                              "contentType": "image/png",
-                              "path": "C:\\Users\\Saitej\\OneDrive\\Documents\\ReactJS\\React\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\test-results\\challenge-21-Challenge-21--3353d-l-route-should-be-reachable-chromium-retry2\\test-failed-1.png"
-                            },
-                            {
-                              "name": "error-context",
-                              "contentType": "text/markdown",
-                              "path": "C:\\Users\\Saitej\\OneDrive\\Documents\\ReactJS\\React\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\test-results\\challenge-21-Challenge-21--3353d-l-route-should-be-reachable-chromium-retry2\\error-context.md"
-                            }
-                          ],
-                          "errorLocation": {
-                            "file": "C:\\Users\\Saitej\\OneDrive\\Documents\\ReactJS\\React\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\tests\\e2e\\challenge-21.spec.ts",
-                            "column": 53,
-                            "line": 14
-                          }
+                          "attachments": []
                         }
                       ],
-                      "status": "unexpected"
+                      "status": "expected"
                     }
                   ],
                   "id": "22625d08e539c53447bc-0603557c1a6fa646b519",
@@ -7637,7 +7495,7 @@
                 },
                 {
                   "title": "back button should exist on task detail page",
-                  "ok": false,
+                  "ok": true,
                   "tags": [],
                   "tests": [
                     {
@@ -7648,156 +7506,20 @@
                       "projectName": "chromium",
                       "results": [
                         {
-                          "workerIndex": 3,
+                          "workerIndex": 0,
                           "parallelIndex": 0,
-                          "status": "failed",
-                          "duration": 5369,
-                          "error": {
-                            "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#task-detail-back')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#task-detail-back')\u001b[22m\n",
-                            "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#task-detail-back')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#task-detail-back')\u001b[22m\n\n    at C:\\Users\\Saitej\\OneDrive\\Documents\\ReactJS\\React\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\tests\\e2e\\challenge-21.spec.ts:19:53",
-                            "location": {
-                              "file": "C:\\Users\\Saitej\\OneDrive\\Documents\\ReactJS\\React\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\tests\\e2e\\challenge-21.spec.ts",
-                              "column": 53,
-                              "line": 19
-                            },
-                            "snippet": "\u001b[0m \u001b[90m 17 |\u001b[39m   test(\u001b[32m'back button should exist on task detail page'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m 18 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/challenge/21-react-router/task/1'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 19 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'#task-detail-back'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 20 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 21 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 22 |\u001b[39m\u001b[0m"
-                          },
-                          "errors": [
-                            {
-                              "location": {
-                                "file": "C:\\Users\\Saitej\\OneDrive\\Documents\\ReactJS\\React\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\tests\\e2e\\challenge-21.spec.ts",
-                                "column": 53,
-                                "line": 19
-                              },
-                              "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#task-detail-back')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#task-detail-back')\u001b[22m\n\n\n  17 |   test('back button should exist on task detail page', async ({ page }) => {\n  18 |     await page.goto('/challenge/21-react-router/task/1');\n> 19 |     await expect(page.locator('#task-detail-back')).toBeVisible();\n     |                                                     ^\n  20 |   });\n  21 | });\n  22 |\n    at C:\\Users\\Saitej\\OneDrive\\Documents\\ReactJS\\React\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\tests\\e2e\\challenge-21.spec.ts:19:53"
-                            }
-                          ],
+                          "status": "passed",
+                          "duration": 296,
+                          "errors": [],
                           "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2026-08-06T12:02:06.150Z",
+                          "startTime": "2026-08-12T05:40:54.711Z",
                           "annotations": [],
-                          "attachments": [
-                            {
-                              "name": "screenshot",
-                              "contentType": "image/png",
-                              "path": "C:\\Users\\Saitej\\OneDrive\\Documents\\ReactJS\\React\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\test-results\\challenge-21-Challenge-21--a6c00-d-exist-on-task-detail-page-chromium\\test-failed-1.png"
-                            },
-                            {
-                              "name": "error-context",
-                              "contentType": "text/markdown",
-                              "path": "C:\\Users\\Saitej\\OneDrive\\Documents\\ReactJS\\React\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\test-results\\challenge-21-Challenge-21--a6c00-d-exist-on-task-detail-page-chromium\\error-context.md"
-                            }
-                          ],
-                          "errorLocation": {
-                            "file": "C:\\Users\\Saitej\\OneDrive\\Documents\\ReactJS\\React\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\tests\\e2e\\challenge-21.spec.ts",
-                            "column": 53,
-                            "line": 19
-                          }
-                        },
-                        {
-                          "workerIndex": 4,
-                          "parallelIndex": 0,
-                          "status": "failed",
-                          "duration": 5509,
-                          "error": {
-                            "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#task-detail-back')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#task-detail-back')\u001b[22m\n",
-                            "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#task-detail-back')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#task-detail-back')\u001b[22m\n\n    at C:\\Users\\Saitej\\OneDrive\\Documents\\ReactJS\\React\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\tests\\e2e\\challenge-21.spec.ts:19:53",
-                            "location": {
-                              "file": "C:\\Users\\Saitej\\OneDrive\\Documents\\ReactJS\\React\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\tests\\e2e\\challenge-21.spec.ts",
-                              "column": 53,
-                              "line": 19
-                            },
-                            "snippet": "\u001b[0m \u001b[90m 17 |\u001b[39m   test(\u001b[32m'back button should exist on task detail page'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m 18 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/challenge/21-react-router/task/1'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 19 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'#task-detail-back'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 20 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 21 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 22 |\u001b[39m\u001b[0m"
-                          },
-                          "errors": [
-                            {
-                              "location": {
-                                "file": "C:\\Users\\Saitej\\OneDrive\\Documents\\ReactJS\\React\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\tests\\e2e\\challenge-21.spec.ts",
-                                "column": 53,
-                                "line": 19
-                              },
-                              "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#task-detail-back')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#task-detail-back')\u001b[22m\n\n\n  17 |   test('back button should exist on task detail page', async ({ page }) => {\n  18 |     await page.goto('/challenge/21-react-router/task/1');\n> 19 |     await expect(page.locator('#task-detail-back')).toBeVisible();\n     |                                                     ^\n  20 |   });\n  21 | });\n  22 |\n    at C:\\Users\\Saitej\\OneDrive\\Documents\\ReactJS\\React\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\tests\\e2e\\challenge-21.spec.ts:19:53"
-                            }
-                          ],
-                          "stdout": [],
-                          "stderr": [],
-                          "retry": 1,
-                          "startTime": "2026-08-06T12:02:14.898Z",
-                          "annotations": [],
-                          "attachments": [
-                            {
-                              "name": "screenshot",
-                              "contentType": "image/png",
-                              "path": "C:\\Users\\Saitej\\OneDrive\\Documents\\ReactJS\\React\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\test-results\\challenge-21-Challenge-21--a6c00-d-exist-on-task-detail-page-chromium-retry1\\test-failed-1.png"
-                            },
-                            {
-                              "name": "error-context",
-                              "contentType": "text/markdown",
-                              "path": "C:\\Users\\Saitej\\OneDrive\\Documents\\ReactJS\\React\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\test-results\\challenge-21-Challenge-21--a6c00-d-exist-on-task-detail-page-chromium-retry1\\error-context.md"
-                            },
-                            {
-                              "name": "trace",
-                              "contentType": "application/zip",
-                              "path": "C:\\Users\\Saitej\\OneDrive\\Documents\\ReactJS\\React\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\test-results\\challenge-21-Challenge-21--a6c00-d-exist-on-task-detail-page-chromium-retry1\\trace.zip"
-                            }
-                          ],
-                          "errorLocation": {
-                            "file": "C:\\Users\\Saitej\\OneDrive\\Documents\\ReactJS\\React\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\tests\\e2e\\challenge-21.spec.ts",
-                            "column": 53,
-                            "line": 19
-                          }
-                        },
-                        {
-                          "workerIndex": 5,
-                          "parallelIndex": 0,
-                          "status": "failed",
-                          "duration": 5367,
-                          "error": {
-                            "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#task-detail-back')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#task-detail-back')\u001b[22m\n",
-                            "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#task-detail-back')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#task-detail-back')\u001b[22m\n\n    at C:\\Users\\Saitej\\OneDrive\\Documents\\ReactJS\\React\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\tests\\e2e\\challenge-21.spec.ts:19:53",
-                            "location": {
-                              "file": "C:\\Users\\Saitej\\OneDrive\\Documents\\ReactJS\\React\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\tests\\e2e\\challenge-21.spec.ts",
-                              "column": 53,
-                              "line": 19
-                            },
-                            "snippet": "\u001b[0m \u001b[90m 17 |\u001b[39m   test(\u001b[32m'back button should exist on task detail page'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m 18 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/challenge/21-react-router/task/1'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 19 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'#task-detail-back'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 20 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 21 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 22 |\u001b[39m\u001b[0m"
-                          },
-                          "errors": [
-                            {
-                              "location": {
-                                "file": "C:\\Users\\Saitej\\OneDrive\\Documents\\ReactJS\\React\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\tests\\e2e\\challenge-21.spec.ts",
-                                "column": 53,
-                                "line": 19
-                              },
-                              "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#task-detail-back')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#task-detail-back')\u001b[22m\n\n\n  17 |   test('back button should exist on task detail page', async ({ page }) => {\n  18 |     await page.goto('/challenge/21-react-router/task/1');\n> 19 |     await expect(page.locator('#task-detail-back')).toBeVisible();\n     |                                                     ^\n  20 |   });\n  21 | });\n  22 |\n    at C:\\Users\\Saitej\\OneDrive\\Documents\\ReactJS\\React\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\tests\\e2e\\challenge-21.spec.ts:19:53"
-                            }
-                          ],
-                          "stdout": [],
-                          "stderr": [],
-                          "retry": 2,
-                          "startTime": "2026-08-06T12:02:23.776Z",
-                          "annotations": [],
-                          "attachments": [
-                            {
-                              "name": "screenshot",
-                              "contentType": "image/png",
-                              "path": "C:\\Users\\Saitej\\OneDrive\\Documents\\ReactJS\\React\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\test-results\\challenge-21-Challenge-21--a6c00-d-exist-on-task-detail-page-chromium-retry2\\test-failed-1.png"
-                            },
-                            {
-                              "name": "error-context",
-                              "contentType": "text/markdown",
-                              "path": "C:\\Users\\Saitej\\OneDrive\\Documents\\ReactJS\\React\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\test-results\\challenge-21-Challenge-21--a6c00-d-exist-on-task-detail-page-chromium-retry2\\error-context.md"
-                            }
-                          ],
-                          "errorLocation": {
-                            "file": "C:\\Users\\Saitej\\OneDrive\\Documents\\ReactJS\\React\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\tests\\e2e\\challenge-21.spec.ts",
-                            "column": 53,
-                            "line": 19
-                          }
+                          "attachments": []
                         }
                       ],
-                      "status": "unexpected"
+                      "status": "expected"
                     }
                   ],
                   "id": "22625d08e539c53447bc-f85ca2164f7d61a1e83d",
@@ -7810,70 +7532,55 @@
           ]
         }
       ],
-      "error": "Command failed: npx playwright test \"tests/e2e/challenge-21.spec.ts\" --reporter=json\nnpm warn Unknown env config \"challenge\". This will stop working in the next major version of npm.\n",
-      "passed": false
+      "screenshots": []
     },
     "aiReviewResults": {
       "challengeId": "21-react-router",
-      "timestamp": "2026-08-06T12:02:30.609Z",
-      "score": 88,
+      "timestamp": "2026-08-12T05:40:56.112Z",
+      "score": 0,
       "feedback": [],
-      "strengths": [
-        "The code is well-structured and follows a consistent naming convention.",
-        "The use of TypeScript and functional components makes the code more maintainable and scalable.",
-        "The application of React Router for client-side routing is a good practice."
-      ],
-      "improvements": [
-        "In the `TaskDetailPage` component, the `useParams` hook is not being used to retrieve the task ID from the URL. This should be fixed to display the correct task details.",
-        "In the `TaskList` component, the `linkToTaskDetail` prop is not being used to render links to task details. This should be fixed to enable navigation to task details.",
-        "The code could benefit from more comments and documentation to explain the purpose of each component and how they interact with each other."
-      ],
-      "readability": 85,
-      "maintainability": 90,
-      "overall": "The code is well-structured and follows good practices, but there are some minor issues that need to be addressed to make it more maintainable and efficient. With some improvements, this code has the potential to be a solid foundation for a larger application."
+      "strengths": [],
+      "improvements": [],
+      "readability": 0,
+      "maintainability": 0,
+      "overall": "",
+      "error": "Groq API error (413): Request too large for model `llama-3.1-8b-instant` in organization `org_01kz67g1cre27rvvjxvyzg9gs2` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Requested 6253, please reduce your message size and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing"
     },
     "aiResults": {
       "challengeId": "21-react-router",
-      "timestamp": "2026-08-06T12:02:30.609Z",
-      "score": 88,
+      "timestamp": "2026-08-12T05:40:56.112Z",
+      "score": 0,
       "feedback": [],
-      "strengths": [
-        "The code is well-structured and follows a consistent naming convention.",
-        "The use of TypeScript and functional components makes the code more maintainable and scalable.",
-        "The application of React Router for client-side routing is a good practice."
-      ],
-      "improvements": [
-        "In the `TaskDetailPage` component, the `useParams` hook is not being used to retrieve the task ID from the URL. This should be fixed to display the correct task details.",
-        "In the `TaskList` component, the `linkToTaskDetail` prop is not being used to render links to task details. This should be fixed to enable navigation to task details.",
-        "The code could benefit from more comments and documentation to explain the purpose of each component and how they interact with each other."
-      ],
-      "readability": 85,
-      "maintainability": 90,
-      "overall": "The code is well-structured and follows good practices, but there are some minor issues that need to be addressed to make it more maintainable and efficient. With some improvements, this code has the potential to be a solid foundation for a larger application."
+      "strengths": [],
+      "improvements": [],
+      "readability": 0,
+      "maintainability": 0,
+      "overall": "",
+      "error": "Groq API error (413): Request too large for model `llama-3.1-8b-instant` in organization `org_01kz67g1cre27rvvjxvyzg9gs2` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Requested 6253, please reduce your message size and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing"
     }
   },
   {
     "challengeId": "22-data-fetching",
     "challengeName": "Data Fetching - Loading and Error State",
-    "timestamp": "2026-08-06T12:02:31.936Z",
+    "timestamp": "2026-08-12T05:47:39.913Z",
     "scores": {
-      "functionalTests": 0,
+      "functionalTests": 100,
       "codeQuality": 100,
       "architecture": 100,
       "bestPractices": 100,
-      "e2eTests": 0,
-      "aiReview": 75
+      "e2eTests": 100,
+      "aiReview": 88
     },
-    "totalScore": 46.25,
-    "passed": false,
+    "totalScore": 98.2,
+    "passed": true,
     "errors": [],
     "warnings": [],
     "testResults": {
-      "score": 0,
-      "passed": false,
+      "score": 100,
+      "passed": true,
       "totalTests": 3,
-      "passedTests": 0,
-      "failedTests": 3,
+      "passedTests": 3,
+      "failedTests": 0,
       "details": [
         {
           "assertionResults": [
@@ -7883,16 +7590,10 @@
                 "Challenge 22: Data Fetching - Loading and Error State"
               ],
               "fullName": " Challenge 22: Data Fetching - Loading and Error State FetchDemoView should show loading state initially or fetch from API",
-              "status": "failed",
+              "status": "passed",
               "title": "FetchDemoView should show loading state initially or fetch from API",
-              "duration": 1038,
-              "failureMessages": [
-                "Unable to find an element with the text: Test todo. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.\n\nIgnored nodes: comments, script, style\n\u001b[36m<body>\u001b[39m\n  \u001b[36m<div />\u001b[39m\n\u001b[36m</body>\u001b[39m\n\nIgnored nodes: comments, script, style\n\u001b[36m<html>\u001b[39m\n  \u001b[36m<head />\u001b[39m\n  \u001b[36m<body>\u001b[39m\n    \u001b[36m<div />\u001b[39m\n  \u001b[36m</body>\u001b[39m\n\u001b[36m</html>\u001b[39m"
-              ],
-              "location": {
-                "line": 163,
-                "column": 27
-              }
+              "duration": 46,
+              "failureMessages": []
             },
             {
               "ancestorTitles": [
@@ -7900,16 +7601,10 @@
                 "Challenge 22: Data Fetching - Loading and Error State"
               ],
               "fullName": " Challenge 22: Data Fetching - Loading and Error State FetchDemoView should have fetch-list when data is loaded",
-              "status": "failed",
+              "status": "passed",
               "title": "FetchDemoView should have fetch-list when data is loaded",
-              "duration": 1019,
-              "failureMessages": [
-                "\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).toBeInTheDocument()\u001b[22m\n\n\u001b[31mreceived\u001b[39m value must be an HTMLElement or an SVGElement.\n\n\nIgnored nodes: comments, script, style\n\u001b[36m<html>\u001b[39m\n  \u001b[36m<head />\u001b[39m\n  \u001b[36m<body>\u001b[39m\n    \u001b[36m<div />\u001b[39m\n  \u001b[36m</body>\u001b[39m\n\u001b[36m</html>\u001b[39m"
-              ],
-              "location": {
-                "line": 35,
-                "column": 20
-              }
+              "duration": 15,
+              "failureMessages": []
             },
             {
               "ancestorTitles": [
@@ -7917,26 +7612,19 @@
                 "Challenge 22: Data Fetching - Loading and Error State"
               ],
               "fullName": " Challenge 22: Data Fetching - Loading and Error State FetchDemoView should show fetch-error when fetch fails",
-              "status": "failed",
+              "status": "passed",
               "title": "FetchDemoView should show fetch-error when fetch fails",
-              "duration": 1012,
-              "failureMessages": [
-                "\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).toBeInTheDocument()\u001b[22m\n\n\u001b[31mreceived\u001b[39m value must be an HTMLElement or an SVGElement.\n\n\nIgnored nodes: comments, script, style\n\u001b[36m<html>\u001b[39m\n  \u001b[36m<head />\u001b[39m\n  \u001b[36m<body>\u001b[39m\n    \u001b[36m<div />\u001b[39m\n  \u001b[36m</body>\u001b[39m\n\u001b[36m</html>\u001b[39m"
-              ],
-              "location": {
-                "line": 44,
-                "column": 19
-              }
+              "duration": 16,
+              "failureMessages": []
             }
           ],
-          "startTime": 1786017756842,
-          "endTime": 1786017759911,
-          "status": "failed",
+          "startTime": 1786513663869,
+          "endTime": 1786513663946,
+          "status": "passed",
           "message": "",
           "name": "C:/Users/Saitej/OneDrive/Documents/ReactJS/React/challenge-engine-react/courses/01-react-fundamentals/project/tests/challenge-22.test.tsx"
         }
-      ],
-      "error": "Command failed: npx vitest run \"C:\\Users\\Saitej\\OneDrive\\Documents\\ReactJS\\React\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\tests\\challenge-22.test.tsx\" --reporter=json\nnpm warn Unknown env config \"challenge\". This will stop working in the next major version of npm.\n"
+      ]
     },
     "lintResults": {
       "score": 100,
@@ -7999,11 +7687,10 @@
         {
           "file": "src/components/FetchDemoView.tsx",
           "patternsFound": [
-            "functionalComponent"
-          ],
-          "patternsMissing": [
+            "functionalComponent",
             "useState"
-          ]
+          ],
+          "patternsMissing": []
         },
         {
           "file": "src/App.tsx",
@@ -8023,10 +7710,11 @@
       "note": "No best practices requirements specified in challenge"
     },
     "e2eResults": {
-      "score": 0,
+      "score": 100,
+      "passed": true,
       "totalTests": 2,
-      "passedTests": 0,
-      "failedTests": 2,
+      "passedTests": 2,
+      "failedTests": 0,
       "details": [
         {
           "title": "challenge-22.spec.ts",
@@ -8043,7 +7731,7 @@
               "specs": [
                 {
                   "title": "should show loading or list",
-                  "ok": false,
+                  "ok": true,
                   "tags": [],
                   "tests": [
                     {
@@ -8056,158 +7744,18 @@
                         {
                           "workerIndex": 0,
                           "parallelIndex": 0,
-                          "status": "failed",
-                          "duration": 1941,
-                          "error": {
-                            "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m",
-                            "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m\n    at C:\\Users\\Saitej\\OneDrive\\Documents\\ReactJS\\React\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\tests\\e2e\\challenge-22.spec.ts:16:47",
-                            "location": {
-                              "file": "C:\\Users\\Saitej\\OneDrive\\Documents\\ReactJS\\React\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\tests\\e2e\\challenge-22.spec.ts",
-                              "column": 47,
-                              "line": 16
-                            },
-                            "snippet": "\u001b[0m \u001b[90m 14 |\u001b[39m     \u001b[36mconst\u001b[39m hasList \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m list\u001b[33m.\u001b[39misVisible()\u001b[33m;\u001b[39m\n \u001b[90m 15 |\u001b[39m     \u001b[36mconst\u001b[39m hasError \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m err\u001b[33m.\u001b[39misVisible()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 16 |\u001b[39m     expect(hasLoading \u001b[33m||\u001b[39m hasList \u001b[33m||\u001b[39m hasError)\u001b[33m.\u001b[39mtoBeTruthy()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                               \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 17 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 18 |\u001b[39m\n \u001b[90m 19 |\u001b[39m   test(\u001b[32m'should eventually show fetch-list when API succeeds'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\u001b[0m"
-                          },
-                          "errors": [
-                            {
-                              "location": {
-                                "file": "C:\\Users\\Saitej\\OneDrive\\Documents\\ReactJS\\React\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\tests\\e2e\\challenge-22.spec.ts",
-                                "column": 47,
-                                "line": 16
-                              },
-                              "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m\n\n  14 |     const hasList = await list.isVisible();\n  15 |     const hasError = await err.isVisible();\n> 16 |     expect(hasLoading || hasList || hasError).toBeTruthy();\n     |                                               ^\n  17 |   });\n  18 |\n  19 |   test('should eventually show fetch-list when API succeeds', async ({ page }) => {\n    at C:\\Users\\Saitej\\OneDrive\\Documents\\ReactJS\\React\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\tests\\e2e\\challenge-22.spec.ts:16:47"
-                            }
-                          ],
+                          "status": "passed",
+                          "duration": 1846,
+                          "errors": [],
                           "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2026-08-06T12:02:52.568Z",
+                          "startTime": "2026-08-12T05:47:52.552Z",
                           "annotations": [],
-                          "attachments": [
-                            {
-                              "name": "screenshot",
-                              "contentType": "image/png",
-                              "path": "C:\\Users\\Saitej\\OneDrive\\Documents\\ReactJS\\React\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\test-results\\challenge-22-Challenge-22--d6d22-should-show-loading-or-list-chromium\\test-failed-1.png"
-                            },
-                            {
-                              "name": "error-context",
-                              "contentType": "text/markdown",
-                              "path": "C:\\Users\\Saitej\\OneDrive\\Documents\\ReactJS\\React\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\test-results\\challenge-22-Challenge-22--d6d22-should-show-loading-or-list-chromium\\error-context.md"
-                            }
-                          ],
-                          "errorLocation": {
-                            "file": "C:\\Users\\Saitej\\OneDrive\\Documents\\ReactJS\\React\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\tests\\e2e\\challenge-22.spec.ts",
-                            "column": 47,
-                            "line": 16
-                          }
-                        },
-                        {
-                          "workerIndex": 1,
-                          "parallelIndex": 0,
-                          "status": "failed",
-                          "duration": 1933,
-                          "error": {
-                            "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m",
-                            "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m\n    at C:\\Users\\Saitej\\OneDrive\\Documents\\ReactJS\\React\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\tests\\e2e\\challenge-22.spec.ts:16:47",
-                            "location": {
-                              "file": "C:\\Users\\Saitej\\OneDrive\\Documents\\ReactJS\\React\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\tests\\e2e\\challenge-22.spec.ts",
-                              "column": 47,
-                              "line": 16
-                            },
-                            "snippet": "\u001b[0m \u001b[90m 14 |\u001b[39m     \u001b[36mconst\u001b[39m hasList \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m list\u001b[33m.\u001b[39misVisible()\u001b[33m;\u001b[39m\n \u001b[90m 15 |\u001b[39m     \u001b[36mconst\u001b[39m hasError \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m err\u001b[33m.\u001b[39misVisible()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 16 |\u001b[39m     expect(hasLoading \u001b[33m||\u001b[39m hasList \u001b[33m||\u001b[39m hasError)\u001b[33m.\u001b[39mtoBeTruthy()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                               \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 17 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 18 |\u001b[39m\n \u001b[90m 19 |\u001b[39m   test(\u001b[32m'should eventually show fetch-list when API succeeds'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\u001b[0m"
-                          },
-                          "errors": [
-                            {
-                              "location": {
-                                "file": "C:\\Users\\Saitej\\OneDrive\\Documents\\ReactJS\\React\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\tests\\e2e\\challenge-22.spec.ts",
-                                "column": 47,
-                                "line": 16
-                              },
-                              "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m\n\n  14 |     const hasList = await list.isVisible();\n  15 |     const hasError = await err.isVisible();\n> 16 |     expect(hasLoading || hasList || hasError).toBeTruthy();\n     |                                               ^\n  17 |   });\n  18 |\n  19 |   test('should eventually show fetch-list when API succeeds', async ({ page }) => {\n    at C:\\Users\\Saitej\\OneDrive\\Documents\\ReactJS\\React\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\tests\\e2e\\challenge-22.spec.ts:16:47"
-                            },
-                            {
-                              "message": "Error: apiRequestContext._wrapApiCall: ENOENT: no such file or directory, open 'C:\\Users\\Saitej\\OneDrive\\Documents\\ReactJS\\React\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\test-results\\.playwright-artifacts-1\\traces\\897c0b09f5b8225a79bd-7bc66a1771cb4c50b87e-retry1.trace'"
-                            },
-                            {
-                              "message": "Error: ENOENT: no such file or directory, open 'C:\\Users\\Saitej\\OneDrive\\Documents\\ReactJS\\React\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\test-results\\.playwright-artifacts-1\\df5e57c21dbc14a9403f83b5bd655b7a.zip'"
-                            },
-                            {
-                              "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
-                            }
-                          ],
-                          "stdout": [],
-                          "stderr": [],
-                          "retry": 1,
-                          "startTime": "2026-08-06T12:02:57.772Z",
-                          "annotations": [],
-                          "attachments": [
-                            {
-                              "name": "screenshot",
-                              "contentType": "image/png",
-                              "path": "C:\\Users\\Saitej\\OneDrive\\Documents\\ReactJS\\React\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\test-results\\challenge-22-Challenge-22--d6d22-should-show-loading-or-list-chromium-retry1\\test-failed-1.png"
-                            },
-                            {
-                              "name": "error-context",
-                              "contentType": "text/markdown",
-                              "path": "C:\\Users\\Saitej\\OneDrive\\Documents\\ReactJS\\React\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\test-results\\challenge-22-Challenge-22--d6d22-should-show-loading-or-list-chromium-retry1\\error-context.md"
-                            }
-                          ],
-                          "errorLocation": {
-                            "file": "C:\\Users\\Saitej\\OneDrive\\Documents\\ReactJS\\React\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\tests\\e2e\\challenge-22.spec.ts",
-                            "column": 47,
-                            "line": 16
-                          }
-                        },
-                        {
-                          "workerIndex": 2,
-                          "parallelIndex": 0,
-                          "status": "failed",
-                          "duration": 1916,
-                          "error": {
-                            "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m",
-                            "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m\n    at C:\\Users\\Saitej\\OneDrive\\Documents\\ReactJS\\React\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\tests\\e2e\\challenge-22.spec.ts:16:47",
-                            "location": {
-                              "file": "C:\\Users\\Saitej\\OneDrive\\Documents\\ReactJS\\React\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\tests\\e2e\\challenge-22.spec.ts",
-                              "column": 47,
-                              "line": 16
-                            },
-                            "snippet": "\u001b[0m \u001b[90m 14 |\u001b[39m     \u001b[36mconst\u001b[39m hasList \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m list\u001b[33m.\u001b[39misVisible()\u001b[33m;\u001b[39m\n \u001b[90m 15 |\u001b[39m     \u001b[36mconst\u001b[39m hasError \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m err\u001b[33m.\u001b[39misVisible()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 16 |\u001b[39m     expect(hasLoading \u001b[33m||\u001b[39m hasList \u001b[33m||\u001b[39m hasError)\u001b[33m.\u001b[39mtoBeTruthy()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                               \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 17 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 18 |\u001b[39m\n \u001b[90m 19 |\u001b[39m   test(\u001b[32m'should eventually show fetch-list when API succeeds'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\u001b[0m"
-                          },
-                          "errors": [
-                            {
-                              "location": {
-                                "file": "C:\\Users\\Saitej\\OneDrive\\Documents\\ReactJS\\React\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\tests\\e2e\\challenge-22.spec.ts",
-                                "column": 47,
-                                "line": 16
-                              },
-                              "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m\n\n  14 |     const hasList = await list.isVisible();\n  15 |     const hasError = await err.isVisible();\n> 16 |     expect(hasLoading || hasList || hasError).toBeTruthy();\n     |                                               ^\n  17 |   });\n  18 |\n  19 |   test('should eventually show fetch-list when API succeeds', async ({ page }) => {\n    at C:\\Users\\Saitej\\OneDrive\\Documents\\ReactJS\\React\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\tests\\e2e\\challenge-22.spec.ts:16:47"
-                            }
-                          ],
-                          "stdout": [],
-                          "stderr": [],
-                          "retry": 2,
-                          "startTime": "2026-08-06T12:03:32.859Z",
-                          "annotations": [],
-                          "attachments": [
-                            {
-                              "name": "screenshot",
-                              "contentType": "image/png",
-                              "path": "C:\\Users\\Saitej\\OneDrive\\Documents\\ReactJS\\React\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\test-results\\challenge-22-Challenge-22--d6d22-should-show-loading-or-list-chromium-retry2\\test-failed-1.png"
-                            },
-                            {
-                              "name": "error-context",
-                              "contentType": "text/markdown",
-                              "path": "C:\\Users\\Saitej\\OneDrive\\Documents\\ReactJS\\React\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\test-results\\challenge-22-Challenge-22--d6d22-should-show-loading-or-list-chromium-retry2\\error-context.md"
-                            }
-                          ],
-                          "errorLocation": {
-                            "file": "C:\\Users\\Saitej\\OneDrive\\Documents\\ReactJS\\React\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\tests\\e2e\\challenge-22.spec.ts",
-                            "column": 47,
-                            "line": 16
-                          }
+                          "attachments": []
                         }
                       ],
-                      "status": "unexpected"
+                      "status": "expected"
                     }
                   ],
                   "id": "897c0b09f5b8225a79bd-7bc66a1771cb4c50b87e",
@@ -8217,7 +7765,7 @@
                 },
                 {
                   "title": "should eventually show fetch-list when API succeeds",
-                  "ok": false,
+                  "ok": true,
                   "tags": [],
                   "tests": [
                     {
@@ -8228,156 +7776,20 @@
                       "projectName": "chromium",
                       "results": [
                         {
-                          "workerIndex": 3,
+                          "workerIndex": 0,
                           "parallelIndex": 0,
-                          "status": "failed",
-                          "duration": 11344,
-                          "error": {
-                            "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#fetch-list')\nExpected: visible\nTimeout: 6000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 6000ms\u001b[22m\n\u001b[2m  - waiting for locator('#fetch-list')\u001b[22m\n",
-                            "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#fetch-list')\nExpected: visible\nTimeout: 6000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 6000ms\u001b[22m\n\u001b[2m  - waiting for locator('#fetch-list')\u001b[22m\n\n    at C:\\Users\\Saitej\\OneDrive\\Documents\\ReactJS\\React\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\tests\\e2e\\challenge-22.spec.ts:22:24",
-                            "location": {
-                              "file": "C:\\Users\\Saitej\\OneDrive\\Documents\\ReactJS\\React\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\tests\\e2e\\challenge-22.spec.ts",
-                              "column": 24,
-                              "line": 22
-                            },
-                            "snippet": "\u001b[0m \u001b[90m 20 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForSelector(\u001b[32m'#fetch-list'\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[35m5000\u001b[39m })\u001b[33m.\u001b[39m\u001b[36mcatch\u001b[39m(() \u001b[33m=>\u001b[39m \u001b[36mnull\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 21 |\u001b[39m     \u001b[36mconst\u001b[39m list \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#fetch-list'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 22 |\u001b[39m     \u001b[36mawait\u001b[39m expect(list)\u001b[33m.\u001b[39mtoBeVisible({ timeout\u001b[33m:\u001b[39m \u001b[35m6000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 23 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 24 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 25 |\u001b[39m\u001b[0m"
-                          },
-                          "errors": [
-                            {
-                              "location": {
-                                "file": "C:\\Users\\Saitej\\OneDrive\\Documents\\ReactJS\\React\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\tests\\e2e\\challenge-22.spec.ts",
-                                "column": 24,
-                                "line": 22
-                              },
-                              "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#fetch-list')\nExpected: visible\nTimeout: 6000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 6000ms\u001b[22m\n\u001b[2m  - waiting for locator('#fetch-list')\u001b[22m\n\n\n  20 |     await page.waitForSelector('#fetch-list', { timeout: 5000 }).catch(() => null);\n  21 |     const list = page.locator('#fetch-list');\n> 22 |     await expect(list).toBeVisible({ timeout: 6000 });\n     |                        ^\n  23 |   });\n  24 | });\n  25 |\n    at C:\\Users\\Saitej\\OneDrive\\Documents\\ReactJS\\React\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\tests\\e2e\\challenge-22.spec.ts:22:24"
-                            }
-                          ],
+                          "status": "passed",
+                          "duration": 278,
+                          "errors": [],
                           "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2026-08-06T12:03:37.899Z",
+                          "startTime": "2026-08-12T05:47:54.776Z",
                           "annotations": [],
-                          "attachments": [
-                            {
-                              "name": "screenshot",
-                              "contentType": "image/png",
-                              "path": "C:\\Users\\Saitej\\OneDrive\\Documents\\ReactJS\\React\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\test-results\\challenge-22-Challenge-22--e238e-etch-list-when-API-succeeds-chromium\\test-failed-1.png"
-                            },
-                            {
-                              "name": "error-context",
-                              "contentType": "text/markdown",
-                              "path": "C:\\Users\\Saitej\\OneDrive\\Documents\\ReactJS\\React\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\test-results\\challenge-22-Challenge-22--e238e-etch-list-when-API-succeeds-chromium\\error-context.md"
-                            }
-                          ],
-                          "errorLocation": {
-                            "file": "C:\\Users\\Saitej\\OneDrive\\Documents\\ReactJS\\React\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\tests\\e2e\\challenge-22.spec.ts",
-                            "column": 24,
-                            "line": 22
-                          }
-                        },
-                        {
-                          "workerIndex": 4,
-                          "parallelIndex": 0,
-                          "status": "failed",
-                          "duration": 11438,
-                          "error": {
-                            "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#fetch-list')\nExpected: visible\nTimeout: 6000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 6000ms\u001b[22m\n\u001b[2m  - waiting for locator('#fetch-list')\u001b[22m\n",
-                            "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#fetch-list')\nExpected: visible\nTimeout: 6000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 6000ms\u001b[22m\n\u001b[2m  - waiting for locator('#fetch-list')\u001b[22m\n\n    at C:\\Users\\Saitej\\OneDrive\\Documents\\ReactJS\\React\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\tests\\e2e\\challenge-22.spec.ts:22:24",
-                            "location": {
-                              "file": "C:\\Users\\Saitej\\OneDrive\\Documents\\ReactJS\\React\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\tests\\e2e\\challenge-22.spec.ts",
-                              "column": 24,
-                              "line": 22
-                            },
-                            "snippet": "\u001b[0m \u001b[90m 20 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForSelector(\u001b[32m'#fetch-list'\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[35m5000\u001b[39m })\u001b[33m.\u001b[39m\u001b[36mcatch\u001b[39m(() \u001b[33m=>\u001b[39m \u001b[36mnull\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 21 |\u001b[39m     \u001b[36mconst\u001b[39m list \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#fetch-list'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 22 |\u001b[39m     \u001b[36mawait\u001b[39m expect(list)\u001b[33m.\u001b[39mtoBeVisible({ timeout\u001b[33m:\u001b[39m \u001b[35m6000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 23 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 24 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 25 |\u001b[39m\u001b[0m"
-                          },
-                          "errors": [
-                            {
-                              "location": {
-                                "file": "C:\\Users\\Saitej\\OneDrive\\Documents\\ReactJS\\React\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\tests\\e2e\\challenge-22.spec.ts",
-                                "column": 24,
-                                "line": 22
-                              },
-                              "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#fetch-list')\nExpected: visible\nTimeout: 6000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 6000ms\u001b[22m\n\u001b[2m  - waiting for locator('#fetch-list')\u001b[22m\n\n\n  20 |     await page.waitForSelector('#fetch-list', { timeout: 5000 }).catch(() => null);\n  21 |     const list = page.locator('#fetch-list');\n> 22 |     await expect(list).toBeVisible({ timeout: 6000 });\n     |                        ^\n  23 |   });\n  24 | });\n  25 |\n    at C:\\Users\\Saitej\\OneDrive\\Documents\\ReactJS\\React\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\tests\\e2e\\challenge-22.spec.ts:22:24"
-                            }
-                          ],
-                          "stdout": [],
-                          "stderr": [],
-                          "retry": 1,
-                          "startTime": "2026-08-06T12:03:52.468Z",
-                          "annotations": [],
-                          "attachments": [
-                            {
-                              "name": "screenshot",
-                              "contentType": "image/png",
-                              "path": "C:\\Users\\Saitej\\OneDrive\\Documents\\ReactJS\\React\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\test-results\\challenge-22-Challenge-22--e238e-etch-list-when-API-succeeds-chromium-retry1\\test-failed-1.png"
-                            },
-                            {
-                              "name": "error-context",
-                              "contentType": "text/markdown",
-                              "path": "C:\\Users\\Saitej\\OneDrive\\Documents\\ReactJS\\React\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\test-results\\challenge-22-Challenge-22--e238e-etch-list-when-API-succeeds-chromium-retry1\\error-context.md"
-                            },
-                            {
-                              "name": "trace",
-                              "contentType": "application/zip",
-                              "path": "C:\\Users\\Saitej\\OneDrive\\Documents\\ReactJS\\React\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\test-results\\challenge-22-Challenge-22--e238e-etch-list-when-API-succeeds-chromium-retry1\\trace.zip"
-                            }
-                          ],
-                          "errorLocation": {
-                            "file": "C:\\Users\\Saitej\\OneDrive\\Documents\\ReactJS\\React\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\tests\\e2e\\challenge-22.spec.ts",
-                            "column": 24,
-                            "line": 22
-                          }
-                        },
-                        {
-                          "workerIndex": 5,
-                          "parallelIndex": 0,
-                          "status": "failed",
-                          "duration": 11388,
-                          "error": {
-                            "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#fetch-list')\nExpected: visible\nTimeout: 6000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 6000ms\u001b[22m\n\u001b[2m  - waiting for locator('#fetch-list')\u001b[22m\n",
-                            "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#fetch-list')\nExpected: visible\nTimeout: 6000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 6000ms\u001b[22m\n\u001b[2m  - waiting for locator('#fetch-list')\u001b[22m\n\n    at C:\\Users\\Saitej\\OneDrive\\Documents\\ReactJS\\React\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\tests\\e2e\\challenge-22.spec.ts:22:24",
-                            "location": {
-                              "file": "C:\\Users\\Saitej\\OneDrive\\Documents\\ReactJS\\React\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\tests\\e2e\\challenge-22.spec.ts",
-                              "column": 24,
-                              "line": 22
-                            },
-                            "snippet": "\u001b[0m \u001b[90m 20 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForSelector(\u001b[32m'#fetch-list'\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[35m5000\u001b[39m })\u001b[33m.\u001b[39m\u001b[36mcatch\u001b[39m(() \u001b[33m=>\u001b[39m \u001b[36mnull\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 21 |\u001b[39m     \u001b[36mconst\u001b[39m list \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#fetch-list'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 22 |\u001b[39m     \u001b[36mawait\u001b[39m expect(list)\u001b[33m.\u001b[39mtoBeVisible({ timeout\u001b[33m:\u001b[39m \u001b[35m6000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 23 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 24 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 25 |\u001b[39m\u001b[0m"
-                          },
-                          "errors": [
-                            {
-                              "location": {
-                                "file": "C:\\Users\\Saitej\\OneDrive\\Documents\\ReactJS\\React\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\tests\\e2e\\challenge-22.spec.ts",
-                                "column": 24,
-                                "line": 22
-                              },
-                              "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#fetch-list')\nExpected: visible\nTimeout: 6000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 6000ms\u001b[22m\n\u001b[2m  - waiting for locator('#fetch-list')\u001b[22m\n\n\n  20 |     await page.waitForSelector('#fetch-list', { timeout: 5000 }).catch(() => null);\n  21 |     const list = page.locator('#fetch-list');\n> 22 |     await expect(list).toBeVisible({ timeout: 6000 });\n     |                        ^\n  23 |   });\n  24 | });\n  25 |\n    at C:\\Users\\Saitej\\OneDrive\\Documents\\ReactJS\\React\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\tests\\e2e\\challenge-22.spec.ts:22:24"
-                            }
-                          ],
-                          "stdout": [],
-                          "stderr": [],
-                          "retry": 2,
-                          "startTime": "2026-08-06T12:04:07.258Z",
-                          "annotations": [],
-                          "attachments": [
-                            {
-                              "name": "screenshot",
-                              "contentType": "image/png",
-                              "path": "C:\\Users\\Saitej\\OneDrive\\Documents\\ReactJS\\React\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\test-results\\challenge-22-Challenge-22--e238e-etch-list-when-API-succeeds-chromium-retry2\\test-failed-1.png"
-                            },
-                            {
-                              "name": "error-context",
-                              "contentType": "text/markdown",
-                              "path": "C:\\Users\\Saitej\\OneDrive\\Documents\\ReactJS\\React\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\test-results\\challenge-22-Challenge-22--e238e-etch-list-when-API-succeeds-chromium-retry2\\error-context.md"
-                            }
-                          ],
-                          "errorLocation": {
-                            "file": "C:\\Users\\Saitej\\OneDrive\\Documents\\ReactJS\\React\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\tests\\e2e\\challenge-22.spec.ts",
-                            "column": 24,
-                            "line": 22
-                          }
+                          "attachments": []
                         }
                       ],
-                      "status": "unexpected"
+                      "status": "expected"
                     }
                   ],
                   "id": "897c0b09f5b8225a79bd-874b54bff2542e762bf2",
@@ -8390,46 +7802,45 @@
           ]
         }
       ],
-      "error": "Command failed: npx playwright test \"tests/e2e/challenge-22.spec.ts\" --reporter=json\nnpm warn Unknown env config \"challenge\". This will stop working in the next major version of npm.\n",
-      "passed": false
+      "screenshots": []
     },
     "aiReviewResults": {
       "challengeId": "22-data-fetching",
-      "timestamp": "2026-08-06T12:04:20.123Z",
-      "score": 75,
+      "timestamp": "2026-08-12T05:47:56.207Z",
+      "score": 88,
       "feedback": [],
       "strengths": [
-        "The code is well-structured and follows a clear pattern for handling loading, error, and data states.",
-        "The use of `useState` and `useEffect` is correct and effective for managing the component's state and fetching data.",
-        "The code is concise and easy to understand, with minimal unnecessary complexity."
+        "The code is well-structured and easy to follow, with clear separation of concerns between the FetchDemoView component and the useEffect hook.",
+        "The use of TypeScript and functional components makes the code more maintainable and efficient.",
+        "The code includes proper error handling and cleanup using the AbortController, which is a good practice for async data loading."
       ],
       "improvements": [
-        "The component's state is not properly initialized, which could lead to unexpected behavior. For example, the `loading` state is not initialized to `false` when the component mounts.",
-        "The error handling could be improved by providing more specific error messages and handling different types of errors (e.g., network errors, JSON parsing errors).",
-        "The code could benefit from additional comments or documentation to explain the purpose of each section and the logic behind the code."
+        "The code could benefit from more descriptive variable names, especially in the useEffect hook. For example, 'controller' could be renamed to 'abortController' for clarity.",
+        "The error message 'Failed to load data' could be more informative and provide additional context, such as the actual error message or the API URL that failed to load.",
+        "The code assumes that the API returns a JSON response with an array of TodoItem objects. Consider adding some error handling for cases where the API returns an unexpected response format."
       ],
-      "readability": 80,
-      "maintainability": 70,
-      "overall": "The code is a good start, but it could benefit from some improvements to make it more robust, maintainable, and readable. With some additional comments and error handling, this component could be a great example of how to handle loading, error, and data states in a React application."
+      "readability": 85,
+      "maintainability": 90,
+      "overall": "The code is well-structured, maintainable, and efficient, with good practices for async data loading and error handling. However, there are some minor improvements that can be made to enhance readability and robustness."
     },
     "aiResults": {
       "challengeId": "22-data-fetching",
-      "timestamp": "2026-08-06T12:04:20.123Z",
-      "score": 75,
+      "timestamp": "2026-08-12T05:47:56.207Z",
+      "score": 88,
       "feedback": [],
       "strengths": [
-        "The code is well-structured and follows a clear pattern for handling loading, error, and data states.",
-        "The use of `useState` and `useEffect` is correct and effective for managing the component's state and fetching data.",
-        "The code is concise and easy to understand, with minimal unnecessary complexity."
+        "The code is well-structured and easy to follow, with clear separation of concerns between the FetchDemoView component and the useEffect hook.",
+        "The use of TypeScript and functional components makes the code more maintainable and efficient.",
+        "The code includes proper error handling and cleanup using the AbortController, which is a good practice for async data loading."
       ],
       "improvements": [
-        "The component's state is not properly initialized, which could lead to unexpected behavior. For example, the `loading` state is not initialized to `false` when the component mounts.",
-        "The error handling could be improved by providing more specific error messages and handling different types of errors (e.g., network errors, JSON parsing errors).",
-        "The code could benefit from additional comments or documentation to explain the purpose of each section and the logic behind the code."
+        "The code could benefit from more descriptive variable names, especially in the useEffect hook. For example, 'controller' could be renamed to 'abortController' for clarity.",
+        "The error message 'Failed to load data' could be more informative and provide additional context, such as the actual error message or the API URL that failed to load.",
+        "The code assumes that the API returns a JSON response with an array of TodoItem objects. Consider adding some error handling for cases where the API returns an unexpected response format."
       ],
-      "readability": 80,
-      "maintainability": 70,
-      "overall": "The code is a good start, but it could benefit from some improvements to make it more robust, maintainable, and readable. With some additional comments and error handling, this component could be a great example of how to handle loading, error, and data states in a React application."
+      "readability": 85,
+      "maintainability": 90,
+      "overall": "The code is well-structured, maintainable, and efficient, with good practices for async data loading and error handling. However, there are some minor improvements that can be made to enhance readability and robustness."
     }
   },
   {
