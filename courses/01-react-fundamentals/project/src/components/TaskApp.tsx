@@ -55,7 +55,11 @@ export default function TaskApp(props: TaskAppProps) {
   const [category, setCategory] = useState("all");
 
   const categories = [
-    ...new Set(tasks.map((task) => task.category).filter(Boolean)),
+    ...new Set(
+      tasks
+        .map((task) => task.category)
+        .filter((category): category is string => Boolean(category)),
+    ),
   ];
 
   const stats = useMemo(() => {

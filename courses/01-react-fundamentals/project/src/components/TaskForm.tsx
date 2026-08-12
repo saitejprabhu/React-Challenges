@@ -90,7 +90,7 @@ export default function TaskForm(_props: TaskFormProps) {
         </select>
       </div>
 
-      <p id="task-form-error">{error}</p>
+          
 
      <Button type="submit" variant="primary">
   Add Task

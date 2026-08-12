@@ -75,7 +75,7 @@ export default function TaskList(props: TaskListProps) {
     <>
       {props.countText && <p id="task-count">{props.countText}</p>}
 
-      <section id="task-list">
+      <section>
         {taskList.map((task) => (
           <TaskCard
             key={task.id}
