@@ -57,12 +57,12 @@ npm run review -- --challenge=01-store-setup
 
 ## 📊 Progress Evidence
 
-*Auto-updated when you run review. Last run: 19/8/2026, 5:03:23 pm*
+*Auto-updated when you run review. Last run: 19/8/2026, 5:19:14 pm*
 
 | Metric | Value |
 |--------|-------|
 | Challenges completed | 5 / 13 (38.5%) |
-| Average score | 82.9% |
+| Average score | 97.1% |
 
 | Challenge | Skills covered | Status |
 |-----------|----------------|--------|

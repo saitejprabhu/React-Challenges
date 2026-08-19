@@ -1,11 +1,11 @@
 {
-  "lastUpdated": "2026-08-19T11:33:24.575Z",
+  "lastUpdated": "2026-08-19T11:49:14.967Z",
   "pathway": {
     "name": "Modern React Engineer",
     "version": "1.0.0",
-    "overallScore": 59.2,
+    "overallScore": 63.9,
     "completionPercentage": 52.8,
-    "badgeLevel": "none",
+    "badgeLevel": "bronze",
     "totalChallenges": 53,
     "completedChallenges": 28
   },
@@ -369,7 +369,7 @@
     "02-redux-rtk-query": {
       "courseId": "02-redux-rtk-query",
       "courseName": "Redux & RTK Query",
-      "averageScore": 82.9,
+      "averageScore": 97.1,
       "completionPercentage": 38.5,
       "badgeLevel": "none",
       "totalChallenges": 13,
@@ -379,14 +379,14 @@
           "challengeId": "01-store-setup",
           "challengeName": "Store Setup with configureStore",
           "passed": true,
-          "score": 82.15,
-          "lastRun": "2026-08-19T10:40:11.886Z",
+          "score": 97.15,
+          "lastRun": "2026-08-19T11:48:56.003Z",
           "scores": {
             "functionalTests": 100,
             "codeQuality": 100,
             "architecture": 100,
             "bestPractices": 100,
-            "e2eTests": 0,
+            "e2eTests": 100,
             "aiReview": 81
           }
         },
@@ -394,60 +394,60 @@
           "challengeId": "02-first-slice",
           "challengeName": "First Slice with createSlice",
           "passed": true,
-          "score": 82.5,
-          "lastRun": "2026-08-19T06:43:50.461Z",
+          "score": 98.65,
+          "lastRun": "2026-08-19T11:47:41.700Z",
           "scores": {
             "functionalTests": 100,
             "codeQuality": 100,
-            "architecture": 75,
+            "architecture": 100,
             "bestPractices": 100,
             "e2eTests": 100,
-            "aiReview": 0
+            "aiReview": 91
           }
         },
         "03-reading-dispatching": {
           "challengeId": "03-reading-dispatching",
           "challengeName": "Reading and Dispatching in Components",
           "passed": true,
-          "score": 80.005,
-          "lastRun": "2026-08-19T11:28:25.496Z",
+          "score": 93.05499999999999,
+          "lastRun": "2026-08-19T11:42:08.726Z",
           "scores": {
             "functionalTests": 100,
             "codeQuality": 100,
             "architecture": 100,
             "bestPractices": 100,
             "e2eTests": 66.7,
-            "aiReview": 0
+            "aiReview": 87
           }
         },
         "04-multiple-slices": {
           "challengeId": "04-multiple-slices",
           "challengeName": "Multiple Slices in the Store",
           "passed": true,
-          "score": 85,
-          "lastRun": "2026-08-19T11:26:30.627Z",
+          "score": 98.5,
+          "lastRun": "2026-08-19T11:46:24.677Z",
           "scores": {
             "functionalTests": 100,
             "codeQuality": 100,
             "architecture": 100,
             "bestPractices": 100,
             "e2eTests": 100,
-            "aiReview": 0
+            "aiReview": 90
           }
         },
         "05-async-thunks": {
           "challengeId": "05-async-thunks",
           "challengeName": "Async Logic with createAsyncThunk",
           "passed": true,
-          "score": 85,
-          "lastRun": "2026-08-19T11:33:08.803Z",
+          "score": 97.9,
+          "lastRun": "2026-08-19T11:40:03.320Z",
           "scores": {
             "functionalTests": 100,
             "codeQuality": 100,
             "architecture": 100,
             "bestPractices": 100,
             "e2eTests": 100,
-            "aiReview": 0
+            "aiReview": 86
           }
         }
       }
