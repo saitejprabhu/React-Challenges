@@ -149,5 +149,29 @@
       "overall": "The implementation satisfies all core requirements: an API slice with `createApi`, a query endpoint, and proper store configuration. It follows RTK Query conventions and TypeScript best practices, though adding explicit generics and simplifying the query definition would further align it with standard patterns.",
       "requirementCompliance": 95
     }
+  },
+  {
+    "challengeId": "07-queries",
+    "challengeName": "Query Endpoints and useQuery Hooks",
+    "aiReview": {
+      "challengeId": "07-queries",
+      "timestamp": "2026-08-19T15:40:50.040Z",
+      "score": 82,
+      "feedback": [],
+      "strengths": [
+        "Clear separation between API slice and UI component – `apiSlice.ts` defines the query and `UsersList.tsx` consumes it.",
+        "Proper handling of loading and error states with descriptive `data-testid` attributes for testing.",
+        "Use of TypeScript interfaces keeps the data shape explicit and type‑safe."
+      ],
+      "improvements": [
+        "In `src/api/apiSlice.ts` the `User` interface is duplicated. Import the shared interface from `mockServer.ts` to avoid duplication and keep types in sync.",
+        "Replace the `queryFn` implementation with a simple `query: () => 'users'` (or the appropriate endpoint) – this keeps the API slice concise and leverages RTK Query’s built‑in error handling.",
+        "Ensure the `apiSlice.reducer` and `apiSlice.middleware` are added to the Redux store and that the route `/challenge/07-queries` renders `UsersList`. These pieces are not shown in the current files and are required for the challenge to run."
+      ],
+      "readability": 85,
+      "maintainability": 80,
+      "overall": "The implementation correctly defines a `getUsers` query and consumes it with `useGetUsersQuery`, handling loading and error states as required. However, the code would benefit from reusing shared types, simplifying the query definition, and confirming that the slice is wired into the store and routed correctly.",
+      "requirementCompliance": 80
+    }
   }
 ]

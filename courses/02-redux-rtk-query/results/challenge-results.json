@@ -1891,5 +1891,286 @@
       "overall": "The implementation satisfies all core requirements: an API slice with `createApi`, a query endpoint, and proper store configuration. It follows RTK Query conventions and TypeScript best practices, though adding explicit generics and simplifying the query definition would further align it with standard patterns.",
       "requirementCompliance": 95
     }
+  },
+  {
+    "challengeId": "07-queries",
+    "challengeName": "Query Endpoints and useQuery Hooks",
+    "timestamp": "2026-08-19T15:40:29.667Z",
+    "scores": {
+      "functionalTests": 100,
+      "codeQuality": 100,
+      "architecture": 0,
+      "bestPractices": 100,
+      "e2eTests": 100,
+      "aiReview": 82
+    },
+    "totalScore": 87.3,
+    "passed": true,
+    "errors": [],
+    "warnings": [],
+    "testResults": {
+      "score": 100,
+      "passed": true,
+      "totalTests": 3,
+      "passedTests": 3,
+      "failedTests": 0,
+      "details": [
+        {
+          "assertionResults": [
+            {
+              "ancestorTitles": [
+                "",
+                "Challenge 07: Query Endpoints and useQuery Hooks"
+              ],
+              "fullName": " Challenge 07: Query Endpoints and useQuery Hooks API slice has getUsers query endpoint",
+              "status": "passed",
+              "title": "API slice has getUsers query endpoint",
+              "duration": 4,
+              "failureMessages": []
+            },
+            {
+              "ancestorTitles": [
+                "",
+                "Challenge 07: Query Endpoints and useQuery Hooks"
+              ],
+              "fullName": " Challenge 07: Query Endpoints and useQuery Hooks UsersList uses useGetUsersQuery or generated query hook",
+              "status": "passed",
+              "title": "UsersList uses useGetUsersQuery or generated query hook",
+              "duration": 1,
+              "failureMessages": []
+            },
+            {
+              "ancestorTitles": [
+                "",
+                "Challenge 07: Query Endpoints and useQuery Hooks"
+              ],
+              "fullName": " Challenge 07: Query Endpoints and useQuery Hooks UsersList has users-list data-testid",
+              "status": "passed",
+              "title": "UsersList has users-list data-testid",
+              "duration": 1,
+              "failureMessages": []
+            }
+          ],
+          "startTime": 1787154033914,
+          "endTime": 1787154033920,
+          "status": "passed",
+          "message": "",
+          "name": "C:/Users/Saitej/OneDrive/Documents/ReactJS/React/challenge-engine-react/courses/02-redux-rtk-query/project/tests/challenge-07.test.tsx"
+        }
+      ]
+    },
+    "lintResults": {
+      "score": 100,
+      "passed": true,
+      "totalIssues": 0,
+      "errors": 0,
+      "warnings": 0,
+      "details": [
+        {
+          "filePath": "C:\\Users\\Saitej\\OneDrive\\Documents\\ReactJS\\React\\challenge-engine-react\\courses\\02-redux-rtk-query\\project\\src\\api\\apiSlice.ts",
+          "messages": [],
+          "suppressedMessages": [],
+          "errorCount": 0,
+          "fatalErrorCount": 0,
+          "warningCount": 0,
+          "fixableErrorCount": 0,
+          "fixableWarningCount": 0,
+          "usedDeprecatedRules": [
+            {
+              "ruleId": "no-extra-semi",
+              "replacedBy": []
+            },
+            {
+              "ruleId": "no-mixed-spaces-and-tabs",
+              "replacedBy": []
+            }
+          ]
+        },
+        {
+          "filePath": "C:\\Users\\Saitej\\OneDrive\\Documents\\ReactJS\\React\\challenge-engine-react\\courses\\02-redux-rtk-query\\project\\src\\components\\UsersList.tsx",
+          "messages": [],
+          "suppressedMessages": [],
+          "errorCount": 0,
+          "fatalErrorCount": 0,
+          "warningCount": 0,
+          "fixableErrorCount": 0,
+          "fixableWarningCount": 0,
+          "usedDeprecatedRules": [
+            {
+              "ruleId": "no-extra-semi",
+              "replacedBy": []
+            },
+            {
+              "ruleId": "no-mixed-spaces-and-tabs",
+              "replacedBy": []
+            }
+          ]
+        }
+      ]
+    },
+    "architectureResults": {
+      "score": 0,
+      "passed": false,
+      "patternsFound": [],
+      "patternsMissing": [
+        "useQueryHook"
+      ],
+      "details": [
+        {
+          "file": "src/api/apiSlice.ts",
+          "patternsFound": [],
+          "patternsMissing": []
+        },
+        {
+          "file": "src/components/UsersList.tsx",
+          "patternsFound": [],
+          "patternsMissing": [
+            "useQueryHook"
+          ]
+        }
+      ]
+    },
+    "bestPracticesResults": {
+      "score": 100,
+      "passed": true,
+      "issues": [],
+      "details": [],
+      "note": "No best practices requirements specified in challenge"
+    },
+    "e2eResults": {
+      "score": 100,
+      "passed": true,
+      "totalTests": 2,
+      "passedTests": 2,
+      "failedTests": 0,
+      "details": [
+        {
+          "title": "challenge-07.spec.ts",
+          "file": "challenge-07.spec.ts",
+          "column": 0,
+          "line": 0,
+          "specs": [],
+          "suites": [
+            {
+              "title": "Challenge 07: Queries - E2E",
+              "file": "challenge-07.spec.ts",
+              "line": 3,
+              "column": 6,
+              "specs": [
+                {
+                  "title": "should load challenge 07 page with UsersList",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 2325,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-08-19T15:40:42.986Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "7e3ab03348c1d17f8ec0-cf18d92da8a8c307fe24",
+                  "file": "challenge-07.spec.ts",
+                  "line": 8,
+                  "column": 3
+                },
+                {
+                  "title": "should show users or loading or error",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 3342,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-08-19T15:40:45.646Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "7e3ab03348c1d17f8ec0-2425f5492a290b856471",
+                  "file": "challenge-07.spec.ts",
+                  "line": 13,
+                  "column": 3
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "screenshots": []
+    },
+    "aiReviewResults": {
+      "challengeId": "07-queries",
+      "timestamp": "2026-08-19T15:40:50.040Z",
+      "score": 82,
+      "feedback": [],
+      "strengths": [
+        "Clear separation between API slice and UI component – `apiSlice.ts` defines the query and `UsersList.tsx` consumes it.",
+        "Proper handling of loading and error states with descriptive `data-testid` attributes for testing.",
+        "Use of TypeScript interfaces keeps the data shape explicit and type‑safe."
+      ],
+      "improvements": [
+        "In `src/api/apiSlice.ts` the `User` interface is duplicated. Import the shared interface from `mockServer.ts` to avoid duplication and keep types in sync.",
+        "Replace the `queryFn` implementation with a simple `query: () => 'users'` (or the appropriate endpoint) – this keeps the API slice concise and leverages RTK Query’s built‑in error handling.",
+        "Ensure the `apiSlice.reducer` and `apiSlice.middleware` are added to the Redux store and that the route `/challenge/07-queries` renders `UsersList`. These pieces are not shown in the current files and are required for the challenge to run."
+      ],
+      "readability": 85,
+      "maintainability": 80,
+      "overall": "The implementation correctly defines a `getUsers` query and consumes it with `useGetUsersQuery`, handling loading and error states as required. However, the code would benefit from reusing shared types, simplifying the query definition, and confirming that the slice is wired into the store and routed correctly.",
+      "requirementCompliance": 80
+    },
+    "aiResults": {
+      "challengeId": "07-queries",
+      "timestamp": "2026-08-19T15:40:50.040Z",
+      "score": 82,
+      "feedback": [],
+      "strengths": [
+        "Clear separation between API slice and UI component – `apiSlice.ts` defines the query and `UsersList.tsx` consumes it.",
+        "Proper handling of loading and error states with descriptive `data-testid` attributes for testing.",
+        "Use of TypeScript interfaces keeps the data shape explicit and type‑safe."
+      ],
+      "improvements": [
+        "In `src/api/apiSlice.ts` the `User` interface is duplicated. Import the shared interface from `mockServer.ts` to avoid duplication and keep types in sync.",
+        "Replace the `queryFn` implementation with a simple `query: () => 'users'` (or the appropriate endpoint) – this keeps the API slice concise and leverages RTK Query’s built‑in error handling.",
+        "Ensure the `apiSlice.reducer` and `apiSlice.middleware` are added to the Redux store and that the route `/challenge/07-queries` renders `UsersList`. These pieces are not shown in the current files and are required for the challenge to run."
+      ],
+      "readability": 85,
+      "maintainability": 80,
+      "overall": "The implementation correctly defines a `getUsers` query and consumes it with `useGetUsersQuery`, handling loading and error states as required. However, the code would benefit from reusing shared types, simplifying the query definition, and confirming that the slice is wired into the store and routed correctly.",
+      "requirementCompliance": 80
+    }
   }
 ]
