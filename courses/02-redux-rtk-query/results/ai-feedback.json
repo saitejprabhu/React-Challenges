@@ -204,22 +204,6 @@
     }
   },
   {
-    "challengeId": "09-mutations",
-    "challengeName": "Mutations with useMutation",
-    "aiReview": {
-      "challengeId": "09-mutations",
-      "timestamp": "2026-08-20T07:24:27.806Z",
-      "score": 0,
-      "feedback": [],
-      "strengths": [],
-      "improvements": [],
-      "readability": 0,
-      "maintainability": 0,
-      "overall": "",
-      "error": "Groq API error (429): Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01kz67g1cre27rvvjxvyzg9gs2` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 2511, Requested 6075. Please try again in 4.395s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing"
-    }
-  },
-  {
     "challengeId": "10-optimistic-updates",
     "challengeName": "Optimistic Updates",
     "aiReview": {
@@ -265,6 +249,65 @@
       "maintainability": 80,
       "overall": "The implementation satisfies the core functional requirements: a filter slice, a component that combines RTK Query data with local UI state, and proper filtering/sorting logic. The code is clean and well‑typed, but a few small issues—particularly the incorrectly implemented typed hooks and missing route—should be addressed to fully meet the challenge specifications and ensure long‑term maintainability.",
       "requirementCompliance": 90
+    }
+  },
+  {
+    "challengeId": "09-mutations",
+    "challengeName": "Mutations with useMutation",
+    "aiReview": {
+      "challengeId": "09-mutations",
+      "timestamp": "2026-08-20T11:58:45.061Z",
+      "score": 0,
+      "feedback": [],
+      "strengths": [],
+      "improvements": [],
+      "readability": 0,
+      "maintainability": 0,
+      "overall": "",
+      "requirementCompliance": 0
+    }
+  },
+  {
+    "challengeId": "12-error-loading-ux",
+    "challengeName": "Error and Loading UX",
+    "aiReview": {
+      "challengeId": "12-error-loading-ux",
+      "timestamp": "2026-08-20T12:26:14.332Z",
+      "score": 0,
+      "feedback": [],
+      "strengths": [],
+      "improvements": [],
+      "readability": 0,
+      "maintainability": 0,
+      "overall": "",
+      "requirementCompliance": 0
+    }
+  },
+  {
+    "challengeId": "13-query-parameters",
+    "challengeName": "Query with Parameters and Detail View",
+    "aiReview": {
+      "challengeId": "13-query-parameters",
+      "timestamp": "2026-08-20T12:34:11.323Z",
+      "score": 87,
+      "feedback": [],
+      "strengths": [
+        "Implemented a parameterized `getPostById` endpoint with proper `providesTags` for cache invalidation.",
+        "PostDetail component correctly uses `useGetPostByIdQuery` with the `skip` option and handles loading, error, and data states.",
+        "Consistent use of `data-testid` attributes across components, facilitating reliable testing."
+      ],
+      "improvements": [
+        "Add a route configuration (e.g., in App.tsx or a dedicated router file) that renders `<PostDetail />` at `/challenge/13-query-parameters/:postId` so the component is actually reachable during the challenge.",
+        "Remove the early `!id` error block in `PostDetail`. The `skip: !id` option already prevents the query from firing, and the component can simply return `null` or a placeholder until an id is available.",
+        "Prefer the `query` field over `queryFn` for simple endpoints: `getPostById: builder.query<Post, number>({ query: (id) => `/posts/${id}` })`. This keeps the API slice closer to a real REST API and reduces boilerplate.",
+        "Define and export the `createPost` mutation in `apiSlice` (it is used in `AddPostForm`). If it already exists in a previous challenge, ensure it is exported here for completeness.",
+        "Add explicit error type handling in `getPostById` (e.g., `error: { status: string; data?: unknown; }`) to match RTK Query’s expected error shape.",
+        "Consider using `useParams` in `PostDetail` to retrieve the `postId` from the URL, making the component more reusable in a routing context."
+      ],
+      "readability": 88,
+      "maintainability": 86,
+      "overall": "The implementation satisfies the core functional requirements: a parameterized query, a detail view that uses the generated hook with skip logic, and proper loading/error handling. The code follows RTK Query best practices and is well‑structured, though adding the missing route and simplifying the endpoint definition would improve completeness and maintainability.",
+      "requirementCompliance": 88
     }
   }
 ]

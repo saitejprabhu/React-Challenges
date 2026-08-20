@@ -1,5 +1,5 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
-import { mockApi, User, Post } from "./mockServer";
+import { mockApi, type Post, type User } from "./mockServer";
 
 export const apiSlice = createApi({
   reducerPath: "api",
@@ -14,7 +14,6 @@ export const apiSlice = createApi({
     getUsers: builder.query<User[], void>({
       queryFn: async () => {
         const users = await mockApi.getUsers();
-
         return { data: users };
       },
 
@@ -30,20 +29,9 @@ export const apiSlice = createApi({
           : [{ type: "User" as const, id: "LIST" }],
     }),
 
-    createUser: builder.mutation<User, Omit<User, "id">>({
-      queryFn: async (user) => {
-        const newUser = await mockApi.createUser(user);
-
-        return { data: newUser };
-      },
-
-      invalidatesTags: [{ type: "User", id: "LIST" }],
-    }),
-
     getPosts: builder.query<Post[], void>({
       queryFn: async () => {
         const posts = await mockApi.getPosts();
-
         return { data: posts };
       },
 
@@ -59,44 +47,26 @@ export const apiSlice = createApi({
           : [{ type: "Post" as const, id: "LIST" }],
     }),
 
-    createPost: builder.mutation<Post, Omit<Post, "id">>({
-  queryFn: async (post) => {
-    const newPost = await mockApi.createPost(post);
-
-    return {
-      data: newPost,
-    };
-  },
-
-  invalidatesTags: [{ type: "Post", id: "LIST" }],
-
-  async onQueryStarted(post, { dispatch, queryFulfilled }) {
-    const patchResult = dispatch(
-      apiSlice.util.updateQueryData(
-        "getPosts",
-        undefined,
-        (draft) => {
-          draft.push({
-            ...post,
-            id: Date.now(),
-          });
+    getPostById: builder.query<Post, number>({
+      queryFn: async (id) => {
+        try {
+          const post = await mockApi.getPostById(id);
+          return { data: post };
+        } catch (error) {
+          return {
+            error: {
+              status: "CUSTOM_ERROR",
+              error:
+                error instanceof Error ? error.message : "Failed to fetch post",
+            },
+          };
         }
-      )
-    );
+      },
 
-    try {
-      await queryFulfilled;
-    } catch {
-      patchResult.undo();
-    }
-  },
-}),
+      providesTags: (_result, _error, id) => [{ type: "Post", id }],
+    }),
   }),
 });
 
-export const {
-  useGetUsersQuery,
-  useCreateUserMutation,
-  useGetPostsQuery,
-  useCreatePostMutation,
-} = apiSlice;
+export const { useGetUsersQuery, useGetPostsQuery, useGetPostByIdQuery } =
+  apiSlice;
