@@ -173,5 +173,98 @@
       "overall": "The implementation correctly defines a `getUsers` query and consumes it with `useGetUsersQuery`, handling loading and error states as required. However, the code would benefit from reusing shared types, simplifying the query definition, and confirming that the slice is wired into the store and routed correctly.",
       "requirementCompliance": 80
     }
+  },
+  {
+    "challengeId": "08-caching-refetch",
+    "challengeName": "Caching and Cache Tags",
+    "aiReview": {
+      "challengeId": "08-caching-refetch",
+      "timestamp": "2026-08-20T07:00:59.700Z",
+      "score": 86,
+      "feedback": [],
+      "strengths": [
+        "Tag types are correctly defined in the `createApi` options (`tagTypes: ['User', 'Post']`).",
+        "Both query endpoints (`getUsers`, `getPosts`) provide tags for each entity and a LIST tag, enabling fine‑grained cache invalidation.",
+        "Mutation endpoints (`createUser`, `createPost`) invalidate the corresponding LIST tags, ensuring queries are refetched automatically.",
+        "The mock server is well‑structured, with clear separation of user and post logic and realistic async delays."
+      ],
+      "improvements": [
+        "Use the simpler `query` field instead of `queryFn` for the query endpoints – this reduces boilerplate and aligns with common RTK Query patterns.",
+        "Extract the tag generation logic into a reusable helper (e.g., `generateEntityTags(result, type)`) to avoid duplication between `getUsers` and `getPosts`.",
+        "Add `invalidatesTags` for update and delete mutations (e.g., `updateUser`, `deleteUser`, `updatePost`, `deletePost`) to keep the cache fully consistent.",
+        "Export the `apiSlice.reducer` and add it to the Redux store configuration (not shown in the snippet) to ensure the API slice is actually wired into the application.",
+        "Consider adding error and loading state handling in the UI components that consume these hooks, or at least document that `useGetUsersQuery` returns `{ data, error, isLoading }`.",
+        "Add unit tests for the API slice to verify that tags are correctly generated and invalidated.",
+        "Use `as const` only where necessary – the tag type strings are already literal types, so the explicit cast can be omitted for brevity."
+      ],
+      "readability": 85,
+      "maintainability": 80,
+      "overall": "The implementation satisfies the core requirements of the challenge: tag types are defined, queries provide tags, and mutations invalidate the appropriate tags. The code is clear and follows RTK Query conventions, though it could be further streamlined by using `query` instead of `queryFn` and by extracting shared logic. Adding store integration and handling for update/delete mutations would make the slice more robust for future extensions.",
+      "requirementCompliance": 92
+    }
+  },
+  {
+    "challengeId": "09-mutations",
+    "challengeName": "Mutations with useMutation",
+    "aiReview": {
+      "challengeId": "09-mutations",
+      "timestamp": "2026-08-20T07:24:27.806Z",
+      "score": 0,
+      "feedback": [],
+      "strengths": [],
+      "improvements": [],
+      "readability": 0,
+      "maintainability": 0,
+      "overall": "",
+      "error": "Groq API error (429): Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01kz67g1cre27rvvjxvyzg9gs2` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 2511, Requested 6075. Please try again in 4.395s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing"
+    }
+  },
+  {
+    "challengeId": "10-optimistic-updates",
+    "challengeName": "Optimistic Updates",
+    "aiReview": {
+      "challengeId": "10-optimistic-updates",
+      "timestamp": "2026-08-20T07:31:30.381Z",
+      "score": 86,
+      "feedback": [],
+      "strengths": [
+        "Optimistic update is correctly implemented in the `createPost` mutation using `updateQueryData` and `patchResult.undo()`.",
+        "All endpoints use TypeScript interfaces (`User`, `Post`) and provide proper tag invalidation for cache consistency.",
+        "The code is well‑structured: API logic is isolated in `apiSlice.ts`, mock data in `mockServer.ts`, and hooks are exported cleanly."
+      ],
+      "improvements": [
+        "After a successful `createPost`, replace the temporary `id` (generated with `Date.now()`) with the real `id` returned from the server. This can be done by dispatching another `updateQueryData` inside the `try` block using the data from `queryFulfilled`.",
+        "Add minimal error handling or logging inside the `catch` block (e.g., `console.error('Create post failed', error)`) to aid debugging while still respecting the ESLint rule that disallows console statements in production code.",
+        "Consider simplifying the `queryFn` implementations for `getUsers` and `getPosts` by using the standard `query: () => 'users'` syntax. This reduces boilerplate and makes the intent clearer."
+      ],
+      "readability": 85,
+      "maintainability": 80,
+      "overall": "The implementation satisfies the core requirement of an optimistic update with rollback on failure. It follows RTK Query best practices for cache updates and tag invalidation, and the TypeScript usage is solid. Minor refinements—such as syncing the temporary ID with the server response and simplifying query definitions—would further improve the solution.",
+      "requirementCompliance": 90
+    }
+  },
+  {
+    "challengeId": "11-api-local-state",
+    "challengeName": "API and Local State Together",
+    "aiReview": {
+      "challengeId": "11-api-local-state",
+      "timestamp": "2026-08-20T11:55:57.489Z",
+      "score": 86,
+      "feedback": [],
+      "strengths": [
+        "Clear separation of concerns: API logic lives in `apiSlice`, UI state in `filtersSlice`, and the component in `PostsWithFilters.tsx`.",
+        "Consistent use of TypeScript: types are defined for state and actions, and payloads are strongly typed.",
+        "All required data‑testids (`posts-with-filters`, `filter-controls`) are present, making the component test‑friendly."
+      ],
+      "improvements": [
+        "Fix the custom typed hooks in `src/store/hooks.ts`. The current `useDispatch.withTypes<AppDispatch>()` and `useSelector.withTypes<RootState>()` are not valid. Replace with:\n```ts\nexport const useAppDispatch = () => useDispatch<AppDispatch>();\nexport const useAppSelector: TypedUseSelectorHook<RootState> = useSelector;\n```",
+        "Use the typed hooks in `PostsWithFilters.tsx` for consistency: replace `useDispatch` with `useAppDispatch` and `useSelector` with `useAppSelector`. This keeps the typing consistent across the app.",
+        "Add a route for `/challenge/11-api-local-state` in the router configuration (not shown in the provided files). Without this, the component will not be reachable from the UI."
+      ],
+      "readability": 85,
+      "maintainability": 80,
+      "overall": "The implementation satisfies the core functional requirements: a filter slice, a component that combines RTK Query data with local UI state, and proper filtering/sorting logic. The code is clean and well‑typed, but a few small issues—particularly the incorrectly implemented typed hooks and missing route—should be addressed to fully meet the challenge specifications and ensure long‑term maintainability.",
+      "requirementCompliance": 90
+    }
   }
 ]
